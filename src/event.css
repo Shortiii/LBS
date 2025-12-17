@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* NAV */
+.top-nav {
+   @apply bg-[#122867] text-white py-6 pl-20  flex gap-4 ;
+}
+.nav-community{
+  @apply underline border-r-2  pr-4
+}
+.nav-header {
+  @apply bg-cover bg-center bg-no-repeat w-full h-screen;
+  background-image: url('./assets/NewHero.png');
+}
+.bottom-nav {
+  @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];
+}
+.nav-list {
+  @apply flex items-center gap-6 text-white
+}
+.logo{
+  @apply flex gap-5
+}
+.bottom-header {
+  @apply  mt-40 ml-20 w-1/2 bg-[#122867CC] p-6
+}
+.bottom-header h1 {
+  @apply text-4xl font-bold mb-7 text-[#00AEEF]
+}
+.bottom-header p {
+  @apply text-base font-normal text-white leading-7
+}
+
+/* EVENT */
+.event{
+    @apply  px-35 pt-25 pb-8
+}
+.search-div{
+    @apply py-8 flex gap-6 justify-between
+}
+.search-div input {
+    @apply w-full p-3 bg-[#F2F3F5] text-base text-[#86909C] cursor-pointer
+}
+.search-category{
+    @apply flex 
+}
+.search-category button{
+    @apply p-4 bg-[#F2F3F5] border-l-2 border-[#E5E6EB]
+}
+.search-button{
+    @apply text-[#122867] border border-[#122867] py-4 px-6 hover:text-[#00AEEF]  hover:border-[#00AEEF] 
+}
+.upcoming-event{
+    @apply mt-4
+}
+.event-text{
+  @apply border-l-4 border-[#0E42D2] pl-3
+}
+.event-text h2{
+  @apply text-3xl font-semibold text-[#122867]
+}
+.event-text p{
+  @apply text-base font-normal text-black
+}
+.event-grid{
+    @apply grid grid-cols-3 gap-6 mt-10 mb-10
+}
+.event-div{
+    @apply  bg-[#F7F8FA] pt-4
+}
+.div-text{
+    @apply px-5 pb-8
+}
+.div-text h5{
+    @apply text-base text-[#122867] font-semibold
+}
+.date, .location{
+    @apply flex  gap-2 pt-3 text-[#676767]
+}
+.location{
+    @apply pb-3
+}
+.event-section{
+    @apply px-1.5 m-1 text-[#122867] text-sm inline-block border rounded-xs border-[#122867]
+}
+.event-div img{
+    @apply object-cover w-full
+}
+.event-div h6{
+    @apply text-center py-3 text-base
+}
+.past-event .event-text h2{
+  @apply text-3xl font-semibold text-black
+}
+.event1{
+    @apply pt-6
+}
+.event2{
+    @apply pt-12
+}
+
+/* FOOTER */
+footer{
+  @apply bg-[#122867] text-white py-20 px-30 grid grid-cols-5 gap-8 items-start
+}
+.footer-note p{
+  @apply text-sm font-normal  pt-4
+}
+.footer-div h3{
+  @apply text-base font-semibold pb-2
+}
+.footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
+  @apply text-sm 
+}
+.footer-div h5{
+  @apply py-6
+}
+.footer-div p{
+  @apply pt-1
+}
+.footer-social div{
+  @apply flex items-center gap-2 pb-2
+}
+.footer-connect h3{
+  @apply text-[28px] pb-4
+}
+.footer-connect p{
+  @apply text-sm
+}
+.connect-input{
+  @apply pt-5 text-xs
+}
+.footer-connect input{
+  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full
+}
+.footer-connect button{
+  @apply bg-[#1679CB] text-white mt-3 w-full py-2
+}

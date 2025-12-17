@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+.alumni{
+  @apply w-screen h-screen bg-[#E8F3FF] flex items-center justify-center;
+}
+.alumni-access{
+      @apply bg-[#ffffff] w-[80vw] h-[95vh] rounded-sm shadow-xl flex overflow-hidden;
+}
+.login{
+    @apply py-5 px-10 w-2/5
+}
+.login-img{
+    @apply w-3/5
+}
+.login-img img{
+    @apply w-full h-full object-cover
+}
+.login img{
+    @apply w-[25%]
+}
+.login-details{
+    @apply mt-10
+}
+.login-details h2{
+    @apply text-4xl text-[#122867]
+}
+.login-details p{
+    @apply text-sm text-[#676767] py-3
+}
+.login-input{
+    @apply border border-[#E5E6EB] p-6 flex flex-col
+}
+.login-input h4{
+    @apply text-2xl text-[#122867]
+}
+.login-input p{
+    @apply text-sm text-[#676767] py-3
+}
+.login-input input{
+    @apply bg-[#F2F3F5] rounded-sm p-2 mb-3 text-sm text-[#86909C] cursor-pointer
+}
+.login-input button{
+    @apply bg-[#122867] text-white p-2 hover:bg-[#1679CB] cursor-pointer mb-1.5
+}

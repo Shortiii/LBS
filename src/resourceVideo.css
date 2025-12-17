@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* NAV */
+.top-nav {
+   @apply bg-[#122867] text-white py-6 pl-20  flex gap-4 ;
+}
+.nav-community{
+  @apply underline border-r-2  pr-4
+}
+.nav-header {
+  @apply w-full
+}
+.bottom-nav {
+  @apply bg-[#12286780] flex py-6 items-center justify-between h-full pl-20 pr-[25%];
+}
+.nav-list {
+  @apply flex items-center gap-6 text-white
+}
+.logo{
+  @apply flex gap-5
+}
+
+/* MAIN */
+main{
+     @apply bg-cover bg-center bg-no-repeat w-full h-screen relative;
+  background-image: url('./assets/resourceVideo.png');
+}
+main a{
+ @apply text-white flex gap-2 absolute top-[10%] left-[10%]
+}
+.play{
+    @apply bg-[#00AEEF] p-6 w-[8%] absolute top-[40%] right-[50%] flex
+}
+
+/* VIDEO_DETAILS */
+.video-details{
+    @apply px-[15%] py-[10%]
+}
+.video-details h3{
+    @apply text-[32px] text-[#122867] font-semibold
+}
+.video-details p{
+    @apply text-[#1D2129] text-base py-4
+}
+.video-details a{
+    @apply text-center text-[#122867] mx-auto underline text-base
+}
+.video-details a p{
+    @apply text-center
+}
+
+/* FOOTER */
+footer{
+  @apply bg-[#122867] text-white py-20 px-30 grid grid-cols-5 gap-8 items-start
+}
+.footer-note p{
+  @apply text-sm font-normal  pt-4
+}
+.footer-div h3{
+  @apply text-base font-semibold pb-2
+}
+.footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
+  @apply text-sm 
+}
+.footer-div h5{
+  @apply py-6
+}
+.footer-div p{
+  @apply pt-1
+}
+.footer-social div{
+  @apply flex items-center gap-2 pb-2
+}
+.footer-connect h3{
+  @apply text-[28px] pb-4
+}
+.footer-connect p{
+  @apply text-sm
+}
+.connect-input{
+  @apply pt-5 text-xs
+}
+.footer-connect input{
+  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full
+}
+.footer-connect button{
+  @apply bg-[#1679CB] text-white mt-3 w-full py-2
+}
