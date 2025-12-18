@@ -10,7 +10,7 @@
 
 .nav-header {
   @apply bg-cover bg-center bg-no-repeat w-full h-screen;
-  background-image: url('./assets/resourceImg.png');
+  background-image: url('../assets/resourceImg.png');
 }
 .bottom-nav {
   @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];

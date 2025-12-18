@@ -1,18 +1,21 @@
-import './style.css'
+import './styles/style.css'
+import header1 from './assets/header1.png'
+import header2 from './assets/header2.png'
+import header3 from './assets/header3.png'
 
   const slides = [
     {
-      image: "src/assets/header1.png",
+      image: header1,
       title: "Together, We Lead Beyond the Classroom.",
       text: "The Lagos Business School Alumni Network unites changemakers who are shaping industries, building communities, and redefining leadership across Africa and beyond. "
     },
     {
-      image: "src/assets/header2.png",
+      image: header2,
       title: "Legacy. Leadership. LBS for Life.",
       text: "More than a school - your alumni journey is a source of inspiration, mentorship, and global possibility shaped by the LBS spirit."
     },
     {
-      image: "src/assets/header3.png",
+      image: header3,
       title: "Innovation Rooted in Community",
       text: "Join a powerful network of alumni driving change in business, technology and society; connected by LBS, motivated by purpose."
     }

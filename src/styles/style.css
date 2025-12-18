@@ -9,7 +9,7 @@
 }
 .nav-header {
   @apply bg-cover bg-center bg-no-repeat w-full h-screen relative transition-all duration-1000 overflow-hidden;
-  background-image: url('src/assets/header1.png');
+  background-image: url('../assets/header1.png');
 }
 .bottom-nav {
   @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];

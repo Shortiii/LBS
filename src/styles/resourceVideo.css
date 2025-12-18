@@ -23,7 +23,7 @@
 /* MAIN */
 main{
      @apply bg-cover bg-center bg-no-repeat w-full h-screen relative;
-  background-image: url('./assets/resourceVideo.png');
+  background-image: url('../assets/resourceVideo.png');
 }
 main a{
  @apply text-white flex gap-2 absolute top-[10%] left-[10%]
