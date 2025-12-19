@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/resourceVideo.css">
-    <title>Resource Video</title>
+    <link rel="stylesheet" href="./src/styles/careerDetails.css">
+    <title>Career Details</title>
 </head>
 <body>
     <header>
@@ -31,27 +31,71 @@
       </div>
     </header>
 
-    <main>
-        <a href="./resource.html">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.3105 17.3867L10.4434 18.2539C10.0762 18.6211 9.48242 18.6211 9.11914 18.2539L1.52539 10.6641C1.1582 10.2969 1.1582 9.70313 1.52539 9.33984L9.11914 1.74609C9.48633 1.37891 10.0801 1.37891 10.4434 1.74609L11.3105 2.61328C11.6816 2.98438 11.6738 3.58984 11.2949 3.95312L6.58789 8.4375H17.8145C18.334 8.4375 18.752 8.85547 18.752 9.375V10.625C18.752 11.1445 18.334 11.5625 17.8145 11.5625H6.58789L11.2949 16.0469C11.6777 16.4102 11.6855 17.0156 11.3105 17.3867Z" fill="white"/>
-            </svg>
-            Back
-        </a>
-        <div class="play">
-            <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M61.1684 26.7212C67.231 30.0181 67.2311 38.5525 61.1685 41.8494L24.5629 61.7554C18.6707 64.9595 11.4297 60.7891 11.4297 54.1913L11.4297 14.3793C11.4297 7.78153 18.6707 3.61108 24.5629 6.81523L61.1684 26.7212Z" fill="#1C274C"/>
-            </svg>
+    <main class="career-details">
+        <a href="./career.html">Back to jobs</a>
+        <section class="job-popup">
+            <div class="job-opening">
+            <div class="job-role">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="24" fill="#C9CDD4"/>
+                <path d="M9.75 43.5H38.25C38.6625 43.5 39 43.1625 39 42.75V13.5H32.25C31.0095 13.5 30 12.4905 30 11.25V4.5H9.75C9.3375 4.5 9 4.8375 9 5.25V42.75C9 43.1625 9.3375 43.5 9.75 43.5Z" fill="white"/>
+                <path d="M37.9395 12L31.5 5.56055V11.25C31.5 11.6625 31.8375 12 32.25 12H37.9395Z" fill="white"/>
+                <path opacity="0.67" fill-rule="evenodd" clip-rule="evenodd" d="M39.84 11.781L31.719 3.6585C31.2963 3.23836 30.725 3.00176 30.129 3H9.75C8.5095 3 7.5 4.0095 7.5 5.25V42.75C7.5 43.9905 8.5095 45 9.75 45H38.25C39.4905 45 40.5 43.9905 40.5 42.75V13.371C40.5 12.771 40.266 12.2055 39.84 11.781ZM31.5 5.5605L37.9395 12H32.25C31.8361 11.9992 31.5008 11.6639 31.5 11.25V5.5605ZM9.75 43.5H38.25C38.6625 43.5 39 43.1625 39 42.75V13.5H32.25C31.0095 13.5 30 12.4905 30 11.25V4.5H9.75C9.3375 4.5 9 4.8375 9 5.25V42.75C9.00083 43.1639 9.33613 43.4992 9.75 43.5Z" fill="#605E5C"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.25 19.5H12.75C12.3358 19.5 12 19.1642 12 18.75C12 18.3358 12.3358 18 12.75 18H35.25C35.6642 18 36 18.3358 36 18.75C36 19.1642 35.6642 19.5 35.25 19.5ZM35.25 22.5H12.75C12.3358 22.5 12 22.1642 12 21.75C12 21.3358 12.3358 21 12.75 21H35.25C35.6642 21 36 21.3358 36 21.75C36 22.1642 35.6642 22.5 35.25 22.5ZM12.75 25.5H35.25C35.6642 25.5 36 25.1642 36 24.75C36 24.3358 35.6642 24 35.25 24H12.75C12.3358 24 12 24.3358 12 24.75C12 25.1642 12.3358 25.5 12.75 25.5Z" fill="#C8C6C4"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 28.5H28.5C30.1569 28.5 31.5 29.8431 31.5 31.5V37.5C31.5 39.1569 30.1569 40.5 28.5 40.5H19.5C17.8431 40.5 16.5 39.1569 16.5 37.5V31.5C16.5 29.8431 17.8431 28.5 19.5 28.5ZM30 31.5C30 30.6735 29.3265 30 28.5 30H19.5C18.6735 30 18 30.6735 18 31.5V37.5C18 38.3265 18.6735 39 19.5 39H28.5C29.3265 39 30 38.3265 30 37.5V31.5ZM7.5 39H14.625C14.8321 39 15 38.8321 15 38.625V30.375C15 30.1679 14.8321 30 14.625 30H7.5C6.67157 30 6 30.6716 6 31.5V37.5C6 38.3284 6.67157 39 7.5 39ZM33.375 30H40.5C41.3284 30 42 30.6716 42 31.5V37.5C42 38.3284 41.3284 39 40.5 39H33.375C33.168 39 33 38.832 33 38.625V30.375C33 30.1679 33.1679 30 33.375 30Z" fill="#D65532"/>
+                </svg>
+                <div class="job-details">
+                    <h6>Senior Strategy Manager - Fintech Sector</h6>
+                    <p> by <span>Aloma</span> Sterling Capital Partners</p>
+                </div>
+            </div>
+            <div class="job-info">
+                <div class="job-type">
+                    <p class="job-contract">Part Time</p>
+                    <p class="job-location">Abuja</p>
+                    <p class="job-pay">₦2,000,000.00</p>
+                </div>
+                <div class="due-date">
+                23 days left to apply 
+                </div>
+            </div>
         </div>
+        <button>Apply now</button>
+        </section>
+
+        <section class="job-description">
+            <div class="job-note">
+                <p>
+                    The Global Impact Initiative at Lagos Business School (LBS) is making significant strides in providing sustainable solutions across Africa. Through collaborative research, innovative programs, and strategic partnerships, LBS is addressing critical challenges in areas such as healthcare, education, and environmental sustainability
+                </p>
+                <p>
+                    Recent projects include developing affordable housing solutions using eco-friendly materials, implementing mobile health clinics in rural communities, and creating educational programs focused on renewable energy. These initiatives not only improve the quality of life for local populations but also contribute to long-term economic growth and stability.
+                </p>
+                <p>LBS is committed to fostering a culture of social responsibility among its students and faculty, encouraging them to become leaders in sustainable development. By integrating sustainability into its curriculum and research, LBS aims to empower the next generation of business leaders to create positive change in Africa and beyond.</p>
+            </div>
+            <h1>Education Technology Summit: Revolutionizing Learning in Africa</h1>
+            <div class="job-note">
+                <p>
+                    The Global Impact Initiative at Lagos Business School (LBS) is making significant strides in providing sustainable solutions across Africa. Through collaborative research, innovative programs, and strategic partnerships, LBS is addressing critical challenges in areas such as healthcare, education, and environmental sustainability
+                </p>
+                <p>
+                    Recent projects include developing affordable housing solutions using eco-friendly materials, implementing mobile health clinics in rural communities, and creating educational programs focused on renewable energy. These initiatives not only improve the quality of life for local populations but also contribute to long-term economic growth and stability.
+                </p>
+                <p>LBS is committed to fostering a culture of social responsibility among its students and faculty, encouraging them to become leaders in sustainable development. By integrating sustainability into its curriculum and research, LBS aims to empower the next generation of business leaders to create positive change in Africa and beyond.
+                </p>
+                <p>
+                    The Global Impact Initiative at Lagos Business School (LBS) is making significant strides in providing sustainable solutions across Africa. Through collaborative research, innovative programs, and strategic partnerships, LBS is addressing critical challenges in areas such as healthcare, education, and environmental sustainability
+                </p>
+                <p>
+                    Recent projects include developing affordable housing solutions using eco-friendly materials, implementing mobile health clinics in rural communities, and creating educational programs focused on renewable energy. These initiatives not only improve the quality of life for local populations but also contribute to long-term economic growth and stability.
+                </p>
+                <p>LBS is committed to fostering a culture of social responsibility among its students and faculty, encouraging them to become leaders in sustainable development. By integrating sustainability into its curriculum and research, LBS aims to empower the next generation of business leaders to create positive change in Africa and beyond.
+                </p>
+            </div>
+
+        </section>
     </main>
 
-    <section class="video-details">
-        <h3>Leading Innovation in Emerging Markets: The ABC Group Story</h3>
-        <p>ABC Group’s journey is a testament to what happens when innovation meets ambition. Discover how the company is shaping industries, empowering communities, and driving transformation across emerging markets.</p>
-        <a href="#">
-            <p>Proceed to Play Video</p>
-        </a>
-    </section>
     <footer>
     <div class="footer-note">
       <img src="./src/assets/footer-logo.png" alt="">

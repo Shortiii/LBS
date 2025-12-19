@@ -9,7 +9,7 @@
 }
 .nav-header {
   @apply bg-cover bg-center bg-no-repeat w-full h-screen relative transition-all duration-1000 overflow-hidden;
-  background-image: url('../assets/alumniHero.png');
+  background-image: url('../assets/membership.png');
 }
 .bottom-nav {
   @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%] ;
@@ -48,51 +48,8 @@
   @apply bg-white text-black p-3 rounded-xl text-xl font-normal cursor-pointer w-[30%] text-center
 }
 
-/* MAIN */
 main{
-    @apply p-[7%]
-}
-.alumni-div{
-    @apply flex gap-6
-}
-.first-div{
-    @apply flex flex-col gap-4 relative 
-}
-.benefit-div, .second-div, .third-div{
-    @apply relative 
-}
-.benefit-div img, .second-div img, .third-div img{
-    @apply w-full object-cover
-}
-.benefit-div h4, .second-div h4, .third-div h4{
-    @apply absolute bg-[#122867] text-white top-0 text-sm py-3 px-4
-}
-.benefit-div div, .second-div div,.third-div div{
-    @apply absolute bottom-0 bg-[#0E42D266] text-white w-full py-4 px-3 text-base
-}
-.third-div div{
-    @apply bg-[#0E42D266] 
-}
-.benefit-div div p, .second-div p, .third-div p{
-    @apply text-[#A7A9AC]
-}
-.alumni-benefits{
-    @apply py-10 flex flex-col gap-15 px-25
-}
-.section-div h2{
-    @apply text-[32px] font-semibold text-[#122867] border-l-3 border-[#0E42D2] p-2
-}
-.initial-div{
-    @apply flex gap-10 text-[#1D2129] pt-4
-}
-.initial-div h4{
-@apply text-[32px] w-3/4
-}
-.initial-div ol{
-    @apply text-2xl pt-4 w-3/4 
-}
-.initial-div li{
-    @apply  pt-4 leading-8
+    @apply py-30
 }
 
 /* FOOTER */

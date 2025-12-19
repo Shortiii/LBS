@@ -2,17 +2,16 @@
 
 /* NAV */
 .top-nav {
-  @apply bg-[#122867] text-white py-6 pl-20  flex gap-4;
+   @apply bg-[#122867] text-white py-6 pl-20  flex gap-4 ;
 }
 .nav-community{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply bg-cover bg-center bg-no-repeat w-full h-screen;
-  background-image: url('../assets/resourceImg.png');
+  @apply w-full
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];
+  @apply bg-[#12286780] flex py-6 items-center justify-between h-full pl-20 pr-[25%];
 }
 .nav-list {
   @apply flex items-center gap-6 text-white
@@ -20,41 +19,22 @@
 .logo{
   @apply flex gap-5
 }
-.bottom-header {
-  @apply  mt-40 ml-20 w-1/2 bg-[#122867CC] p-6
-}
-.bottom-header h1 {
-  @apply text-4xl font-bold mb-7 text-[#00AEEF] w-3/4
-}
-.bottom-header p {
-  @apply text-base font-normal text-white leading-7 w-3/4
-}
 
-.search-input{
-    @apply  px-35 pt-25 pb-8
+/* MAIN */
+.career-details{
+    @apply px-38 pt-5  pb-[20%]
 }
-.search-input input{
-    @apply w-full p-3 bg-[#F2F3F5] text-base text-[#86909C] cursor-pointer
+.career-details a{
+    @apply text-sm text-[#115FD6]
 }
-.search-div{
-    @apply py-8 flex gap-6 justify-between
+.career-details button{
+    @apply mt-3 bg-[#122867] text-white px-4 py-2 rounded-sm hover:bg-[#115FD6]
 }
-.search-category{
-    @apply flex 
-}
-.search-category button{
-    @apply p-4 bg-[#F2F3F5] border-l-2 border-[#E5E6EB]
-}
-.search-button{
-    @apply text-[#122867] border border-[#122867] py-4 px-6 hover:text-[#00AEEF]  hover:border-[#00AEEF] 
-}
-
-/* JOB */
-.job{
-    @apply px-35 grid grid-cols-2 gap-5 pb-[20%]
+.job-popup{
+    @apply bg-[#F7F8FA] px-5 pt-5 pb-5 mt-5
 }
 .job-opening{
-    @apply p-6 border border-[#E5E6EB]
+    @apply p-6 bg-white border border-[#E5E6EB]
 }
 .job-role{
     @apply flex  gap-4
@@ -81,7 +61,19 @@
   @apply bg-[#D0BCFF]
 }
 .due-date{
-    @apply text-[#676767] text-sm p-1.5 border border-[#E5E6EB] w-[30%]
+    @apply text-[#676767] text-sm p-1.5 border border-[#E5E6EB] w-[15%] flex justify-center
+}
+.job-description{
+    @apply py-10
+}
+.job-description p{
+    @apply text-[#1D2129] text-base
+}
+.job-description h1{
+    @apply text-[#122867] text-[32px] font-semibold py-8
+}
+.job-note{
+    @apply flex flex-col gap-6
 }
 
 /* FOOTER */

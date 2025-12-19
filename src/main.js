@@ -1,4 +1,5 @@
 import './styles/style.css'
+// import './styles/alumni.css'
 import header1 from './assets/header1.png'
 import header2 from './assets/header2.png'
 import header3 from './assets/header3.png'
@@ -21,10 +22,11 @@ import header3 from './assets/header3.png'
     }
   ];
 
+
   let current = 0;
-   const hero = document.querySelector(".nav-header");
-   const title = document.querySelector(".bottom-header h1");
-   const text = document.querySelector(".bottom-header p");
+   const hero = document.getElementById("hero");
+   const title = document.getElementById("hero-title");
+   const text = document.getElementById("hero-text");
    const dots = document.querySelectorAll(".dot");
 
   function showSlide(index) {
@@ -43,7 +45,6 @@ import header3 from './assets/header3.png'
     showSlide(current);
   }, 3000);
 
-  // manual controls
   dots.forEach(dot => {
     dot.addEventListener("click", () => {
       clearInterval(interval);
@@ -51,7 +52,27 @@ import header3 from './assets/header3.png'
     });
   });
 
-  // init
   showSlide(0);
 
+const toggle = document.getElementById('alumni-toggle');
+const menu = document.getElementById('alumni-menu');
 
+toggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  menu.classList.toggle('hidden');
+});
+
+document.addEventListener('click', () => {
+  menu.classList.add('hidden');
+});
+const newsToggle = document.getElementById('news-toggle');
+const newsMenu = document.getElementById('news-menu');
+
+newsToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  newsMenu.classList.toggle('hidden');
+});
+
+document.addEventListener('click', () => {
+  newsMenu.classList.add('hidden');
+});

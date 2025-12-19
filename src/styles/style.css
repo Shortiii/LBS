@@ -12,10 +12,22 @@
   background-image: url('../assets/header1.png');
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];
+  @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%] ;
 }
 .nav-list {
-  @apply flex items-center gap-6 text-white
+  @apply flex items-center gap-6 text-white cursor-pointer
+}
+.list{
+  @apply relative
+}
+.list ul{
+  @apply bg-white text-black text-base p-3  border-b-2 border-[#165DFF] absolute top-8 left-2
+}
+.list ul li{
+  @apply block pb-2
+}
+.list ul li a{
+  @apply whitespace-nowrap
 }
 .logo{
   @apply flex gap-5
