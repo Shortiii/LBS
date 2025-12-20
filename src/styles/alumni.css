@@ -95,6 +95,66 @@ main{
     @apply  pt-4 leading-8
 }
 
+/* SEARCH */
+.search{
+  @apply bg-[#122867] text-white mx-25 my-8 px-6 pt-10 pb-15
+}
+.search h2{
+  @apply text-[32px] border-l-3 pl-4 border-[#0E42D2]
+}
+.search-div{
+  @apply flex flex-col gap-4 py-4
+}
+.search-template{
+  @apply flex items-stretch
+}
+.search-template h5{
+  @apply bg-[#00AEEF] text-2xl font-semibold px-4 py-2 flex items-center justify-center
+}
+.search-template p{
+  @apply bg-white text-black text-xl px-4 py-2
+}
+
+/* ACCESS */
+.access{
+  @apply mx-25
+}
+.access-title{
+  @apply border-l-3 border-[#0E42D2] pl-4
+}
+.access-title h2{
+  @apply text-[#122867] text-[32px] font-semibold
+}
+.access-title p{
+  @apply text-[#676767] text-base
+}
+.access-template{
+  @apply p-10 flex justify-between items-center
+}
+.access-div{
+  @apply flex flex-col gap-2 items-center text-center
+}
+.svgIcon{
+  @apply bg-[#00AEEF] p-4 rounded-r-lg rounded-t-lg 
+}
+.access-div h6{
+  @apply text-[#122867] text-base
+}
+.access-template img{
+  @apply h-2
+}
+.privacy{
+  @apply px-25
+}
+.privacy-template{
+  @apply py-10 px-6 bg-[#122867] text-white
+}
+.privacy-template h2{
+  @apply text-[32px] font-semibold pl-4 border-l-3 border-[#0E42D2]
+}
+.privacy-template p {
+  @apply text-2xl pt-6
+}
 /* FOOTER */
 footer{
   @apply bg-[#122867] text-white py-20 px-30 grid grid-cols-5 gap-8 items-start

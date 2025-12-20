@@ -1,4 +1,4 @@
-import './styles/spotlight.css'
+import './styles/alumniSpotlight.css'
 import img from './assets/spotlightImg.png'
 
 const spotlightData = [

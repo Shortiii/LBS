@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+/* NAV */
+.top-nav {
+  @apply bg-[#122867] text-white py-6 pl-20  flex gap-4;
+}
+.nav-community{
+  @apply underline border-r-2  pr-4
+}
+.nav-header {
+  @apply bg-cover bg-center bg-no-repeat relative w-full h-screen;
+  background-image: url('../assets/alumniImg.png');
+}
+.bottom-nav {
+  @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];
+}
+.nav-list {
+  @apply flex items-center gap-6 text-white cursor-pointer
+}
+.logo{
+  @apply flex gap-5
+}
+.bottom-header {
+  @apply absolute  left-25 -bottom-16  w-1/2 bg-[#F2F3F5] p-6 border-b-2 border-[#165DFF]
+}
+.bottom-header h1 {
+  @apply text-4xl font-bold mb-7 text-[#122867]
+}
+.bottom-header p {
+  @apply text-base font-normal text-black leading-7
+}
+
+/* MAIN */
+.insights{
+    @apply px-25 py-30
+}
+.insights-title{
+    @apply bg-[#122867] text-white p-10
+}
+.insights-title h2{
+    @apply text-[32px] font-semibold
+}
+.insights-title p{
+    @apply text-base py-2
+}
+.insights-template{
+    @apply flex py-6 gap-6
+}
+.insight-div{
+    @apply relative
+}
+.insight-div img{
+    @apply w-full object-cover h-full
+}
+.insight-div h6{
+    @apply absolute top-0 text-sm bg-[#122867] text-white p-3
+}
+.insight-div div{
+    @apply absolute bottom-0 bg-[#0E42D280] w-full p-4 text-white
+}
+.template-div{
+    @apply w-2/3
+}
+.template-div h5{
+    @apply text-xl font-semibold
+}
+.template-div p{
+    @apply text-sm
+}
+.insight{
+    @apply flex flex-col gap-6 w-1/3
+}
+.insight h5{
+     @apply text-sm font-semibold
+}
+.insight p{
+     @apply text-sm 
+}
+.event{
+    @apply bg-[#122867] text-white mb-8 px-25 py-15
+}
+.event-title h2{
+    @apply text-[32px] font-semibold
+}
+.event-title p{
+    @apply text-base py-2 w-1/3
+}
+.event-div{
+    @apply flex gap-6 py-6
+}
+.event-details{
+    @apply relative w-1/3
+}
+.event-details img{
+    @apply w-full
+}
+.event-details h5{
+    @apply bg-[#122867] text-white absolute top-0 p-3 text-sm
+}
+.event-text{
+    @apply bg-[#0E42D266] absolute bottom-0 p-3 text-sm
+}
+.event-text h6{
+    @apply font-semibold
+}
+
+.recent-news{
+    @apply px-25 py-15
+}
+.recent-news-title{
+    @apply border-l-4 border-[#122867] pl-4
+}
+.recent-news-title h2{
+    @apply text-[#122867] text-[32px] font-semibold
+}
+.recent-news-title p{
+    @apply text-[#1D2129] text-base w-2/5 
+}
+.news-template{
+    @apply pt-8 flex relative items-start gap-20
+}
+.template-cards{
+    @apply flex flex-col gap-6 w-[70%]
+}
+.template{
+    @apply flex gap-4
+}
+.template-note{
+    @apply w-1/2 flex flex-col gap-3
+}
+.template-note h6{
+    @apply text-base text-[#122867]
+}
+.template-note h4{
+    @apply font-semibold text-[#122867] text-[18px]
+}
+.template-text{
+    @apply flex items-center gap-4
+}
+.template-text p{
+    @apply flex gap-2 items-center
+}
+.template-alumni{
+    @apply w-[30%] pb-2 border-b-2  border-[#165DFF] sticky top-24
+}
+.template-title{
+    @apply text-2xl text-white font-semibold p-3 bg-[#00227FE5]
+}
+.template-alumni img{
+    @apply w-full h-full object-cover;
+}
+.card-div{
+  @apply bg-white py-4
+}
+.card-div h2{
+  @apply text-[#1D2129] text-[23px]
+}
+.card-div h4{
+  @apply text-[#4E5969] text-base
+}
+.card-div p{
+  @apply pt-2 text-base text-[#4E5969] italic
+}
+.card-div a {
+  @apply text-base underline text-[#122867]
+}
+/* FOOTER */
+footer{
+  @apply bg-[#122867] text-white py-20 px-30 grid grid-cols-5 gap-8 items-start
+}
+.footer-note p{
+  @apply text-sm font-normal  pt-4
+}
+.footer-div h3{
+  @apply text-base font-semibold pb-2
+}
+.footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
+  @apply text-sm 
+}
+.footer-div h5{
+  @apply py-6
+}
+.footer-div p{
+  @apply pt-1
+}
+.footer-social div{
+  @apply flex items-center gap-2 pb-2
+}
+.footer-connect h3{
+  @apply text-[28px] pb-4
+}
+.footer-connect p{
+  @apply text-sm
+}
+.connect-input{
+  @apply pt-5 text-xs
+}
+.footer-connect input{
+  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full
+}
+.footer-connect button{
+  @apply bg-[#1679CB] text-white mt-3 w-full py-2
+}
