@@ -226,7 +226,7 @@ body{
   @apply flex bg-white rounded-sm 
 }
 .contact-note{
-  @apply bg-[#1679CB] text-white w-[40%] p-5 md:p-10 hover:rounded-xl ml-3 relative
+  @apply bg-[#1679CB] text-white w-[40%] p-2 sm:p-5 md:p-10 hover:rounded-xl ml-1 sm:ml-3 relative
 }
 .contact-note img{
   @apply w-[30%] md:w-[40%] lg:w-[50%]
@@ -265,7 +265,7 @@ body{
   @apply text-sm md:text-base font-semibold pb-2 md:pb-4
 }
 .radio-group{
-  @apply flex gap-4 items-center 
+  @apply flex gap-2 sm:gap-4 items-center 
 }
 .radio-group label{
   @apply flex gap-2 items-center

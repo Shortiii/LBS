@@ -70,9 +70,7 @@ body{
 .bottom-header p {
   @apply text-xs md:text-base lg:text-xl font-normal
 }
-.bottom-header a{
-  @apply inline
-}
+
 
 /* EVENT */
 .event{
