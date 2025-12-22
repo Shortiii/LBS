@@ -1,78 +1,50 @@
 import './styles/style.css'
-// import './styles/alumni.css'
-import header1 from './assets/header1.png'
-import header2 from './assets/header2.png'
-import header3 from './assets/header3.png'
-
-  const slides = [
-    {
-      image: header1,
-      title: "Together, We Lead Beyond the Classroom.",
-      text: "The Lagos Business School Alumni Network unites changemakers who are shaping industries, building communities, and redefining leadership across Africa and beyond. "
-    },
-    {
-      image: header2,
-      title: "Legacy. Leadership. LBS for Life.",
-      text: "More than a school - your alumni journey is a source of inspiration, mentorship, and global possibility shaped by the LBS spirit."
-    },
-    {
-      image: header3,
-      title: "Innovation Rooted in Community",
-      text: "Join a powerful network of alumni driving change in business, technology and society; connected by LBS, motivated by purpose."
-    }
-  ];
 
 
-  let current = 0;
-   const hero = document.getElementById("hero");
-   const title = document.getElementById("hero-title");
-   const text = document.getElementById("hero-text");
-   const dots = document.querySelectorAll(".dot");
+const toggles = document.querySelectorAll('.js-toggle');
+const menus = document.querySelectorAll('.js-menu');
 
-  function showSlide(index) {
-    current = index;
+toggles.forEach(toggle => {
+  const target = toggle.dataset.target;
+  const menu = toggle.querySelector(`.js-menu[data-menu="${target}"]`);
 
-    hero.style.backgroundImage = `url(${slides[index].image})`;
-    title.textContent = slides[index].title;
-    text.textContent = slides[index].text;
+  if (!menu) return;
 
-    dots.forEach(d => d.classList.remove("active"));
-    dots[index].classList.add("active");
-  }
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
 
-  let interval = setInterval(() => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }, 3000);
-
-  dots.forEach(dot => {
-    dot.addEventListener("click", () => {
-      clearInterval(interval);
-      showSlide(+dot.dataset.index);
+    menus.forEach(m => {
+      if (m !== menu) m.classList.add('hidden');
     });
+
+    menu.classList.toggle('hidden');
   });
-
-  showSlide(0);
-
-const toggle = document.getElementById('alumni-toggle');
-const menu = document.getElementById('alumni-menu');
-
-toggle.addEventListener('click', (e) => {
-  e.stopPropagation();
-  menu.classList.toggle('hidden');
 });
 
 document.addEventListener('click', () => {
-  menu.classList.add('hidden');
-});
-const newsToggle = document.getElementById('news-toggle');
-const newsMenu = document.getElementById('news-menu');
-
-newsToggle.addEventListener('click', (e) => {
-  e.stopPropagation();
-  newsMenu.classList.toggle('hidden');
+  menus.forEach(menu => menu.classList.add('hidden'));
 });
 
-document.addEventListener('click', () => {
-  newsMenu.classList.add('hidden');
-});
+
+const navToggle = document.querySelector('.js-nav-toggle');
+const navClose = document.querySelector('.js-nav-close');
+const mobileNav = document.querySelector('.mobile-nav');
+
+if (mobileNav) {
+  if (navToggle) {
+    navToggle.addEventListener('click', e => {
+      e.stopPropagation();
+      mobileNav.classList.toggle('open');
+    });
+  }
+  if (navClose) {
+    navClose.addEventListener('click', e => {
+      e.stopPropagation();
+      mobileNav.classList.remove('open');
+    });
+  }
+  document.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+  });
+  mobileNav.addEventListener('click', e => e.stopPropagation());
+}

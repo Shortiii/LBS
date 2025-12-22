@@ -10,25 +10,54 @@
     <header>
       <div class="nav">
         <div class="top-nav">
+          <div class="nav-toggle js-nav-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <a href="./index.html" class="nav-community"> Join our community</a>
           <a href="./login.html" class="nav-login"> Login</a>
         </div>
-        <div class="nav-header">
+        <div class="nav-header" id="hero">
           <div class="bottom-nav">
             <div class="logo">
               <img src="./src/assets/logo2.png" alt="Logo">
               <img src="./src/assets/logo.png" alt="Logo">
             </div>
-            <div class="nav-list">
+            <div class="nav-list mobile-nav">
+              <div class="cancel js-nav-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <div><a href="./index.html">Home</a></div>
-              <div class="list" id="alumni-toggle">Alumni
-                <ul id="alumni-menu" class="hidden">
+              <div class="list js-toggle" data-target="alumni" >Alumni
+                <ul class="js-menu hidden" data-menu="alumni">
                   <li><a href="./alumni.html">Find an Alumnus</a></li>
                   <li><a href="./membership.html">Membership</a></li>
                 </ul>
               </div>
-              <div class="list" id="news-toggle">News
-                <ul id="news-menu" class="hidden">
+              <div class="list js-toggle" data-target="news"> News
+                <ul class="js-menu hidden" data-menu="news">
+                  <li><a href="./news.html">News & Insights</a></li>
+                  <li><a href="./alumniSpotlight.html">Alumni Spotlights</a></li>
+                </ul>
+              </div>
+              <div><a href="./event.html">Events</a></div>
+              <div><a href="./resource.html">Resources</a></div>
+              <div><a href="./career.html">Careers</a></div>
+            </div>
+
+            <div class="nav-list desktop-nav">
+              <div><a href="./index.html">Home</a></div>
+              <div class="list js-toggle" data-target="alumni" >Alumni
+                <ul class="js-menu hidden" data-menu="alumni">
+                  <li><a href="./alumni.html">Find an Alumnus</a></li>
+                  <li><a href="./membership.html">Membership</a></li>
+                </ul>
+              </div>
+              <div class="list js-toggle" data-target="news">News
+                <ul class="js-menu hidden" data-menu="news">
                   <li><a href="./news.html">News & Insights</a></li>
                   <li><a href="./alumniSpotlight.html">Alumni Spotlights</a></li>
                 </ul>
@@ -165,7 +194,7 @@
               <path d="M49.2188 25C49.2188 38.3757 38.3757 49.2188 25 49.2188C11.6243 49.2188 0.78125 38.3757 0.78125 25C0.78125 11.6243 11.6243 0.78125 25 0.78125C38.3757 0.78125 49.2188 11.6243 49.2188 25ZM22.1986 37.8236L40.1674 19.8549C40.7775 19.2447 40.7775 18.2554 40.1674 17.6452L37.9577 15.4355C37.3476 14.8253 36.3582 14.8253 35.7479 15.4355L21.0938 30.0896L14.2521 23.2479C13.6419 22.6378 12.6525 22.6378 12.0423 23.2479L9.83262 25.4576C9.22246 26.0678 9.22246 27.0571 9.83262 27.6673L19.9889 37.8235C20.5991 38.4338 21.5884 38.4338 22.1986 37.8236Z" fill="white"/>
               </svg>
               </div>
-              <h6>Verified Alumni Only <br/> Staff (Optional)</h6>
+              <h6>Verified Alumni Only Staff (Optional)</h6>
             </div>
             <img src="./src/assets/Arc.png" alt="">
             <div class="access-div">
@@ -221,7 +250,7 @@
         <section class="privacy">
           <div class="privacy-template">
             <h2>Privacy and Security Notice</h2>
-          <p>Your privacy is important to us. Only verified alumni have access to the directory, and you can choose what information you want to display</p>
+          <p>Your privacy is important to us. Only verified alumni have access to the directory, and you can choose what information you want to display. </p>
           </div>
         </section>
     </main>
@@ -294,6 +323,6 @@
     </div>
 
   </footer>
-  <!-- <script type="module" src="/src/main.js"></script> -->
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

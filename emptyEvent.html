@@ -20,12 +20,22 @@
               <img src="./src/assets/logo.png" alt="Logo">
             </div>
             <div class="nav-list">
-              <a href="./index.html">Home</a>
-              <a href="./login.html">Alumni</a>
-              <a href="#">News</a>
-              <a href="./event.html">Events</a>
-              <a href="./resource.html">Resources</a>
-              <a href="./career.html">Careers</a>
+              <div><a href="./index.html">Home</a></div>
+              <div class="list js-toggle" data-target="alumni" >Alumni
+                <ul class="js-menu hidden" data-menu="alumni">
+                  <li><a href="./alumni.html">Find an Alumnus</a></li>
+                  <li><a href="./membership.html">Membership</a></li>
+                </ul>
+              </div>
+              <div class="list js-toggle" data-target="news"> News
+                <ul class="js-menu hidden" data-menu="news">
+                  <li><a href="./news.html">News & Insights</a></li>
+                  <li><a href="./alumniSpotlight.html">Alumni Spotlights</a></li>
+                </ul>
+              </div>
+              <div><a href="./event.html">Events</a></div>
+              <div><a href="./resource.html">Resources</a></div>
+              <div><a href="./career.html">Careers</a></div>
             </div>
           </div>
       </div>
@@ -115,5 +125,6 @@
     </div>
 
   </footer>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

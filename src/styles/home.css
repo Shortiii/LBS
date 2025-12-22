@@ -1,0 +1,325 @@
+@import "tailwindcss";
+body{
+  @apply w-full
+}
+/* NAV */
+.nav{
+  @apply relative
+}
+.top-nav {
+  @apply bg-[#122867] text-white py-2 md:py-4 lg:py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+}
+.nav-toggle {
+  @apply block lg:hidden cursor-pointer;
+}
+.top-nav a{
+  @apply text-xs md:text-sm lg:text-base
+}
+.nav-community{
+  @apply underline border-r-2  pr-4
+}
+.nav-header {
+  @apply bg-cover bg-center bg-no-repeat w-full h-[60vh] md:h-[80vh] lg:h-[90vh] transition-all duration-1000 overflow-hidden;
+  background-image: url('../assets/header1.png');
+}
+.bottom-nav {
+  @apply bg-[#12286780] flex py-6 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+}
+.desktop-nav{
+  @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
+}
+ .cancel {
+  @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
+}
+.nav-list {
+  @apply text-white cursor-pointer;
+}
+.list{
+  @apply relative
+}
+.list ul{
+  @apply bg-white text-black text-base p-3  border-b-2 border-[#165DFF] absolute top-8 left-2
+}
+.list ul li{
+  @apply block pb-2
+}
+.list ul li a{
+  @apply whitespace-nowrap
+}
+.mobile-nav {
+  @apply fixed top-0 left-0 h-screen w-2/4 sm:w-1/4 max-w-xs
+         bg-[#122867] text-white
+         flex flex-col gap-6
+         pt-15 px-6 items-center
+         transform -translate-x-full
+         transition-transform duration-300 ease-in-out
+         z-50 lg:hidden
+}
+.mobile-nav.open {
+  @apply translate-x-0;
+}
+.logo{
+  @apply flex gap-5
+}
+.bottom-header {
+  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-full md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 gap-6 
+}
+.bottom-header h1 {
+  @apply text-lg md:text-2xl lg:text-4xl font-bold mb-7
+}
+.bottom-header p {
+  @apply text-xs md:text-base lg:text-xl font-normal
+}
+.bottom-header a{
+  @apply inline
+}
+.join{
+  @apply bg-white text-black p-4 md:p-3 rounded-xl text-sm md:text-base lg:text-xl font-normal cursor-pointer w-[50%] md:w-[40%] lg:w-[30%] text-center
+}
+.toggle{
+  @apply absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-3 z-20
+}
+.dot {
+  @apply w-4 h-4 rounded-full bg-white/50 hover:bg-white transition;
+}
+.dot.active {
+  @apply bg-white;
+}
+
+/* ABOUT */
+.about {
+  @apply flex flex-col lg:flex-row items-center px-8 md:px-18 lg:px-24 my-28 gap-8 sm:gap-16 md:gap-8 w-full 
+}
+.main-img {
+  @apply  w-full lg:w-1/2 relative
+}
+.main-img img{
+  @apply w-full object-cover
+}
+.top-img{
+  @apply bg-[#122867] w-[20%] absolute top-[40%] left-[40%] flex justify-center py-2 md:py-4 cursor-pointer
+}
+.top-img svg{
+ @apply w-[50%] h-[50%] lg:w-full  lg:h-full
+}
+.bottom-img{
+  @apply w-[20%] h-[8%] bg-[#122867] absolute bottom-0 lg:-bottom-[46px]
+}
+.about-content {
+  @apply flex flex-col w-full lg:w-1/2 
+}
+.about-content h1 {
+  @apply text-xl sm:text-2xl lg:text-3xl font-semibold text-[#122867]
+}
+.about-content p {
+  @apply text-sm md:text-base font-normal text-[#676767] py-2 lg:py-4
+}
+.about-content a {
+  @apply text-sm md:text-base underline hover:text-[#122867]
+}
+.about-list{
+  @apply mt-4
+}
+.about-items {
+  @apply flex justify-between items-center gap-6 py-4
+}
+.about-item {
+  @apply border-t border-b border-[#E5E6EB]
+}
+.about-items p{
+  @apply p-0
+}
+.first-div .firstP {
+  @apply text-[#122867] text-lg font-semibold
+}
+.first-div .secondP {
+  @apply text-[#676767] text-base font-normal
+}
+
+/* CONNECT */
+.connect {
+  @apply bg-cover bg-center bg-no-repeat w-full h-full px-8 md:px-18 lg:px-24;
+  background-image: url('src/assets/Background Shape1.png');
+}
+.first-connect {
+  @apply pt-4 pb-10
+}
+.first-text{
+  @apply border-l-3 border-[#0E42D2] pl-3
+}
+.first-text h1{
+  @apply text-xl sm:text-2xl lg:text-3xl font-semibold text-[#122867]
+}
+.first-text p{
+  @apply text-sm md:text-base font-normal text-[#676767] 
+}
+.connect-grid{
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-20
+}
+.grid-card {
+  @apply relative overflow-hidden ;
+}
+.grid-card img, .card-items img, .third-card img {
+  @apply w-full h-full object-cover;
+}
+.grid-text {
+  @apply absolute bottom-0 left-0 w-3/4 bg-[#00227FE5] text-white px-5 py-2 md:py-4 hover:mb-2
+}
+.grid-text h4 {
+  @apply text-[10px] md:text-sm md:text-lg font-semibold mb-1;
+}
+.grid-text p {
+  @apply text-[10px] md:text-sm leading-snug opacity-90 pb-2;
+}
+.grid-text h6{
+@apply opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out
+}
+.second-container{
+  @apply flex flex-col lg:flex-row items-center lg:items-start gap-8 w-full pt-8 lg:pt-4 pb-6;
+}
+.first-card{
+  @apply flex flex-col gap-4
+}
+.card-items{
+  @apply relative overflow-hidden
+}
+.cardP{
+  @apply absolute top-0 left-0 bg-[#00227FE5] text-white p-2 sm:p-3 text-xs sm:text-sm;
+}
+.card-text, .card-note{
+  @apply absolute bottom-0 left-0 w-full bg-[#0E42D266] text-white p-3 
+}
+.card-text h4{
+  @apply text-[12px] sm:text-sm font-semibold pb-1
+}
+.card-text p, .card-note p{
+  @apply text-[12px] sm:text-sm
+}
+.card-note h4{
+  @apply text-xs sm:text-sm md:text-xl font-semibold pb-1
+}
+.third-div{
+  @apply text-base sm:text-lg md:text-2xl text-white font-semibold p-2 sm:p-3 bg-[#00227FE5]
+}
+.card-div{
+  @apply bg-white py-4
+}
+.card-div h2{
+  @apply text-[#1D2129] text-base sm:text-lg md:text-2xl
+}
+.card-div h4{
+  @apply text-[#4E5969] text-sm sm:text-base md:text-lg
+}
+.card-div p{
+  @apply pt-2 text-[12px] sm:text-base md:text-lg text-[#4E5969] italic
+}
+.card-div a {
+  @apply text-[12px] sm:text-base md:text-lg underline text-[#122867]
+}
+
+/* CONTACT */
+.contact {
+  @apply bg-cover bg-center bg-no-repeat w-full h-full px-8 md:px-18 lg:px-24 py-36 mt-5 flex flex-col justify-center items-center gap-28;
+  background-image: url('src/assets/Background Shape2.png');
+}
+.contact-div{
+  @apply flex bg-white rounded-sm 
+}
+.contact-note{
+  @apply bg-[#1679CB] text-white w-[40%] p-5 md:p-10 hover:rounded-xl ml-3 relative
+}
+.contact-note img{
+  @apply w-[30%] md:w-[40%] lg:w-[50%]
+}
+.contact-note h4{
+  @apply text-base sm:text-lg md:text-xl lg:text-[28px] font-semibold pb-2 sm:pb-4 md:pb-2 lg:pb-8
+}
+.contact-note h6{
+  @apply  text-[12px] sm:text-base lg:text-lg font-normal pb-3 md:pb-6
+}
+.contact-div  .eliipse1{
+  @apply absolute bottom-0 right-0
+}
+.contact-div  .eliipse2{
+  @apply absolute bottom-[5%] sm:bottom-[10%] right-[15%]
+}
+.contact-details{
+  @apply w-[60%] p-4 sm:p-8 md:p-10 lg:p-15 text-[#676767]
+}
+.form-div{
+  @apply flex gap-4 md:gap-8 lg:gap-10
+}
+.form-input input{
+  @apply border-b-2 border-[#8D8D8D] w-full
+}
+.form-input{
+  @apply flex flex-col
+}
+.email{
+  @apply w-[30%] py-4 md:py-8 lg:py-12
+}
+.form-input label{
+  @apply text-sm
+}
+.form-input .title{
+  @apply text-sm md:text-base font-semibold pb-2 md:pb-4
+}
+.radio-group{
+  @apply flex gap-4 items-center 
+}
+.radio-group label{
+  @apply flex gap-2 items-center
+}
+.subject{
+  @apply pb-4 md:pb-8 lg:pb-12
+}
+.message label{
+  @apply pb-2 md:pb-4
+}
+.contact button{
+  @apply my-4 md:my-8 lg:my-12 bg-[#122867] text-white py-2 md:py-4 px-4 md:px-8 rounded-lg text-xs md:text-sm lg:text-base
+}
+.form-note p{
+  @apply w-full lg:w-[55%] pb-3 font-medium text-[#676767] text-xs md:text-sm lg:text-base
+}
+.form-note p span{
+  @apply text-[#122867]
+}
+
+/* FOOTER */
+footer{
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6  lg:gap-8 items-center lg:items-start
+}
+.footer-note p{
+  @apply text-[12px] md:text-sm font-normal  pt-4 
+}
+.footer-div h3{
+  @apply text-base font-semibold pb-2
+}
+.footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
+  @apply text-[12px] md:text-sm 
+}
+.footer-div h5{
+  @apply py-2 md:py-4 lg:py-6
+}
+.footer-div p{
+  @apply pt-1
+}
+.footer-social div{
+  @apply flex items-center gap-2 pb-2
+}
+.footer-connect h3{
+  @apply text-base md:text-xl lg:text-[28px] pb-2 lg:pb-4
+}
+.footer-connect p{
+  @apply text-[12px] md:text-sm 
+}
+.connect-input{
+  @apply pt-5 text-xs
+}
+.footer-connect input{
+  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full
+}
+.footer-connect button{
+  @apply bg-[#1679CB] text-white mt-3 w-full py-2
+}

@@ -15,7 +15,19 @@
   @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];
 }
 .nav-list {
-  @apply flex items-center gap-6 text-white
+  @apply flex items-center gap-6 text-white cursor-pointer
+}
+.list{
+  @apply relative
+}
+.list ul{
+  @apply bg-white text-black text-base p-3  border-b-2 border-[#165DFF] absolute top-8 left-2
+}
+.list ul li{
+  @apply block pb-2
+}
+.list ul li a{
+  @apply whitespace-nowrap
 }
 .logo{
   @apply flex gap-5
@@ -83,19 +95,19 @@
 
 /* FOOTER */
 footer{
-  @apply bg-[#122867] text-white py-20 px-30 grid grid-cols-5 gap-8 items-start
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6  lg:gap-8 items-center lg:items-start
 }
 .footer-note p{
-  @apply text-sm font-normal  pt-4
+  @apply text-[12px] md:text-sm font-normal  pt-4 
 }
 .footer-div h3{
   @apply text-base font-semibold pb-2
 }
 .footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
-  @apply text-sm 
+  @apply text-[12px] md:text-sm 
 }
 .footer-div h5{
-  @apply py-6
+  @apply py-2 md:py-4 lg:py-6
 }
 .footer-div p{
   @apply pt-1
@@ -104,10 +116,10 @@ footer{
   @apply flex items-center gap-2 pb-2
 }
 .footer-connect h3{
-  @apply text-[28px] pb-4
+  @apply text-base md:text-xl lg:text-[28px] pb-2 lg:pb-4
 }
 .footer-connect p{
-  @apply text-sm
+  @apply text-[12px] md:text-sm 
 }
 .connect-input{
   @apply pt-5 text-xs

@@ -1,21 +1,38 @@
 @import "tailwindcss";
-
+body{
+  @apply w-full
+}
 /* NAV */
+.nav{
+  @apply relative
+}
 .top-nav {
-  @apply bg-[#122867] text-white py-6 pl-20  flex gap-4;
+  @apply bg-[#122867] text-white py-2 md:py-4 lg:py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+}
+.nav-toggle {
+  @apply block lg:hidden cursor-pointer;
+}
+.top-nav a{
+  @apply text-xs md:text-sm lg:text-base
 }
 .nav-community{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply bg-cover bg-center bg-no-repeat w-full h-screen relative transition-all duration-1000 overflow-hidden;
+  @apply bg-cover bg-center bg-no-repeat w-full h-[60vh] md:h-[80vh] lg:h-[90vh] transition-all duration-1000 overflow-hidden;
   background-image: url('../assets/alumniHero.png');
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%] ;
+  @apply bg-[#12286780] flex py-6 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+}
+.desktop-nav{
+  @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
+}
+ .cancel {
+  @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
 }
 .nav-list {
-  @apply flex items-center gap-6 text-white cursor-pointer
+  @apply text-white cursor-pointer;
 }
 .list{
   @apply relative
@@ -29,23 +46,35 @@
 .list ul li a{
   @apply whitespace-nowrap
 }
+.mobile-nav {
+  @apply fixed top-0 left-0 h-screen w-2/4 sm:w-1/4 max-w-xs
+         bg-[#122867] text-white
+         flex flex-col gap-6
+         pt-15 px-6 items-center
+         transform -translate-x-full
+         transition-transform duration-300 ease-in-out
+         z-50 lg:hidden
+}
+.mobile-nav.open {
+  @apply translate-x-0;
+}
 .logo{
   @apply flex gap-5
 }
 .bottom-header {
-  @apply text-white mt-35 ml-20 w-3/4 flex flex-col gap-5 bg-[#122867CC]  p-6
+  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-full md:w-3/4 flex flex-col gap-2 md:gap-4 gap-6 bg-[#122867CC] p-2 md:p-4 lg:p-6 
 }
 .bottom-header h1 {
-  @apply text-4xl font-bold mb-4 text-[#00AEEF]
+  @apply text-lg md:text-2xl lg:text-4xl font-bold mb-0 lg:mb-7 text-[#00AEEF] leading-7
 }
 .bottom-header p {
-  @apply text-xl font-normal
+  @apply text-xs md:text-base lg:text-xl font-normal
 }
 .bottom-header a{
   @apply inline
 }
 .join{
-  @apply bg-white text-black p-3 rounded-xl text-xl font-normal cursor-pointer w-[30%] text-center
+  @apply bg-white text-black p-4 md:p-3 rounded-xl text-sm md:text-base lg:text-xl font-normal cursor-pointer w-[50%] md:w-[40%] lg:w-[30%] text-center
 }
 
 /* MAIN */
@@ -53,7 +82,7 @@ main{
     @apply p-[7%]
 }
 .alumni-div{
-    @apply flex gap-6
+    @apply flex flex-col lg:flex-row gap-6
 }
 .first-div{
     @apply flex flex-col gap-4 relative 
@@ -77,30 +106,30 @@ main{
     @apply text-[#A7A9AC]
 }
 .alumni-benefits{
-    @apply py-10 flex flex-col gap-15 px-25
+    @apply py-10 flex flex-col gap-15 px-8 md:px-18 lg:px-24
 }
 .section-div h2{
-    @apply text-[32px] font-semibold text-[#122867] border-l-3 border-[#0E42D2] p-2
+    @apply text-xl md:text-2xl lg:text-[32px] font-semibold text-[#122867] border-l-3 border-[#0E42D2] p-2
 }
 .initial-div{
-    @apply flex gap-10 text-[#1D2129] pt-4
+    @apply flex flex-col lg:flex-row gap-10 text-[#1D2129] pt-4
 }
 .initial-div h4{
-@apply text-[32px] w-3/4
+@apply text-xl md:text-2xl lg:text-[32px] w-full  md:w-3/4
 }
 .initial-div ol{
-    @apply text-2xl pt-4 w-3/4 
+    @apply text-lg md:text-xl lg:text-2xl pt-2 md:pt-4 w-3/4 
 }
 .initial-div li{
-    @apply  pt-4 leading-8
+    @apply pt-2 md:pt-4 leading-8
 }
 
 /* SEARCH */
 .search{
-  @apply bg-[#122867] text-white mx-25 my-8 px-6 pt-10 pb-15
+  @apply bg-[#122867] text-white mx-8 md:mx-18 lg:mx-24 my-8 px-3 md:px-6 pt-10 pb-15
 }
 .search h2{
-  @apply text-[32px] border-l-3 pl-4 border-[#0E42D2]
+  @apply text-xl md:text-2xl lg:text-[32px] border-l-3 pl-4 border-[#0E42D2]
 }
 .search-div{
   @apply flex flex-col gap-4 py-4
@@ -109,27 +138,27 @@ main{
   @apply flex items-stretch
 }
 .search-template h5{
-  @apply bg-[#00AEEF] text-2xl font-semibold px-4 py-2 flex items-center justify-center
+  @apply bg-[#00AEEF] text-lg md:text-xl lg:text-2xl font-semibold px-4 py-2 flex items-center justify-center
 }
 .search-template p{
-  @apply bg-white text-black text-xl px-4 py-2
+  @apply bg-white text-black text-base md:text-lg lg:text-xl px-4 py-2
 }
 
 /* ACCESS */
 .access{
-  @apply mx-25
+  @apply mx-8 md:mx-18 lg:mx-24
 }
 .access-title{
-  @apply border-l-3 border-[#0E42D2] pl-4
+  @apply border-l-3 border-[#0E42D2] pl-2 md:pl-4
 }
 .access-title h2{
-  @apply text-[#122867] text-[32px] font-semibold
+  @apply text-[#122867] text-xl md:text-2xl lg:text-[32px]  font-semibold
 }
 .access-title p{
-  @apply text-[#676767] text-base
+  @apply text-[#676767] text-xs md:text-sm lg:text-base
 }
 .access-template{
-  @apply p-10 flex justify-between items-center
+  @apply p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 justify-center gap-2 md:gap-4 lg:gap-6 items-center
 }
 .access-div{
   @apply flex flex-col gap-2 items-center text-center
@@ -141,35 +170,35 @@ main{
   @apply text-[#122867] text-base
 }
 .access-template img{
-  @apply h-2
+  @apply h-2 hidden lg:block
 }
 .privacy{
-  @apply px-25
+  @apply px-8 md:px-18 lg:px-24
 }
 .privacy-template{
-  @apply py-10 px-6 bg-[#122867] text-white
+  @apply py-5 md:py-10 px-4 md:px-6 bg-[#122867] text-white
 }
 .privacy-template h2{
-  @apply text-[32px] font-semibold pl-4 border-l-3 border-[#0E42D2]
+  @apply text-xl md:text-2xl lg:text-[32px] font-semibold pl-4 border-l-3 border-[#0E42D2]
 }
 .privacy-template p {
-  @apply text-2xl pt-6
+  @apply text-lg md:text-xl lg:text-2xl pt-6
 }
 /* FOOTER */
 footer{
-  @apply bg-[#122867] text-white py-20 px-30 grid grid-cols-5 gap-8 items-start
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6  lg:gap-8 items-center lg:items-start
 }
 .footer-note p{
-  @apply text-sm font-normal  pt-4
+  @apply text-[12px] md:text-sm font-normal  pt-4 
 }
 .footer-div h3{
   @apply text-base font-semibold pb-2
 }
 .footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
-  @apply text-sm 
+  @apply text-[12px] md:text-sm 
 }
 .footer-div h5{
-  @apply py-6
+  @apply py-2 md:py-4 lg:py-6
 }
 .footer-div p{
   @apply pt-1
@@ -178,10 +207,10 @@ footer{
   @apply flex items-center gap-2 pb-2
 }
 .footer-connect h3{
-  @apply text-[28px] pb-4
+  @apply text-base md:text-xl lg:text-[28px] pb-2 lg:pb-4
 }
 .footer-connect p{
-  @apply text-sm
+  @apply text-[12px] md:text-sm 
 }
 .connect-input{
   @apply pt-5 text-xs

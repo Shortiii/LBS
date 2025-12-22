@@ -3,10 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/spotlight.css">
+    <link rel="stylesheet" href="./src/styles/highlight.css">
     <title>News & highlight</title>
 </head>
 <body>
-    
+    <header>
+      <div class="nav">
+        <div class="top-nav">
+          <a href="./index.html" class="nav-community"> Join our community</a>
+          <a href="./login.html" class="nav-login"> Login</a>
+        </div>
+        <div class="nav-header">
+          <div class="bottom-nav">
+            <div class="logo">
+              <img src="./src/assets/logo2.png" alt="Logo">
+              <img src="./src/assets/logo.png" alt="Logo">
+            </div>
+            <div class="nav-list">
+              <div><a href="./index.html">Home</a></div>
+              <div class="list js-toggle" data-target="alumni" >Alumni
+                <ul class="js-menu hidden" data-menu="alumni">
+                  <li><a href="./alumni.html">Find an Alumnus</a></li>
+                  <li><a href="./membership.html">Membership</a></li>
+                </ul>
+              </div>
+              <div class="list js-toggle" data-target="news"> News
+                <ul class="js-menu hidden" data-menu="news">
+                  <li><a href="./news.html">News & Insights</a></li>
+                  <li><a href="./alumniSpotlight.html">Alumni Spotlights</a></li>
+                </ul>
+              </div>
+              <div><a href="./event.html">Events</a></div>
+              <div><a href="./resource.html">Resources</a></div>
+              <div><a href="./career.html">Careers</a></div>
+            </div>
+          </div>
+      </div>
+    </header>
+
+    <main>
+        <section class="highlight">
+            <a href="./news.html">Back to News</a>
+            <div class="highlight-title">
+                <h6>Category</h6>
+                <h2>Stories That Inspire. Voices That Lead.</h2>
+                <div class="title-info">
+                    <p>
+                        <img src="./src/assets/Ellipse3.png" alt="">
+                        Simi Adeagbo
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66732 1.16699C4.94346 1.16699 5.16732 1.39085 5.16732 1.66699V2.17547C5.60867 2.16698 6.09492 2.16699 6.62971 2.16699H9.3716C9.90638 2.16699 10.3926 2.16698 10.834 2.17547V1.66699C10.834 1.39085 11.0578 1.16699 11.334 1.16699C11.6101 1.16699 11.834 1.39085 11.834 1.66699V2.21838C12.0073 2.2316 12.1714 2.2482 12.3267 2.26908C13.1083 2.37417 13.7409 2.59558 14.2398 3.09449C14.7387 3.5934 14.9601 4.22603 15.0652 5.00764C15.0988 5.25744 15.1213 5.53005 15.1365 5.82704C15.1564 5.88103 15.1673 5.9394 15.1673 6.00033C15.1673 6.04654 15.161 6.09129 15.1493 6.13377C15.1673 6.66842 15.1673 7.27549 15.1673 7.96272V9.37127C15.1673 10.5964 15.1673 11.5669 15.0652 12.3263C14.9601 13.108 14.7387 13.7406 14.2398 14.2395C13.7409 14.7384 13.1083 14.9598 12.3267 15.0649C11.5672 15.167 10.5968 15.167 9.37159 15.167H6.62971C5.40454 15.167 4.43411 15.167 3.67464 15.0649C2.89302 14.9598 2.26039 14.7384 1.76148 14.2395C1.26257 13.7406 1.04116 13.108 0.936075 12.3263C0.833966 11.5669 0.833974 10.5964 0.833985 9.37127V7.96271C0.833979 7.27549 0.833973 6.66842 0.85199 6.13377C0.840255 6.09129 0.833985 6.04654 0.833985 6.00033C0.833985 5.9394 0.844881 5.88103 0.86483 5.82703C0.879954 5.53005 0.902491 5.25744 0.936075 5.00764C1.04116 4.22603 1.26257 3.5934 1.76148 3.09449C2.26039 2.59558 2.89302 2.37417 3.67464 2.26908C3.82992 2.2482 3.99402 2.2316 4.16732 2.21838V1.66699C4.16732 1.39085 4.39118 1.16699 4.66732 1.16699ZM1.84271 6.50033C1.8342 6.93548 1.83398 7.43098 1.83398 8.00033V9.33366C1.83398 10.6049 1.83505 11.508 1.92716 12.1931C2.01733 12.8638 2.18645 13.2502 2.46859 13.5324C2.75073 13.8145 3.13716 13.9836 3.80788 14.0738C4.49299 14.1659 5.3961 14.167 6.66732 14.167H9.33398C10.6052 14.167 11.5083 14.1659 12.1934 14.0738C12.8641 13.9836 13.2506 13.8145 13.5327 13.5324C13.8149 13.2502 13.984 12.8638 14.0741 12.1931C14.1663 11.508 14.1673 10.6049 14.1673 9.33366V8.00033C14.1673 7.43098 14.1671 6.93548 14.1586 6.50033H1.84271ZM14.1129 5.50033H1.88844C1.89912 5.37407 1.91189 5.25448 1.92716 5.14089C2.01733 4.47017 2.18645 4.08373 2.46859 3.80159C2.75073 3.51945 3.13716 3.35034 3.80788 3.26016C4.49299 3.16805 5.3961 3.16699 6.66732 3.16699H9.33398C10.6052 3.16699 11.5083 3.16805 12.1934 3.26016C12.8641 3.35034 13.2506 3.51945 13.5327 3.80159C13.8149 4.08373 13.984 4.47017 14.0741 5.14089C14.0894 5.25448 14.1022 5.37407 14.1129 5.50033Z" fill="#4E5969"/>
+                        </svg>
+                        November 18, 2025
+                    </p>
+                    <p>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.59 12L15 7.41V9.87L14.14 10C9.83 10.61 6.91 12.87 5.24 16.33C7.56 14.69 10.44 13.9 14 13.9H15V16.59M13 14.92C8.53 15.13 5.33 16.74 3 20C4 15 7 10 14 9V5L21 12L14 19V14.9C13.67 14.9 13.34 14.91 13 14.92Z" fill="#4E5969"/>
+                        </svg>
+                        Share
+                    </p>
+                </div>
+            </div>
+            <div class="highlight-img">
+                <img src="./src/assets/moreEvent.png" alt="">
+                <div class="social-media">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2171_10518)">
+                    <rect width="29.7049" height="29.7049" rx="14.8525" fill="#4267B2"/>
+                    <path d="M15.8432 24.7544V15.7211H18.8753L19.3293 12.2007H15.8432V9.95306C15.8432 8.93384 16.1263 8.23919 17.588 8.23919L19.4522 8.23833V5.08974C19.1296 5.04699 18.0231 4.95117 16.7357 4.95117C14.048 4.95117 12.2079 6.59169 12.2079 9.60459V12.2008H9.16797V15.7212H12.2078V24.7545L15.8432 24.7544Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2171_10518">
+                    <rect width="29.7049" height="29.7049" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2171_10519)">
+                    <rect width="29.7049" height="29.7049" rx="14.8525" fill="#0077B5"/>
+                    <path d="M23.0997 21.8611C22.125 21.8379 21.1736 21.8379 20.1989 21.8611C19.99 21.8611 19.9436 21.8147 19.9436 21.6058C19.9436 19.8885 19.9436 18.148 19.9436 16.4306C19.9436 16.0361 19.9204 15.6416 19.8043 15.2703C19.4562 14.0635 18.0638 13.6226 17.0659 14.4348C16.5322 14.8526 16.3233 15.4327 16.3233 16.129C16.3233 17.7534 16.3233 19.3779 16.3233 21.0024C16.3233 21.2113 16.3001 21.4201 16.3233 21.6522C16.3465 21.8379 16.2537 21.8843 16.0912 21.8611C15.0933 21.8611 14.1186 21.8611 13.1207 21.8611C12.9351 21.8611 12.8887 21.8147 12.8887 21.629C12.9119 20.167 12.9119 18.7049 12.9119 17.2197C12.9119 15.4095 12.9119 13.5994 12.8887 11.8125C12.8887 11.6036 12.9351 11.5572 13.1207 11.5572C14.1186 11.5572 15.0933 11.5572 16.0912 11.5572C16.2769 11.5572 16.3233 11.6036 16.3233 11.7892C16.3233 12.1606 16.3233 12.5319 16.3233 12.9728C16.3929 12.9032 16.4161 12.88 16.4393 12.8568C17.3444 11.534 18.6208 11.1627 20.1292 11.3947C21.8698 11.6732 22.9837 12.88 23.2622 14.7365C23.3318 15.1775 23.355 15.6184 23.355 16.0593C23.355 17.9159 23.355 19.7492 23.355 21.6058C23.355 21.7915 23.3086 21.8611 23.0997 21.8611Z" fill="white"/>
+                    <path d="M11.0325 16.7096C11.0325 18.3341 11.0325 19.9585 11.0325 21.583C11.0325 21.7919 10.9861 21.8615 10.7772 21.8615C9.80255 21.8383 8.82786 21.8615 7.85316 21.8615C7.66751 21.8615 7.62109 21.8151 7.62109 21.6294C7.62109 18.3573 7.62109 15.0619 7.62109 11.7897C7.62109 11.6272 7.66751 11.5576 7.85316 11.5576C8.85106 11.5576 9.84896 11.5576 10.8469 11.5576C11.0557 11.5576 11.0789 11.6272 11.0789 11.8129C11.0325 13.4374 11.0325 15.0619 11.0325 16.7096Z" fill="white"/>
+                    <path d="M11.1942 8.86528C10.9621 9.79355 10.0107 10.3273 8.91993 10.1417C7.75958 9.956 7.10979 8.81886 7.52751 7.70493C7.806 7.00872 8.479 6.59099 9.33766 6.6142C10.6372 6.59099 11.4959 7.63531 11.1942 8.86528Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2171_10519">
+                    <rect width="29.7049" height="29.7049" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2171_10520)">
+                    <path d="M0.633168 14.6725C0.632472 17.1678 1.28958 19.6044 2.53907 21.752L0.513672 29.0897L8.0816 27.1208C10.1748 28.2515 12.5201 28.8439 14.9033 28.8441H14.9096C22.7772 28.8441 29.1816 22.4916 29.185 14.6836C29.1865 10.9001 27.7029 7.34231 25.0074 4.66563C22.3123 1.98918 18.728 0.514422 14.909 0.512695C7.04048 0.512695 0.636532 6.86481 0.633284 14.6725" fill="url(#paint0_linear_2171_10520)"/>
+                    <path d="M0.124137 14.6677C0.123325 17.2528 0.803988 19.7765 2.09803 22.001L0 29.6018L7.83929 27.5623C9.99927 28.7308 12.4312 29.3469 14.9058 29.3479H14.9122C23.062 29.3479 29.6965 22.7669 29.7 14.6794C29.7014 10.7599 28.1644 7.07424 25.3726 4.30167C22.5805 1.52943 18.868 0.00161163 14.9122 0C6.76093 0 0.127385 6.58005 0.124137 14.6677ZM4.79272 21.6179L4.50001 21.1569C3.26955 19.2156 2.6201 16.9722 2.62102 14.6686C2.62358 7.94636 8.1371 2.4773 14.9168 2.4773C18.2001 2.47868 21.2856 3.74865 23.6064 6.05281C25.9271 8.35721 27.204 11.4205 27.2032 14.6785C27.2002 21.4007 21.6866 26.8704 14.9122 26.8704H14.9073C12.7015 26.8693 10.5382 26.2815 8.65152 25.1708L8.20254 24.9066L3.55054 26.1168L4.79272 21.6179Z" fill="url(#paint1_linear_2171_10520)"/>
+                    <path d="M11.2165 8.53557C10.9397 7.92511 10.6484 7.91279 10.3851 7.90208C10.1696 7.89288 9.92317 7.89357 9.67698 7.89357C9.43057 7.89357 9.0302 7.98554 8.69178 8.35219C8.35301 8.71918 7.39844 9.60604 7.39844 11.4098C7.39844 13.2137 8.72252 14.9569 8.9071 15.2017C9.09192 15.4461 11.4633 19.2661 15.2189 20.7357C18.3402 21.957 18.9754 21.7141 19.6528 21.6528C20.3304 21.5918 21.839 20.7662 22.1468 19.9101C22.4548 19.0541 22.4548 18.3203 22.3625 18.167C22.2701 18.0142 22.0237 17.9225 21.6542 17.7392C21.2846 17.5559 19.468 16.6689 19.1294 16.5465C18.7906 16.4243 18.5443 16.3632 18.2979 16.7304C18.0515 17.0969 17.3439 17.9225 17.1282 18.167C16.9128 18.4121 16.6971 18.4426 16.3277 18.2592C15.958 18.0753 14.768 17.6886 13.3562 16.4397C12.2578 15.4679 11.5162 14.2678 11.3006 13.9007C11.0851 13.5341 11.2775 13.3355 11.4628 13.1528C11.6288 12.9885 11.8324 12.7247 12.0174 12.5107C12.2016 12.2965 12.2631 12.1438 12.3863 11.8993C12.5096 11.6545 12.4479 11.4404 12.3557 11.257C12.2631 11.0737 11.5451 9.26046 11.2165 8.53557Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_2171_10520" x1="1434.08" y1="2858.22" x2="1434.08" y2="0.512695" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1FAF38"/>
+                    <stop offset="1" stop-color="#60D669"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_2171_10520" x1="1485" y1="2960.18" x2="1485" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F9F9F9"/>
+                    <stop offset="1" stop-color="white"/>
+                    </linearGradient>
+                    <clipPath id="clip0_2171_10520">
+                    <rect width="29.7" height="29.7" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2171_10524)">
+                    <rect width="32" height="32" rx="16" fill="#272727"/>
+                    <g clip-path="url(#clip1_2171_10524)">
+                    <path d="M20.1626 9.5H22.3679L17.5499 15.0067L23.2179 22.5H18.7799L15.3039 17.9553L11.3266 22.5H9.11994L14.2733 16.61L8.83594 9.5H13.3866L16.5286 13.654L20.1626 9.5ZM19.3886 21.18H20.6106L12.7226 10.7507H11.4113L19.3886 21.18Z" fill="white"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2171_10524">
+                    <rect width="32" height="32" fill="white"/>
+                    </clipPath>
+                    <clipPath id="clip1_2171_10524">
+                    <rect width="16" height="16" fill="white" transform="translate(8 8)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2171_10531)">
+                    <rect width="29.7049" height="29.7049" rx="14.8525" fill="#F2F2F2"/>
+                    <path d="M14.1398 11.1208C13.8868 10.8088 13.9421 10.3475 14.2687 10.1137C16.927 8.21055 18.3921 8.05453 20.29 10.2531L20.5172 10.5239C22.5283 13.0035 22.135 14.4273 19.6287 16.7226C19.3324 16.994 18.8697 16.9526 18.6166 16.6406C18.3752 16.3429 18.4144 15.9088 18.6967 15.6497C18.8916 15.4709 19.0701 15.3 19.2328 15.1353C19.828 14.533 20.1338 14.0935 20.2758 13.7563C20.3962 13.4704 20.4118 13.2334 20.3272 12.9376C20.2274 12.5887 19.9706 12.1057 19.4137 11.419C18.8569 10.7325 18.4377 10.3821 18.117 10.2124C17.8448 10.0684 17.6095 10.0341 17.3046 10.0929C16.9454 10.1623 16.4529 10.3715 15.7406 10.8295C15.5457 10.9549 15.3411 11.094 15.1255 11.2475C14.8135 11.4695 14.381 11.4182 14.1398 11.1208ZM11.3813 13.3581C11.6225 13.6555 11.5835 14.0893 11.3018 14.3487C11.1075 14.5278 10.9293 14.699 10.7666 14.8637C10.1714 15.466 9.86517 15.9048 9.72304 16.242C9.60245 16.5282 9.58752 16.7653 9.67225 17.0615C9.77206 17.4103 10.0283 17.8927 10.5852 18.5793C11.1421 19.266 11.5617 19.6169 11.8825 19.7866C12.1545 19.9304 12.3895 19.9642 12.6942 19.9053C13.0534 19.8359 13.5465 19.6276 14.2588 19.1695C14.4535 19.0443 14.6574 18.905 14.8724 18.7514C15.184 18.5288 15.6165 18.58 15.8578 18.8775C16.1107 19.1893 16.0557 19.6503 15.7292 19.8841C12.9661 21.8626 11.4926 21.9538 9.48159 19.4743L9.2627 19.1967C7.50335 16.8859 7.95851 15.4844 10.3693 13.2763C10.6655 13.005 11.1283 13.0461 11.3813 13.3581Z" fill="#757575"/>
+                    <path d="M12.7012 16.8643L17.2992 13.135" stroke="#757575" stroke-width="1.42086" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_2171_10531">
+                    <rect width="29.7049" height="29.7049" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <section class="highlight-note">
+            <div class="highlight-text">
+                <div class="register-note">
+                    <p>The Global Impact Initiative at Lagos Business School (LBS) is making significant strides in providing sustainable solutions across Africa. Through collaborative research, innovative programs, and strategic partnerships, LBS is addressing critical challenges in areas such as healthcare, education, and environmental sustainability.</p>
+                    <p>Recent projects include developing affordable housing solutions using eco-friendly materials, implementing mobile health clinics in rural communities, and creating educational programs focused on renewable energy. These initiatives not only improve the quality of life for local populations but also contribute to long-term economic growth and stability.</p>
+                    <p>LBS is committed to fostering a culture of social responsibility among its students and faculty, encouraging them to become leaders in sustainable development. By integrating sustainability into its curriculum and research, LBS aims to empower the next generation of business leaders to create positive change in Africa and beyond.</p>
+                </div>
+                <h2>Education Technology Summit: Revolutionizing Learning in Africa</h2>
+                <div class="register-note">
+                    <p>The Global Impact Initiative at Lagos Business School (LBS) is making significant strides in providing sustainable solutions across Africa. Through collaborative research, innovative programs, and strategic partnerships, LBS is addressing critical challenges in areas such as healthcare, education, and environmental sustainability.</p>
+                    <p>Recent projects include developing affordable housing solutions using eco-friendly materials, implementing mobile health clinics in rural communities, and creating educational programs focused on renewable energy. These initiatives not only improve the quality of life for local populations but also contribute to long-term economic growth and stability.</p>
+                    <p>LBS is committed to fostering a culture of social responsibility among its students and faculty, encouraging them to become leaders in sustainable development. By integrating sustainability into its curriculum and research, LBS aims to empower the next generation of business leaders to create positive change in Africa and beyond.</p>
+                </div>
+                <div class="register-note">
+                    <p>The Global Impact Initiative at Lagos Business School (LBS) is making significant strides in providing sustainable solutions across Africa. Through collaborative research, innovative programs, and strategic partnerships, LBS is addressing critical challenges in areas such as healthcare, education, and environmental sustainability.</p>
+                    <p>Recent projects include developing affordable housing solutions using eco-friendly materials, implementing mobile health clinics in rural communities, and creating educational programs focused on renewable energy. These initiatives not only improve the quality of life for local populations but also contribute to long-term economic growth and stability.</p>
+                    <p>LBS is committed to fostering a culture of social responsibility among its students and faculty, encouraging them to become leaders in sustainable development. By integrating sustainability into its curriculum and research, LBS aims to empower the next generation of business leaders to create positive change in Africa and beyond.</p>
+                </div>
+            </div>
+            <div class="past-highlight">
+                <h6>Popular Posts</h6>
+                <p>LBS Alumni Lead the Conversation on Artificial Intelligence in Africa</p>
+                <p>From Classroom to Company: Building Africa’s Next-Gen Startups</p>
+                <p>Lagos Business School Opens Admissions for 2025 MBA, EMBA, and Executive Programs</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-note">
+      <img src="./src/assets/footer-logo.png" alt="">
+      <p>Connecting business leaders across the globe through a vibrant alumni network that drives professional growth and meaningful impact.</p>
+    </div>
+
+    <div class="footer-div">
+        <h3>Contact Us</h3>
+        <h4>Lagos Business School  KM 22, Lekki-Epe Expressway  Ajah, Lagos State, Nigeria</h4>
+        <h5>Call: +234 (0) 803 304 2387</h5>
+        <h6>Email: alumni@lbs.edu.ng</h6>
+    </div>
+
+    <div class="footer-div">
+        <h3>Quick Links</h3>
+        <p>Resources</p>
+        <p>Signup</p>
+        <p>Login</p>
+        <p>Support</p>
+        <p>Career</p>
+        <p>Alumni Directory</p>
+        <p>Leadership Board</p>
+        <p>Event</p>
+    </div>
+
+    <div class="footer-div footer-social">
+        <h3>Our social pages</h3>
+        <div>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.5 7.9275C11.2601 7.74775 10.9995 7.5975 10.7238 7.48C10.5363 5.64375 9.34875 5.08 8.81375 4.9175C7.67875 4.57375 6.37625 4.98 5.79125 5.86062C5.75445 5.91582 5.74109 5.98338 5.7541 6.04843C5.76711 6.11348 5.80543 6.1707 5.86062 6.2075C5.91582 6.2443 5.98338 6.25766 6.04843 6.24465C6.11348 6.23164 6.1707 6.19332 6.2075 6.13812C6.67 5.44438 7.75125 5.11812 8.66875 5.39625C9.17625 5.54937 9.97813 5.99625 10.1944 7.29125C9.7733 7.17174 9.3377 7.11117 8.9 7.11125C8.07875 7.11125 7.31437 7.32 6.7475 7.70062C6.09437 8.13812 5.7475 8.76313 5.7475 9.49938C5.7475 10.7931 6.81 11.4694 7.85437 11.4694C8.22233 11.4667 8.586 11.3902 8.92385 11.2444C9.26171 11.0986 9.56686 10.8865 9.82125 10.6206C10.4187 9.99937 10.7388 9.10875 10.7475 8.04375C10.905 8.1248 11.0553 8.2191 11.1969 8.32563C11.8844 8.84563 12.2475 9.59688 12.2475 10.4994C12.2475 11.2325 11.8569 12.0281 11.2037 12.6275C10.6475 13.14 9.63812 13.75 8 13.75C4.84812 13.75 3.25 11.8156 3.25 8C3.25 4.18438 4.84812 2.25 8 2.25C10.1431 2.25 11.5788 3.15625 12.2669 4.9425C12.2777 4.97444 12.2948 5.00387 12.3172 5.02902C12.3397 5.05417 12.367 5.07452 12.3975 5.08884C12.428 5.10317 12.4611 5.11118 12.4948 5.11239C12.5285 5.1136 12.5621 5.10798 12.5935 5.09588C12.625 5.08378 12.6537 5.06543 12.6779 5.04196C12.702 5.01848 12.7212 4.99036 12.7343 4.95927C12.7473 4.92819 12.7539 4.89479 12.7537 4.86108C12.7535 4.82737 12.7465 4.79405 12.7331 4.76312C11.9637 2.76375 10.3713 1.75 8 1.75C4.56562 1.75 2.75 3.91125 2.75 8C2.75 12.0887 4.56562 14.25 8 14.25C9.79938 14.25 10.92 13.5687 11.5437 12.9969C12.2994 12.3044 12.75 11.3719 12.75 10.5C12.75 9.4375 12.3181 8.54562 11.5 7.9275ZM9.4625 10.2744C9.25499 10.492 9.00589 10.6657 8.72996 10.7852C8.45404 10.9047 8.15693 10.9675 7.85625 10.97C7.0825 10.97 6.24937 10.51 6.24937 9.5C6.24937 8.2025 7.62437 7.61188 8.9 7.61188C9.35897 7.61063 9.81504 7.68474 10.25 7.83125C10.25 7.88625 10.2531 7.9425 10.2531 8C10.25 8.95312 9.97813 9.73938 9.46313 10.2744H9.4625Z" fill="white"/>
+          </svg>
+          <p>Thread</p>
+        </div>
+        <div>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.86131 7.18317L7.41598 5.77517C7.27241 5.69251 7.10962 5.64906 6.94395 5.64919C6.77828 5.64931 6.61556 5.693 6.47211 5.77587C6.32866 5.85873 6.20952 5.97787 6.12665 6.12133C6.04378 6.26478 6.0001 6.4275 5.99998 6.59317V9.40784C5.99798 9.74517 6.17798 10.0572 6.47065 10.2238C6.61414 10.3077 6.77729 10.3519 6.94347 10.3522C7.10965 10.3524 7.27292 10.3086 7.41665 10.2252L9.86131 8.81717C10.0049 8.73461 10.1242 8.61564 10.2072 8.47226C10.2901 8.32888 10.3338 8.16616 10.3338 8.0005C10.3338 7.83485 10.2901 7.67213 10.2072 7.52875C10.1242 7.38537 10.0049 7.2664 9.86131 7.18384M9.52798 8.2385L7.08398 9.64717C7.04172 9.67229 6.99347 9.68555 6.94431 9.68555C6.89515 9.68555 6.8469 9.67229 6.80465 9.64717C6.76226 9.62302 6.72711 9.58797 6.70284 9.54565C6.67858 9.50333 6.66608 9.45528 6.66665 9.4065V6.59317C6.66632 6.54462 6.67893 6.49685 6.70318 6.45479C6.72744 6.41272 6.76246 6.37788 6.80465 6.35384C6.84658 6.32814 6.8948 6.31454 6.94398 6.31454C6.99316 6.31454 7.04138 6.32814 7.08331 6.35384L9.52798 7.7625C9.57014 7.78631 9.60522 7.8209 9.62963 7.86272C9.65404 7.90453 9.6669 7.95208 9.6669 8.0005C9.6669 8.04892 9.65404 8.09648 9.62963 8.13829C9.60522 8.18011 9.57014 8.21469 9.52798 8.2385ZM12.6666 2.6665H3.33331C2.80304 2.66703 2.29464 2.87792 1.91968 3.25288C1.54473 3.62783 1.33384 4.13623 1.33331 4.6665V11.3332C1.33384 11.8634 1.54473 12.3718 1.91968 12.7468C2.29464 13.1218 2.80304 13.3326 3.33331 13.3332H12.6666C13.1969 13.3326 13.7053 13.1218 14.0803 12.7468C14.4552 12.3718 14.6661 11.8634 14.6666 11.3332V4.6665C14.6661 4.13623 14.4552 3.62783 14.0803 3.25288C13.7053 2.87792 13.1969 2.66703 12.6666 2.6665ZM14 11.3332C13.9994 11.6866 13.8588 12.0255 13.6089 12.2754C13.3589 12.5253 13.0201 12.666 12.6666 12.6665H3.33331C2.97985 12.666 2.64102 12.5253 2.39109 12.2754C2.14115 12.0255 2.00051 11.6866 1.99998 11.3332V4.6665C2.00051 4.31304 2.14115 3.97421 2.39109 3.72428C2.64102 3.47435 2.97985 3.3337 3.33331 3.33317H12.6666C13.0201 3.3337 13.3589 3.47435 13.6089 3.72428C13.8588 3.97421 13.9994 4.31304 14 4.6665V11.3332Z" fill="white"/>
+          </svg>
+          <p>Youtube</p>
+        </div>
+        <div>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.6664 5.33301C11.7273 5.33301 12.7447 5.75444 13.4949 6.50458C14.245 7.25473 14.6664 8.27214 14.6664 9.33301V13.9997H11.9998V9.33301C11.9998 8.97939 11.8593 8.64025 11.6093 8.3902C11.3592 8.14015 11.0201 7.99967 10.6664 7.99967C10.3128 7.99967 9.97368 8.14015 9.72363 8.3902C9.47359 8.64025 9.33311 8.97939 9.33311 9.33301V13.9997H6.66644V9.33301C6.66644 8.27214 7.08787 7.25473 7.83802 6.50458C8.58816 5.75444 9.60558 5.33301 10.6664 5.33301Z" stroke="white" stroke-width="0.692048" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3.9998 6H1.33313V14H3.9998V6Z" stroke="white" stroke-width="0.692048" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2.66646 3.99967C3.40284 3.99967 3.9998 3.40272 3.9998 2.66634C3.9998 1.92996 3.40284 1.33301 2.66646 1.33301C1.93008 1.33301 1.33313 1.92996 1.33313 2.66634C1.33313 3.40272 1.93008 3.99967 2.66646 3.99967Z" stroke="white" stroke-width="0.692048" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p>Linked in</p>
+        </div>
+        <div>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.3333 1.3335H4.66665C2.8257 1.3335 1.33331 2.82588 1.33331 4.66683V11.3335C1.33331 13.1744 2.8257 14.6668 4.66665 14.6668H11.3333C13.1743 14.6668 14.6666 13.1744 14.6666 11.3335V4.66683C14.6666 2.82588 13.1743 1.3335 11.3333 1.3335Z" stroke="white" stroke-width="1.19699" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.6667 7.5802C10.7489 8.13503 10.6542 8.70168 10.3958 9.19954C10.1375 9.69741 9.72877 10.1011 9.22776 10.3533C8.72675 10.6055 8.15897 10.6933 7.6052 10.6042C7.05143 10.515 6.53985 10.2536 6.14323 9.85698C5.74662 9.46036 5.48516 8.94878 5.39605 8.39501C5.30694 7.84124 5.39472 7.27346 5.64689 6.77245C5.89907 6.27144 6.3028 5.86269 6.80066 5.60436C7.29853 5.34603 7.86518 5.25126 8.42001 5.33353C8.98596 5.41746 9.50991 5.68118 9.91447 6.08574C10.319 6.4903 10.5828 7.01425 10.6667 7.5802Z" stroke="white" stroke-width="1.19699" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.6664 4.3335H11.6747" stroke="white" stroke-width="1.19699" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p>Instagram</p>
+        </div>
+    </div>
+
+    <div class="footer-connect">
+      <h3>Stay Connected</h3>
+      <p>Get the latest news, events, and opportunities delivered directly to your inbox</p>
+      <div class="connect-input">
+        <p>Email</p>
+        <input type="text" placeholder="Please enter Email address">
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+  </footer>
+
+
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
