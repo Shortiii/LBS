@@ -1,21 +1,38 @@
 @import "tailwindcss";
-
+body{
+  @apply w-full
+}
 /* NAV */
+.nav{
+  @apply relative
+}
 .top-nav {
-  @apply bg-[#122867] text-white py-6 pl-20  flex gap-4;
+  @apply bg-[#122867] text-white py-4 lg:py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+}
+.nav-toggle {
+  @apply block lg:hidden cursor-pointer;
+}
+.top-nav a{
+  @apply text-xs md:text-sm lg:text-base
 }
 .nav-community{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply bg-cover bg-center bg-no-repeat relative w-full h-screen;
+  @apply bg-cover bg-center bg-no-repeat w-full h-[85vh] lg:h-[95vh] transition-all duration-1000 overflow-hidden;
   background-image: url('../assets/alumniImg.png');
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];
+  @apply bg-[#12286780] flex py-6 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+}
+.desktop-nav{
+  @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
+}
+ .cancel {
+  @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
 }
 .nav-list {
-  @apply flex items-center gap-6 text-white cursor-pointer
+  @apply text-white cursor-pointer;
 }
 .list{
   @apply relative
@@ -29,34 +46,50 @@
 .list ul li a{
   @apply whitespace-nowrap
 }
+.mobile-nav {
+  @apply fixed top-0 left-0 h-screen w-2/4 sm:w-1/4 max-w-xs
+         bg-[#122867] text-white
+         flex flex-col gap-6
+         pt-15 px-6 items-center
+         transform -translate-x-full
+         transition-transform duration-300 ease-in-out
+         z-50 lg:hidden
+}
+.mobile-nav.open {
+  @apply translate-x-0;
+}
 .logo{
   @apply flex gap-5
 }
 .bottom-header {
-  @apply absolute  left-25 -bottom-16  w-1/2 bg-[#F2F3F5] p-6 border-b-2 border-[#165DFF]
+  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#F2F3F5] p-6 border-b-2 border-[#165DFF] md:p-4 lg:p-6 absolute left-8 md:left-15 lg:left-25 -bottom-16
 }
 .bottom-header h1 {
-  @apply text-4xl font-bold mb-7 text-[#122867]
+  @apply text-lg md:text-2xl lg:text-4xl font-bold mb-0 lg:mb-7 text-[#122867] leading-7
 }
 .bottom-header p {
-  @apply text-base font-normal text-black leading-7
+  @apply text-xs md:text-base lg:text-xl font-normal text-black
 }
+.bottom-header a{
+  @apply inline
+}
+
 
 /* MAIN */
 .insights{
-    @apply px-25 py-30
+    @apply px-8 md:px-18 lg:px-24 py-30
 }
 .insights-title{
-    @apply bg-[#122867] text-white p-10
+    @apply bg-[#122867] text-white p-5 md:p-10
 }
 .insights-title h2{
-    @apply text-[32px] font-semibold
+    @apply text-xl md:text-2xl lg:text-[32px] font-semibold
 }
 .insights-title p{
-    @apply text-base py-2
+    @apply text-xs md:text-sm lg:text-base py-2
 }
 .insights-template{
-    @apply flex py-6 gap-6
+    @apply flex flex-col lg:flex-row py-6 gap-6
 }
 .insight-div{
     @apply relative
@@ -65,43 +98,43 @@
     @apply w-full object-cover h-full
 }
 .insight-div h6{
-    @apply absolute top-0 text-sm bg-[#122867] text-white p-3
+    @apply absolute top-0 text-[8px] md:text-xs lg:text-sm bg-[#122867] text-white p-1 md:p-3
 }
 .insight-div div{
-    @apply absolute bottom-0 bg-[#0E42D280] w-full p-4 text-white
+    @apply absolute bottom-0 bg-[#0E42D280] w-full p-1 md:p-4 text-white
 }
 .template-div{
-    @apply w-2/3
+    @apply w-full lg:w-2/3
 }
 .template-div h5{
-    @apply text-xl font-semibold
+    @apply text-base md:text-lg md:text-xl font-semibold
 }
 .template-div p{
-    @apply text-sm
+    @apply text-[8px] md:text-xs lg:text-sm
 }
 .insight{
-    @apply flex flex-col gap-6 w-1/3
+    @apply flex flex-row lg:flex-col gap-3 md:gap-6 w-full lg:w-1/3
 }
 .insight h5{
-     @apply text-sm font-semibold
+     @apply text-[8px] md:text-xs lg:text-sm font-semibold
 }
 .insight p{
-     @apply text-sm 
+     @apply text-[8px] md:text-xs lg:text-sm
 }
 .event{
-    @apply bg-[#122867] text-white mb-8 px-25 py-15
+    @apply bg-[#122867] text-white mb-8 px-8 md:px-18 lg:px-24 py-15
 }
 .event-title h2{
-    @apply text-[32px] font-semibold
+    @apply text-xl md:text-2xl lg:text-[32px]  font-semibold
 }
 .event-title p{
-    @apply text-base py-2 w-1/3
+    @apply text-xs md:text-sm lg:text-base py-2 w-full md:w-2/3 lg:w-1/3
 }
 .event-div{
-    @apply flex gap-6 py-6
+    @apply flex flex-col lg:flex-row justify-center items-center gap-6 py-6
 }
 .event-details{
-    @apply relative w-1/3
+    @apply relative w-full lg:w-1/3
 }
 .event-details img{
     @apply w-full
@@ -117,34 +150,34 @@
 }
 
 .recent-news{
-    @apply px-25 py-15
+    @apply px-8 md:px-18 lg:px-24 py-15
 }
 .recent-news-title{
     @apply border-l-4 border-[#122867] pl-4
 }
 .recent-news-title h2{
-    @apply text-[#122867] text-[32px] font-semibold
+    @apply text-[#122867] text-xl md:text-2xl lg:text-[32px] font-semibold
 }
 .recent-news-title p{
-    @apply text-[#1D2129] text-base w-2/5 
+    @apply text-[#1D2129] text-xs md:text-sm lg:text-base w-full md:w-3/4 lg:w-2/5 
 }
 .news-template{
-    @apply pt-8 flex relative items-start gap-20
+    @apply pt-8 flex flex-col lg:flex-row relative items-center lg:items-start gap-20
 }
 .template-cards{
-    @apply flex flex-col gap-6 w-[70%]
+    @apply flex flex-col gap-6 w-full lg:w-[70%]
 }
 .template{
-    @apply flex gap-4
+    @apply flex flex-col sm:flex-row gap-4
 }
 .template-note{
-    @apply w-1/2 flex flex-col gap-3
+    @apply w-full sm:w-1/2 flex flex-col gap-3
 }
 .template-note h6{
-    @apply text-base text-[#122867]
+    @apply text-sm sm:text-base text-[#122867]
 }
 .template-note h4{
-    @apply font-semibold text-[#122867] text-[18px]
+    @apply font-semibold text-[#122867] text-base sm:text-[18px]
 }
 .template-text{
     @apply flex items-center gap-4
@@ -153,10 +186,10 @@
     @apply flex gap-2 items-center
 }
 .template-alumni{
-    @apply w-[30%] pb-2 border-b-2  border-[#165DFF] sticky top-24
+    @apply w-full lg:w-[30%] pb-2 border-b-2  border-[#165DFF] sticky top-24
 }
 .template-title{
-    @apply text-2xl text-white font-semibold p-3 bg-[#00227FE5]
+    @apply text-base sm:text-2xl text-white font-semibold p-3 bg-[#00227FE5]
 }
 .template-alumni img{
     @apply w-full h-full object-cover;
@@ -165,17 +198,18 @@
   @apply bg-white py-4
 }
 .card-div h2{
-  @apply text-[#1D2129] text-[23px]
+  @apply text-[#1D2129] text-base sm:text-[23px]
 }
 .card-div h4{
-  @apply text-[#4E5969] text-base
+  @apply text-[#4E5969] text-sm sm:text-base
 }
 .card-div p{
-  @apply pt-2 text-base text-[#4E5969] italic
+  @apply pt-2 text-sm sm:text-base text-[#4E5969] italic
 }
 .card-div a {
-  @apply text-base underline text-[#122867]
+  @apply text-sm sm:text-base underline text-[#122867]
 }
+
 /* FOOTER */
 footer{
   @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6  lg:gap-8 items-center lg:items-start

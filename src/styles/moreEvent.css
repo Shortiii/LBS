@@ -1,20 +1,38 @@
 @import "tailwindcss";
 
+body{
+  @apply w-full
+}
 /* NAV */
+.nav{
+  @apply relative
+}
 .top-nav {
-   @apply bg-[#122867] text-white py-6 pl-20  flex gap-4 ;
+  @apply bg-[#122867] text-white py-4 lg:py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+}
+.nav-toggle {
+  @apply block lg:hidden cursor-pointer;
+}
+.top-nav a{
+  @apply text-xs md:text-sm lg:text-base
 }
 .nav-community{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply w-full h-[20vh]
+  @apply w-full
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];
+  @apply bg-[#12286780] flex py-6 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+}
+.desktop-nav{
+  @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
+}
+ .cancel {
+  @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
 }
 .nav-list {
-  @apply flex items-center gap-6 text-white cursor-pointer
+  @apply text-white cursor-pointer;
 }
 .list{
   @apply relative
@@ -28,13 +46,26 @@
 .list ul li a{
   @apply whitespace-nowrap
 }
+.mobile-nav {
+  @apply fixed top-0 left-0 h-screen w-2/4 sm:w-1/4 max-w-xs
+         bg-[#122867] text-white
+         flex flex-col gap-6
+         pt-15 px-6 items-center
+         transform -translate-x-full
+         transition-transform duration-300 ease-in-out
+         z-50 lg:hidden
+}
+.mobile-nav.open {
+  @apply translate-x-0;
+}
 .logo{
   @apply flex gap-5
 }
 
+
 /* EVENT DETAILS */
 .event-details{
-    @apply pt-10 pb-[20%] px-[15%]
+    @apply pt-10 pb-[20%] px-12 md:px-24 lg:px-32
 }
 .event-details a{
     @apply text-sm text-[#115FD6] 
@@ -43,28 +74,28 @@
     @apply w-full pb-4 pt-8
 }
 .register-event{
-    @apply flex justify-between bg-[#F7F8FA] p-4 
+    @apply flex flex-col lg:flex-row justify-between bg-[#F7F8FA] p-4 gap-4
 }
 .register-details{
     @apply flex flex-col gap-2
 }
 .register-details h5{
-    @apply text-base text-[#122867] font-semibold
+    @apply text-sm sm:text-base text-[#122867] font-semibold
 }
 .date, .location{
-    @apply flex gap-3 text-[#1D2129] text-base
+    @apply flex gap-3 text-[#1D2129] text-sm sm:text-base
 }
 .event-role{
     @apply m-0 px-1.5 text-[#122867] text-sm inline-block border rounded-xs border-[#122867]
 }
 .register-button a{
-    @apply bg-[#122867] text-white px-4 py-2 rounded-sm hover:bg-[#115FD6]
+    @apply bg-[#122867] text-white text-xs sm:text-sm px-4 py-2 rounded-sm hover:bg-[#115FD6]
 }
 .register-note{
-    @apply py-6 flex flex-col gap-6 text-[#1D2129] text-base 
+    @apply py-6 flex flex-col gap-3 sm:gap-6 text-[#1D2129] text-sm sm:text-base
 }
 .event-details h2{
-    @apply text-[#122867] text-[32px] font-semibold
+    @apply text-[#122867] text-xl md:text-2xl lg:text-[32px] font-semibold
 }
 
 /* FOOTER */

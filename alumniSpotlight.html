@@ -10,16 +10,26 @@
     <header>
       <div class="nav">
         <div class="top-nav">
+          <div class="nav-toggle js-nav-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <a href="./index.html" class="nav-community"> Join our community</a>
           <a href="./login.html" class="nav-login"> Login</a>
         </div>
-        <div class="nav-header">
+        <div class="nav-header" id="hero">
           <div class="bottom-nav">
             <div class="logo">
               <img src="./src/assets/logo2.png" alt="Logo">
               <img src="./src/assets/logo.png" alt="Logo">
             </div>
-            <div class="nav-list">
+            <div class="nav-list mobile-nav">
+              <div class="cancel js-nav-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
               <div><a href="./index.html">Home</a></div>
               <div class="list js-toggle" data-target="alumni" >Alumni
                 <ul class="js-menu hidden" data-menu="alumni">
@@ -37,9 +47,28 @@
               <div><a href="./resource.html">Resources</a></div>
               <div><a href="./career.html">Careers</a></div>
             </div>
+
+            <div class="nav-list desktop-nav">
+              <div><a href="./index.html">Home</a></div>
+              <div class="list js-toggle" data-target="alumni" >Alumni
+                <ul class="js-menu hidden" data-menu="alumni">
+                  <li><a href="./alumni.html">Find an Alumnus</a></li>
+                  <li><a href="./membership.html">Membership</a></li>
+                </ul>
+              </div>
+              <div class="list js-toggle" data-target="news">News
+                <ul class="js-menu hidden" data-menu="news">
+                  <li><a href="./news.html">News & Insights</a></li>
+                  <li><a href="./alumniSpotlight.html">Alumni Spotlights</a></li>
+                </ul>
+              </div>
+              <div><a href="./event.html">Events</a></div>
+              <div><a href="./resource.html">Resources</a></div>
+              <div><a href="./career.html">Careers</a></div>
+            </div>
           </div>
           <div class="bottom-header">
-              <h1>Our Alumni. Our Pride.</h1>
+               <h1>Our Alumni. Our Pride.</h1>
               <p>Every LBS graduate carries forward the School’s legacy of excellence and purpose-driven leadership. The Alumni Spotlight celebrates members of our community who are making remarkable contributions in business, governance, and security. </p>
             </div>
         </div>

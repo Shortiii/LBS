@@ -1,21 +1,38 @@
 @import "tailwindcss";
-
+body{
+  @apply w-full
+}
 /* NAV */
+.nav{
+  @apply relative
+}
 .top-nav {
-  @apply bg-[#122867] text-white py-6 pl-20  flex gap-4;
+  @apply bg-[#122867] text-white py-4 lg:py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+}
+.nav-toggle {
+  @apply block lg:hidden cursor-pointer;
+}
+.top-nav a{
+  @apply text-xs md:text-sm lg:text-base
 }
 .nav-community{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply bg-cover bg-center bg-no-repeat w-full h-screen;
+  @apply bg-cover bg-center bg-no-repeat w-full h-[85vh] lg:h-[95vh] transition-all duration-1000 overflow-hidden;
   background-image: url('../assets/alumniImg.png');
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 items-center justify-between pl-20 pr-[25%];
+  @apply bg-[#12286780] flex py-6 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+}
+.desktop-nav{
+  @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
+}
+ .cancel {
+  @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
 }
 .nav-list {
-  @apply flex items-center gap-6 text-white cursor-pointer
+  @apply text-white cursor-pointer;
 }
 .list{
   @apply relative
@@ -29,35 +46,51 @@
 .list ul li a{
   @apply whitespace-nowrap
 }
+.mobile-nav {
+  @apply fixed top-0 left-0 h-screen w-2/4 sm:w-1/4 max-w-xs
+         bg-[#122867] text-white
+         flex flex-col gap-6
+         pt-15 px-6 items-center
+         transform -translate-x-full
+         transition-transform duration-300 ease-in-out
+         z-50 lg:hidden
+}
+.mobile-nav.open {
+  @apply translate-x-0;
+}
 .logo{
   @apply flex gap-5
 }
 .bottom-header {
-  @apply  mt-40 ml-20 w-1/2 bg-[#122867CC] p-6
+  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-full md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#122867CC] p-2 md:p-4 lg:p-6 
 }
 .bottom-header h1 {
-  @apply text-4xl font-bold mb-7 text-[#00AEEF]
+  @apply text-lg md:text-2xl lg:text-4xl font-bold mb-0 lg:mb-7 text-[#00AEEF] leading-7
 }
 .bottom-header p {
-  @apply text-base font-normal text-white leading-7
+  @apply text-xs md:text-base lg:text-xl font-normal
 }
+.bottom-header a{
+  @apply inline
+}
+
 
 /* MAIN */
 .spotlight-list{
-  @apply px-36 pt-[10%] pb-[20%] flex flex-col gap-6
+  @apply  px-12 md:px-24 lg:px-32 pt-[10%] pb-[20%] flex flex-col gap-6
 }
 .div-list{
-    @apply flex gap-6 border border-[#E5E6EB] p-4
+    @apply flex items-center gap-3 sm:gap-6 border border-[#E5E6EB] p-2 sm:p-4
 }
 
 .list-details h3{
-    @apply text-[#00AEEF] text-base
+    @apply text-[#00AEEF] text-sm sm:text-base
 }
 .list-details h2{
-    @apply text-[#1D2129] text-base font-semibold py-1
+    @apply text-[#1D2129] text-sm sm:text-base font-semibold py-1
 }
 .list-details p{
-    @apply text-[#4E5969] text-xs 
+    @apply text-[#4E5969] text-[10px] sm:text-xs 
 }
 
 /* FOOTER */

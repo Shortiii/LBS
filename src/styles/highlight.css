@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
+body{
+  @apply w-full
+}
 /* NAV */
+.nav{
+  @apply relative
+}
 .top-nav {
-   @apply bg-[#122867] text-white py-6 pl-20  flex gap-4 ;
+  @apply bg-[#122867] text-white py-4 lg:py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+}
+.nav-toggle {
+  @apply block lg:hidden cursor-pointer;
+}
+.top-nav a{
+  @apply text-xs md:text-sm lg:text-base
 }
 .nav-community{
   @apply underline border-r-2  pr-4
@@ -11,16 +23,22 @@
   @apply w-full
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 items-center justify-between h-full pl-20 pr-[25%];
+  @apply bg-[#12286780] flex py-6 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+}
+.desktop-nav{
+  @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
+}
+ .cancel {
+  @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
 }
 .nav-list {
-  @apply flex items-center gap-6 text-white cursor-pointer
+  @apply text-white cursor-pointer;
 }
 .list{
   @apply relative
 }
 .list ul{
-  @apply bg-white text-black text-base p-3  border-b-2 border-[#165DFF] absolute -top-12 left-0
+  @apply bg-white text-black text-base p-3  border-b-2 border-[#165DFF] absolute top-8 left-2
 }
 .list ul li{
   @apply block pb-2
@@ -28,16 +46,30 @@
 .list ul li a{
   @apply whitespace-nowrap
 }
+.mobile-nav {
+  @apply fixed top-0 left-0 h-screen w-2/4 sm:w-1/4 max-w-xs
+         bg-[#122867] text-white
+         flex flex-col gap-6
+         pt-15 px-6 items-center
+         transform -translate-x-full
+         transition-transform duration-300 ease-in-out
+         z-50 lg:hidden
+}
+.mobile-nav.open {
+  @apply translate-x-0;
+}
 .logo{
   @apply flex gap-5
 }
 
+
+
 /* MAIN */
 main{
-    @apply px-32 pt-15 pb-20
+    @apply  px-12 md:px-24 lg:px-32 pt-15 pb-20
 }
 .highlight a{
-    @apply text-[#115FD6] text-sm
+    @apply text-[#115FD6] text-xs sm:text-sm
 }
 .highlight-title{
     @apply pt-8 flex flex-col gap-6
@@ -46,10 +78,10 @@ main{
     @apply text-[#115FD6] text-xs
 }
 .highlight-title h2{
-    @apply text-[#122867] text-[32px] font-semibold
+    @apply text-[#122867] text-xl md:text-2xl lg:text-[32px] font-semibold
 }
 .title-info{
-    @apply flex gap-4
+    @apply flex flex-col sm:flex-row  gap-2 sm:gap-4
 }
 .title-info p{
     @apply flex gap-2 items-center text-xs text-[#4E5969]
@@ -61,32 +93,34 @@ main{
     @apply w-full object-cover
 }
 .social-media{
-    @apply flex items-center gap-4 absolute top-0 left-[15%] p-3 bg-white rounded-md
+    @apply flex items-center gap-2 sm:gap-4 absolute top-6 sm:top-0 left-[5%] sm:left-[15%] p-2 sm:p-3 bg-white rounded-md
 }
-
+.social-media svg{
+  @apply w-[15px] h-[15px] sm:w-[30px] sm:h-[30px]
+}
 .highlight-note{
-    @apply flex items-start gap-16 pt-[5%] pb-[20%] relative
+    @apply flex flex-col lg:flex-row items-start gap-8 md:gap-16 pt-[5%] pb-[20%] relative
 }
 .highlight-text{
-    @apply w-3/5
+    @apply w-full lg:w-3/5
 }
 .past-highlight{
-    @apply w-2/5 py-6 px-[10%] sticky top-24
+    @apply w-full lg:w-2/5 py-6 px-[10%] sticky top-24
 }
 .past-highlight h6{
-    @apply text-white bg-[#122867] text-base font-semibold py-4 px-6
+    @apply text-white bg-[#122867] text-sm sm:text-base font-semibold py-4 px-6
 }
 .past-highlight p{
-    @apply py-4 border-b border-[#E5E6EB] text-base text-[#1D2129] font-semibold
+    @apply py-4 border-b border-[#E5E6EB] text-sm sm:text-base text-[#1D2129] font-semibold
 }
 .past-highlight a{
     @apply text-[#122867]
 }
 .register-note{
-    @apply py-6 flex flex-col gap-6 text-[#1D2129] text-base 
+    @apply py-6 flex flex-col gap-3 md:gap-6 text-[#1D2129] text-sm sm:text-base
 }
 .highlight-text h2{
-    @apply text-[#122867] text-[32px] font-semibold
+    @apply text-[#122867] text-xl md:text-2xl lg:text-[32px] font-semibold
 }
 
 
