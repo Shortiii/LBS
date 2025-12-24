@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+@theme {
+  --font-roboto: "Roboto", sans-serif; 
+}
 body{
-  @apply w-full
+  @apply w-full font-roboto
+}
+input{
+   @apply outline-none focus:outline-none
 }
 /* NAV */
 .nav{
   @apply relative
 }
 .top-nav {
-  @apply bg-[#122867] text-white py-2 py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+  @apply bg-[#122867] text-white py-4 lg:py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
 }
 .nav-toggle {
   @apply block lg:hidden cursor-pointer;
@@ -28,23 +35,26 @@ body{
 .desktop-nav{
   @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
 }
+.desktop-nav div{
+  @apply text-white transition delay-200 duration-400 ease-in-out hover:text-xl
+}
  .cancel {
   @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
 }
 .nav-list {
-  @apply text-white cursor-pointer;
+  @apply text-white cursor-pointer text-base xl:text-lg 2xl:text-xl;
 }
 .list{
   @apply relative
 }
 .list ul{
-  @apply bg-white text-black text-base p-3  border-b-2 border-[#165DFF] absolute top-8 left-2
+  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2
 }
 .list ul li{
-  @apply block pb-2
+  @apply block  px-3 py-2 bg-white hover:bg-[#122867] text-black hover:text-white
 }
 .list ul li a{
-  @apply whitespace-nowrap
+  @apply whitespace-nowrap 
 }
 .mobile-nav {
   @apply fixed top-0 left-0 h-screen w-2/4 sm:w-1/4 max-w-xs
@@ -62,10 +72,10 @@ body{
   @apply flex gap-5
 }
 .bottom-header {
-  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-full md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 
+  @apply text-white mt-[40%] lg:mt-[10%] 2xl:mt-[30%] ml-[5%] w-full md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 
 }
 .bottom-header h1 {
-  @apply text-lg md:text-2xl lg:text-4xl font-bold mb-7
+  @apply text-lg md:text-2xl lg:text-4xl font-bold mb-3
 }
 .bottom-header p {
   @apply text-xs md:text-base lg:text-xl font-normal
@@ -74,7 +84,7 @@ body{
   @apply inline
 }
 .join{
-  @apply bg-white text-black p-4 md:p-3 rounded-xl text-sm md:text-base lg:text-xl font-normal cursor-pointer w-[50%] md:w-[40%] lg:w-[30%] text-center
+  @apply bg-white text-black p-4 md:p-3 rounded-xl text-sm md:text-base lg:text-xl font-medium cursor-pointer w-[50%] md:w-[40%] lg:w-[30%] text-center hover:bg-[#122867] transition duration-400 ease-in-out hover:text-white 
 }
 .toggle{
   @apply absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-3 z-20
@@ -172,7 +182,7 @@ body{
   @apply text-[10px] md:text-sm leading-snug opacity-90 pb-2;
 }
 .grid-text h6{
-@apply opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out
+@apply opacity-0 translate-y-2 uppercase group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out
 }
 .second-container{
   @apply flex flex-col lg:flex-row items-center lg:items-start gap-8 w-full pt-8 lg:pt-4 pb-6;
@@ -226,7 +236,7 @@ body{
   @apply flex bg-white rounded-sm 
 }
 .contact-note{
-  @apply bg-[#1679CB] text-white w-[40%] p-2 sm:p-5 md:p-10 hover:rounded-xl ml-1 sm:ml-3 relative
+  @apply bg-[#1679CB] text-white w-[40%] p-2 sm:p-5 md:p-10 hover:rounded-xl ml-1 sm:ml-3 relative transition duration-400 ease-in-out
 }
 .contact-note img{
   @apply w-[30%] md:w-[40%] lg:w-[50%]
@@ -244,31 +254,34 @@ body{
   @apply absolute bottom-[5%] sm:bottom-[10%] right-[15%]
 }
 .contact-details{
-  @apply w-[60%] p-4 sm:p-8 md:p-10 lg:p-15 text-[#676767]
+  @apply w-[60%] p-3 sm:p-5 md:p-8 lg:p-10 lg:p-15 text-[#676767]
 }
 .form-div{
-  @apply flex gap-4 md:gap-8 lg:gap-10
+  @apply flex flex-col sm:flex-row gap-4 md:gap-8 lg:gap-10 justify-between
 }
 .form-input input{
-  @apply border-b-2 border-[#8D8D8D] w-full
+  @apply border-b-2 border-[#8D8D8D] w-full hover:border-b-3 text-xs sm:text-sm md:text-base
 }
 .form-input{
-  @apply flex flex-col
+  @apply flex flex-col w-[80%] sm:w-[40%]
 }
 .email{
-  @apply w-[30%] py-4 md:py-8 lg:py-12
+  @apply w-[80%] sm:w-[40%] py-4 md:py-8 lg:py-12
 }
 .form-input label{
-  @apply text-sm
+  @apply text-xs sm:text-sm
 }
 .form-input .title{
   @apply text-sm md:text-base font-semibold pb-2 md:pb-4
 }
 .radio-group{
-  @apply flex gap-2 sm:gap-4 items-center 
+  @apply flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center w-full 
 }
 .radio-group label{
-  @apply flex gap-2 items-center
+  @apply flex gap-2 items-center whitespace-nowrap
+}
+.radio-group label input{
+  @apply w-4 h-4 shrink-0
 }
 .subject{
   @apply pb-4 md:pb-8 lg:pb-12
@@ -277,7 +290,7 @@ body{
   @apply pb-2 md:pb-4
 }
 .contact button{
-  @apply my-4 md:my-8 lg:my-12 bg-[#122867] text-white py-2 md:py-4 px-4 md:px-8 rounded-lg text-xs md:text-sm lg:text-base
+  @apply my-4 md:my-8 lg:my-12 bg-[#122867] text-white py-2 md:py-4 px-4 md:px-8 rounded-lg text-xs md:text-sm lg:text-base hover:bg-[#1679CB] transition duration-400 ease-in-out
 }
 .form-note p{
   @apply w-full lg:w-[55%] pb-3 font-medium text-[#676767] text-xs md:text-sm lg:text-base
@@ -288,12 +301,15 @@ body{
 
 /* FOOTER */
 footer{
-  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6  lg:gap-8 items-center lg:items-start
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
+}
+.footer-contact-div{
+  @apply flex gap-4 md:gap-6 lg:gap-8
 }
 .footer-note p{
   @apply text-[12px] md:text-sm font-normal  pt-4 
 }
-.footer-div h3{
+.footer-div h3 {
   @apply text-base font-semibold pb-2
 }
 .footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
@@ -318,8 +334,9 @@ footer{
   @apply pt-5 text-xs
 }
 .footer-connect input{
-  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full
+  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
+  outline-none focus:outline-none
 }
 .footer-connect button{
-  @apply bg-[#1679CB] text-white mt-3 w-full py-2
+  @apply bg-[#1679CB] text-white mt-3 w-full py-2 hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
 }

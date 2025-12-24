@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-
+@theme {
+  --font-roboto: "Roboto", sans-serif; 
+}
+body{
+  @apply w-full font-roboto
+}
 .alumni{
   @apply w-screen h-screen bg-[#E8F3FF] flex items-center justify-center;
 }

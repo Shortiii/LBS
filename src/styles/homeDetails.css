@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+@theme {
+  --font-roboto: "Roboto", sans-serif; 
+}
 body{
-  @apply w-full
+  @apply w-full font-roboto
 }
 /* NAV */
 .nav{
@@ -28,6 +32,9 @@ body{
 .desktop-nav{
   @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
 }
+.desktop-nav div{
+  @apply text-white transition delay-200 duration-400 ease-in-out hover:text-xl
+}
  .cancel {
   @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
 }
@@ -38,10 +45,10 @@ body{
   @apply relative
 }
 .list ul{
-  @apply bg-white text-black text-base p-3  border-b-2 border-[#165DFF] absolute top-8 left-2
+  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2
 }
 .list ul li{
-  @apply block pb-2
+  @apply block  px-3 py-2 bg-white hover:bg-[#122867] text-black hover:text-white
 }
 .list ul li a{
   @apply whitespace-nowrap
@@ -65,16 +72,13 @@ body{
   @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-full md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#122867CC] p-2 md:p-4 lg:p-6 
 }
 .bottom-header h1 {
-  @apply text-lg md:text-2xl lg:text-4xl font-bold mb-0 lg:mb-7 text-[#00AEEF] leading-7
+  @apply text-lg md:text-2xl lg:text-4xl font-bold mb-0 lg:mb-3 text-[#00AEEF] 
 }
 .bottom-header p {
   @apply text-xs md:text-base lg:text-xl font-normal
 }
 .bottom-header a{
   @apply inline
-}
-.join{
-  @apply bg-white text-black p-4 md:p-3 rounded-xl text-sm md:text-base lg:text-xl font-normal cursor-pointer w-[50%] md:w-[40%] lg:w-[30%] text-center
 }
 
 
@@ -179,14 +183,17 @@ body{
 .connect h1 {
     @apply text-lg md:text-xl lg:text-[32px] font-semibold text-center text-[#122867]
 }
+.connect .subtitle{
+  @apply text-xs md:text-sm lg:text-base text-[#4E5969] text-center m-auto
+}
 .connect p {
-    @apply text-xs md:text-sm text-base font-normal text-center text-[#4E5969] py-3 
+    @apply text-xs md:text-sm lg:text-base font-normal text-white py-3 
 }
 .connect-grid {
     @apply grid grid-cols-1 sm:grid-cols-3 gap-5 mt-10 m-auto w-2/3 sm:w-full
 }
 .connect-grid div, .grid-div div {
-    @apply border bg-[#122867] p-5 text-white h-[195px] 
+    @apply border bg-[#122867] p-5 text-white xl:py-8
 }
 .connect-grid div h6, .grid-div div h6 {
     @apply text-sm md:text-base lg:text-lg font-semibold 
@@ -212,13 +219,13 @@ body{
     @apply bg-[#122867] text-white py-9 px-4 md:pl-12 lg:pl-24 w-1/2
 }
 .contact-text h2{
-    @apply text-xs md:text-sm text-base font-semibold
+    @apply text-xs md:text-sm lg:text-base font-semibold
 }
 .contact-text p{
-    @apply text-white text-[8px] md:text-sm w-full md:w-3/4 py-3 md:py-5
+    @apply text-white text-[8px] md:text-sm w-full md:w-3/4 py-3 md:py-5 
 }
 .contact-text button{
-    @apply bg-white text-[#4E5969] py-2 md:py-3 px-5 rounded-sm cursor-pointer text-[8px] md:text-sm
+    @apply bg-white text-[#4E5969] py-2 md:py-3 px-5 rounded-sm cursor-pointer text-[8px] md:text-sm hover:bg-[#23E0FE] transition duration-400 ease-in-out hover:text-white 
 }
 .second-join-img{
     @apply w-1/2
@@ -239,10 +246,10 @@ body{
   @apply text-[#122867] text-xl md:text-2xl text-[32px] font-semibold
 }
 .counter-text h6{
-  @apply text-[#4E5969] text-xs md:text-sm text-base w-full md:w-1/2 pt-2
+  @apply text-[#4E5969] text-xs md:text-sm lg:text-base w-full md:w-1/2 pt-2
 }
 .council-template{
-  @apply flex pl-15 md:pl-30 gap-5 py-8 overflow-x-auto overflow-y-hidden
+  @apply flex pl-[7%] xl:pl-[12%] md:pl-30 gap-5 xl:gap-7 py-8 overflow-x-auto overflow-y-hidden
 }
 .template-grid{
   @apply min-w-[260px] max-w-[260px] shrink-0 relative
@@ -266,12 +273,15 @@ body{
 
 /* FOOTER */
 footer{
-  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6  lg:gap-8 items-center lg:items-start
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
+}
+.footer-contact-div{
+  @apply flex gap-4 md:gap-6 lg:gap-8
 }
 .footer-note p{
   @apply text-[12px] md:text-sm font-normal  pt-4 
 }
-.footer-div h3{
+.footer-div h3 {
   @apply text-base font-semibold pb-2
 }
 .footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
@@ -296,8 +306,9 @@ footer{
   @apply pt-5 text-xs
 }
 .footer-connect input{
-  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full
+  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
+  outline-none focus:outline-none
 }
 .footer-connect button{
-  @apply bg-[#1679CB] text-white mt-3 w-full py-2
+  @apply bg-[#1679CB] text-white mt-3 w-full py-2 hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
 }
