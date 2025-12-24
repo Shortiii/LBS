@@ -69,7 +69,7 @@ body{
   @apply flex gap-5
 }
 .bottom-header {
-  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-full md:w-3/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#122867CC] p-2 md:p-4 lg:p-6 
+  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-[90%] md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#122867CC] p-2 md:p-4 lg:p-6 
 }
 .bottom-header h1 {
   @apply text-lg md:text-2xl lg:text-4xl font-bold mb-0 lg:mb-3 text-[#00AEEF] 
@@ -81,7 +81,7 @@ body{
   @apply inline
 }
 .join{
-  @apply bg-white text-black p-4 md:p-3 rounded-xl text-sm md:text-base lg:text-xl font-normal cursor-pointer w-[50%] md:w-[40%] lg:w-[30%] text-center hover:bg-[#00AEEF] transition duration-400 ease-in-out hover:text-white 
+  @apply bg-white text-black p-2 md:p-3 rounded-xl text-sm md:text-base lg:text-xl font-normal cursor-pointer w-[50%] md:w-[40%] lg:w-[30%] text-center hover:bg-[#00AEEF] transition duration-400 ease-in-out hover:text-white 
 }
 
 /* MAIN */
@@ -94,8 +94,11 @@ main{
 .first-div{
     @apply flex flex-col gap-4 relative 
 }
-.benefit-div, .second-div, .third-div{
-    @apply relative 
+.benefit-div,  .third-div{
+    @apply relative bg-[linear-gradient(90deg,#00143C52_32%,transparent_100%)]
+}
+.second-div{
+    @apply relative bg-[linear-gradient(90deg,#00143C00_0%,#00143C52_32%,#0E42D280_50%,transparent_100%)]
 }
 .benefit-div img, .second-div img, .third-div img{
     @apply w-full object-cover
@@ -104,10 +107,11 @@ main{
     @apply absolute bg-[#122867] text-white top-0 text-sm py-3 px-4
 }
 .benefit-div div, .second-div div,.third-div div{
-    @apply absolute bottom-0 bg-[#0E42D266] text-white w-full py-4 px-3 text-base
+    @apply absolute bottom-0 bg-[linear-gradient(90deg,#0E42D280_50%,transparent_100%)] text-white w-full py-4 px-3 text-base
 }
 .third-div div{
-    @apply bg-[#0E42D266] 
+    @apply bg-[linear-gradient(90deg,#0E42D280_40%,transparent_100%)]
+ 
 }
 .benefit-div div p, .second-div p, .third-div p{
     @apply text-[#A7A9AC]
@@ -224,12 +228,12 @@ footer{
   @apply text-[12px] md:text-sm 
 }
 .connect-input{
-  @apply pt-5 text-xs
+  @apply pt-5 text-[10px] sm:text-xs
 }
 .footer-connect input{
-  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
+  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-[70%] md:w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
   outline-none focus:outline-none
 }
 .footer-connect button{
-  @apply bg-[#1679CB] text-white mt-3 w-full py-2 hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
+  @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-2 hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
 }

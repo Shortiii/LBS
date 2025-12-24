@@ -129,12 +129,12 @@ footer{
   @apply text-[12px] md:text-sm 
 }
 .connect-input{
-  @apply pt-5 text-xs
+  @apply pt-5 text-[10px] sm:text-xs
 }
 .footer-connect input{
-  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
+  @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-[70%] md:w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
   outline-none focus:outline-none
 }
 .footer-connect button{
-  @apply bg-[#1679CB] text-white mt-3 w-full py-2 hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
+  @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-2 hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
 }
