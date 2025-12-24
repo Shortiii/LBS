@@ -72,7 +72,7 @@ input{
   @apply flex gap-5
 }
 .bottom-header {
-  @apply text-white mt-[40%] lg:mt-[10%] 2xl:mt-[30%] ml-[5%] w-[90%] md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 
+  @apply text-white mt-[25%] lg:mt-[10%] 2xl:mt-[30%] ml-[5%] w-[90%] md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 
 }
 .bottom-header h1 {
   @apply text-lg md:text-2xl lg:text-4xl font-bold mb-3
