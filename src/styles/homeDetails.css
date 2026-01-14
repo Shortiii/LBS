@@ -48,7 +48,7 @@ body{
   @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2
 }
 .list ul li{
-  @apply block  px-3 py-2 bg-white hover:bg-[#122867] text-black hover:text-white
+  @apply block  px-3 py-2 bg-white hover:bg-[#122867] text-black hover:text-white z-50
 }
 .list ul li a{
   @apply whitespace-nowrap
@@ -79,6 +79,9 @@ body{
 }
 .bottom-header a{
   @apply inline
+}
+.active-nav{
+  @apply border-b-4 border-white pb-10
 }
 
 

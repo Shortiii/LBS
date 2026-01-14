@@ -44,11 +44,15 @@ input{
 .nav-list {
   @apply text-white cursor-pointer text-base xl:text-lg 2xl:text-xl;
 }
+.nav-label {
+  @apply relative inline-block pb-1;
+}
+
 .list{
   @apply relative
 }
 .list ul{
-  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2
+  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2 z-50
 }
 .list ul li{
   @apply block  px-3 py-2 bg-white hover:bg-[#122867] text-black hover:text-white
@@ -94,6 +98,9 @@ input{
 }
 .dot.active {
   @apply bg-white;
+}
+.active-nav, .nav-label.active-nav {
+  @apply border-b-4 border-white pb-10
 }
 
 /* ABOUT */

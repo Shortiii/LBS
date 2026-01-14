@@ -6,6 +6,9 @@
 body{
   @apply w-full font-roboto
 }
+input{
+  @apply outline-none focus:outline-none
+}
 /* NAV */
 .nav{
   @apply relative
@@ -45,7 +48,7 @@ body{
   @apply relative
 }
 .list ul{
-  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2
+  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2 z-50
 }
 .list ul li{
   @apply block  px-3 py-2 bg-white hover:bg-[#122867] text-black hover:text-white
@@ -76,6 +79,9 @@ body{
 }
 .bottom-header p {
   @apply text-xs md:text-base lg:text-xl font-normal 
+}
+.active-nav{
+  @apply border-b-4 border-white pb-10
 }
 
 /* MAIN */

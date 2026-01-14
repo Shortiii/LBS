@@ -8,7 +8,7 @@ body{
 }
 /* NAV */
 .nav{
-  @apply relative
+  @apply relative select-none outline-none
 }
 .top-nav {
   @apply bg-[#122867] text-white py-4 lg:py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
@@ -33,7 +33,7 @@ body{
   @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
 }
 .desktop-nav div{
-  @apply text-white transition delay-200 duration-400 ease-in-out hover:text-xl
+  @apply text-white transition delay-200 duration-400 ease-in-out hover:text-xl select-none outline-none
 }
  .cancel {
   @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
@@ -42,10 +42,10 @@ body{
   @apply text-white cursor-pointer;
 }
 .list{
-  @apply relative
+  @apply relative 
 }
 .list ul{
-  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2
+  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2 z-50
 }
 .list ul li{
   @apply block  px-3 py-2 bg-white hover:bg-[#122867] text-black hover:text-white
@@ -69,7 +69,7 @@ body{
   @apply flex gap-5
 }
 .bottom-header {
-  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-[90%] md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#122867CC] p-2 md:p-4 lg:p-6 
+  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-[90%] md:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#122867CC] p-2 md:p-4 lg:p-6 select-none outline-none
 }
 .bottom-header h1 {
   @apply text-lg md:text-2xl lg:text-4xl font-bold mb-0 lg:mb-3 text-[#00AEEF] 
@@ -83,10 +83,28 @@ body{
 .join{
   @apply bg-white text-black p-2 md:p-3 rounded-xl text-sm md:text-base lg:text-xl font-normal cursor-pointer w-[50%] md:w-[40%] lg:w-[30%] text-center hover:bg-[#00AEEF] transition duration-400 ease-in-out hover:text-white 
 }
+.nav-label {
+  @apply relative inline-block;
+}
+ .nav-label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -40px;        
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.1s ease;
+}
+.nav-label.active-nav::after {
+  transform: scaleX(1);
+}
 
 /* MAIN */
 main{
-    @apply p-[7%]
+    @apply p-[7%] select-none outline-none
 }
 .alumni-div{
     @apply flex flex-col lg:flex-row gap-6

@@ -48,3 +48,22 @@ if (mobileNav) {
   });
   mobileNav.addEventListener('click', e => e.stopPropagation());
 }
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const page = location.pathname.split("/").pop() || "index.html";
+
+//   document.querySelectorAll(".nav-list a").forEach(a => {
+//     const href = a.getAttribute("href");
+
+//     if (href && href.includes(page)) {
+//       a.classList.add("active-nav");
+
+//       const parentList = a.closest(".list");
+//       if (parentList) {
+//         parentList.querySelector(".nav-label")?.classList.add("active-nav");
+//       }
+//     }
+//   });
+// });
+
