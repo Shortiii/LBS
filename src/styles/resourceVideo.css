@@ -11,13 +11,13 @@ body{
   @apply relative
 }
 .top-nav {
-  @apply bg-[#122867] text-white py-4 lg:py-6 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+  @apply bg-[#122867] text-white py-4 lg:py-6 2xl:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
 }
 .nav-toggle {
   @apply block lg:hidden cursor-pointer;
 }
 .top-nav a{
-  @apply text-xs md:text-sm lg:text-base
+  @apply text-xs md:text-sm lg:text-base 2xl:text-xl
 }
 .nav-community{
   @apply underline border-r-2  pr-4
@@ -26,7 +26,7 @@ body{
   @apply w-full
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+  @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
 }
 .desktop-nav{
   @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
@@ -38,7 +38,7 @@ body{
   @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
 }
 .nav-list {
-  @apply text-white cursor-pointer text-base xl:text-lg 2xl:text-xl;
+  @apply text-white cursor-pointer text-base xl:text-lg 2xl:text-2xl
 }
 .list{
   @apply relative
@@ -73,7 +73,7 @@ body{
 
 /* MAIN */
 main{
-     @apply bg-cover bg-center bg-no-repeat w-full h-[85vh] lg:h-[95vh] relative;
+     @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[85vh] md:h-[90vh] 2xl:h-[65vh] relative;
   background-image: url('../assets/resourceVideo.png');
 }
 main a{
