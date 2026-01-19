@@ -23,7 +23,7 @@ body{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[85vh] md:h-[90vh] 2xl:h-[65vh]  transition-all duration-1000 overflow-hidden;
+  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[80vh] md:h-[95vh] 2xl:min-h-screen flex flex-col justify-center transition-all duration-1000 overflow-hidden;
   background-image: url('../assets/membership.png');
 }
 .bottom-nav {
@@ -68,8 +68,11 @@ body{
 .logo{
   @apply flex gap-5
 }
+.hero-body {
+  @apply flex-1 flex items-center;
+}
 .bottom-header {
-  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-[90%] md:w-3/4 lg:w-2/4  flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#122867CC] p-2 md:p-4 lg:p-6 
+  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-[90%] md:w-3/4 lg:w-2/4  flex flex-col gap-2 md:gap-4 lg:gap-6 justify-center bg-[#122867CC] p-2 md:p-4 lg:p-6 
 }
 .bottom-header h1 {
   @apply text-lg md:text-2xl lg:text-4xl 2xl:text-5xl font-bold mb-0 lg:mb-3 text-[#00AEEF]
@@ -90,9 +93,9 @@ body{
   content: "";
   position: absolute;
   left: 0;
-  bottom: -40px;        
+  bottom: -45px;        
   width: 100%;
-  height: 4px;
+  height: 5px;
   background-color: white;
   transform: scaleX(0);
   transform-origin: left;
@@ -115,13 +118,13 @@ footer{
   @apply flex gap-4 md:gap-6 lg:gap-8
 }
 .footer-note p{
-  @apply text-[12px] md:text-sm font-normal  pt-4 
+  @apply text-[12px] md:text-sm 2xl:text-base font-normal pt-4 
 }
 .footer-div h3 {
-  @apply text-base font-semibold pb-2
+  @apply text-base 2xl:text-lg font-semibold pb-2
 }
 .footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
-  @apply text-[12px] md:text-sm 
+  @apply text-[12px] md:text-sm 2xl:text-base 
 }
 .footer-div h5{
   @apply py-2 md:py-4 lg:py-6
@@ -133,13 +136,13 @@ footer{
   @apply flex items-center gap-2 pb-2
 }
 .footer-connect h3{
-  @apply text-base md:text-xl lg:text-[28px] pb-2 lg:pb-4
+  @apply text-base md:text-xl lg:text-[28px] 2xl:text-3xl pb-2 lg:pb-4
 }
 .footer-connect p{
-  @apply text-[12px] md:text-sm 
+  @apply text-[12px] md:text-sm 2xl:text-base
 }
 .connect-input{
-  @apply pt-5 text-[10px] sm:text-xs
+  @apply pt-5 text-[10px] sm:text-xs 2xl:text-sm
 }
 .footer-connect input{
   @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-[70%] md:w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
