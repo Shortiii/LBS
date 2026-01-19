@@ -4,7 +4,7 @@
   --font-roboto: "Roboto", sans-serif; 
 }
 body{
-  @apply w-full font-roboto
+  @apply w-full font-roboto select-none outline-none
 }
 /* NAV */
 .nav{

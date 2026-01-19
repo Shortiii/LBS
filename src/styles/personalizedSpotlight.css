@@ -4,7 +4,7 @@
   --font-roboto: "Roboto", sans-serif; 
 }
 body{
-  @apply w-full font-roboto
+  @apply w-full font-roboto select-none outline-none
 }
 /* NAV */
 .nav{
@@ -23,7 +23,7 @@ body{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[85vh] md:h-[90vh] 2xl:h-[65vh] transition-all duration-1000 overflow-hidden;
+  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[80vh] md:h-[95vh] 2xl:min-h-screen flex flex-col justify-center transition-all duration-1000 overflow-hidden;
   background-image: url('../assets/alumniImg.png');
 }
 .bottom-nav {
@@ -68,11 +68,14 @@ body{
 .logo{
   @apply flex gap-5
 }
+.hero-body {
+  @apply flex-1 flex items-center;
+}
 .bottom-header {
-  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-[90%] md:w-3/4 lg:w-2/4 2xl:w-1/3 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#122867CC] p-2 md:p-4 lg:p-6 
+  @apply text-white ml-[5%] w-[90%] md:w-3/4 lg:w-2/4 2xl:w-2/5 flex flex-col gap-2 md:gap-4 lg:gap-6 justify-center bg-[#122867CC] p-2 md:p-4 lg:p-6 select-none outline-none
 }
 .bottom-header h1 {
-  @apply text-lg md:text-2xl lg:text-4xl 2xl:text-5xl font-bold mb-0 lg:mb-3 text-[#00AEEF]
+  @apply text-lg md:text-2xl lg:text-4xl 2xl:text-5xl font-bold mb-0 lg:mb-3 text-[#00AEEF] 
 }
 .bottom-header p {
   @apply text-xs md:text-base lg:text-xl 2xl:text-2xl font-normal
@@ -87,9 +90,9 @@ body{
   content: "";
   position: absolute;
   left: 0;
-  bottom: -40px;        
+  bottom: -45px;        
   width: 100%;
-  height: 4px;
+  height: 6px;
   background-color: white;
   transform: scaleX(0);
   transform-origin: left;
@@ -110,13 +113,13 @@ body{
     @apply w-1/2 sm:w-1/3 bg-[#122867] text-white px-3 md:px-6 lg:px-12 py-4 md:py-8
 }
 .highlight-text h2{
-    @apply text-lg md:text-2xl lg:text-[32px] font-semibold
+    @apply text-lg md:text-2xl lg:text-[32px] 2xl:text-4xl font-semibold
 }
 .highlight-text h4{
-    @apply text-xs sm:text-base xl:text-xl py-2 md:py-4 xl:py-6
+    @apply text-xs sm:text-base xl:text-xl 2xl:text-2xl py-2 md:py-4 xl:py-6
 }
 .highlight-text p{
-    @apply italic text-xs sm:text-base xl:text-xl pt-4
+    @apply italic text-xs sm:text-base xl:text-xl 2xl:text-2xl pt-4
 }
 .hightlight-img{
     @apply w-1/2 sm:w-2/3
@@ -134,22 +137,22 @@ body{
     @apply w-full lg:w-2/5 py-3 md:py-6 px-[10%] sticky top-24
 }
 .past-spotlight h6{
-    @apply text-white bg-[#122867] text-xs sm:text-sm md:text-base font-semibold py-4 px-6
+    @apply text-white bg-[#122867] text-xs sm:text-sm md:text-base 2xl:text-lg font-semibold py-4 px-6
 }
 .past-spotlight p{
-    @apply py-4 border-b border-[#E5E6EB] text-xs sm:text-sm md:text-base text-[#1D2129] font-semibold
+    @apply py-4 border-b border-[#E5E6EB] text-xs sm:text-sm md:text-base 2xl:text-lg text-[#1D2129] font-semibold
 }
 .past-spotlight a{
     @apply text-[#122867]
 }
 .register-note{
-    @apply py-4  flex flex-col gap-6 text-[#1D2129] text-base 
+    @apply py-4  flex flex-col gap-6 text-[#1D2129] text-base 2xl:text-lg
 }
 .register-note p{
-  @apply text-xs sm:text-sm md:text-base
+  @apply text-xs sm:text-sm md:text-base 2xl:text-lg
 }
 .spotlight-text h2{
-    @apply text-[#122867] text-lg md:text-2xl lg:text-[32px] font-semibold pt-6
+    @apply text-[#122867] text-lg md:text-2xl lg:text-[32px] 2xl:text-4xl font-semibold pt-6
 }
 
 
@@ -161,13 +164,13 @@ footer{
   @apply flex gap-4 md:gap-6 lg:gap-8
 }
 .footer-note p{
-  @apply text-[12px] md:text-sm font-normal  pt-4 
+  @apply text-[12px] md:text-sm 2xl:text-base font-normal pt-4 
 }
 .footer-div h3 {
-  @apply text-base font-semibold pb-2
+  @apply text-base 2xl:text-lg font-semibold pb-2
 }
 .footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
-  @apply text-[12px] md:text-sm 
+  @apply text-[12px] md:text-sm 2xl:text-base 
 }
 .footer-div h5{
   @apply py-2 md:py-4 lg:py-6
@@ -179,13 +182,13 @@ footer{
   @apply flex items-center gap-2 pb-2
 }
 .footer-connect h3{
-  @apply text-base md:text-xl lg:text-[28px] pb-2 lg:pb-4
+  @apply text-base md:text-xl lg:text-[28px] 2xl:text-3xl pb-2 lg:pb-4
 }
 .footer-connect p{
-  @apply text-[12px] md:text-sm 
+  @apply text-[12px] md:text-sm 2xl:text-base
 }
 .connect-input{
-  @apply pt-5 text-[10px] sm:text-xs
+  @apply pt-5 text-[10px] sm:text-xs 2xl:text-sm
 }
 .footer-connect input{
   @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-[70%] md:w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out

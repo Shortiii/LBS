@@ -4,11 +4,11 @@
   --font-roboto: "Roboto", sans-serif; 
 }
 body{
-  @apply w-full font-roboto
+  @apply w-full font-roboto select-none outline-none
 }
 /* NAV */
 .nav{
-  @apply relative
+  @apply relative 
 }
 .top-nav {
   @apply bg-[#122867] text-white py-4 lg:py-6 2xl:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
@@ -23,7 +23,7 @@ body{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[85vh] md:h-[90vh] 2xl:h-[65vh] transition-all duration-1000 overflow-hidden;
+  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[80vh] md:h-[95vh] 2xl:min-h-screen flex flex-col justify-center transition-all duration-1000 overflow-hidden;
   background-image: url('../assets/alumniImg.png');
 }
 .bottom-nav {
@@ -68,6 +68,9 @@ body{
 .logo{
   @apply flex gap-5
 }
+.hero-body {
+  @apply flex-1 flex items-center;
+}
 .bottom-header {
   @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-[90%] sm:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#F2F3F5] p-6 border-b-2 border-[#165DFF] md:p-4 lg:p-6 absolute left-3 md:left-15 lg:left-25 -bottom-16
 }
@@ -87,9 +90,9 @@ body{
   content: "";
   position: absolute;
   left: 0;
-  bottom: -40px;        
+  bottom: -45px;        
   width: 100%;
-  height: 4px;
+  height: 6px;
   background-color: white;
   transform: scaleX(0);
   transform-origin: left;
@@ -107,10 +110,10 @@ body{
     @apply bg-[#122867] text-white p-5 md:p-10
 }
 .insights-title h2{
-    @apply text-xl md:text-2xl lg:text-[32px] font-semibold
+    @apply text-xl md:text-2xl lg:text-[32px] 2xl:text-4xl font-semibold
 }
 .insights-title p{
-    @apply text-xs md:text-sm lg:text-base py-2
+    @apply text-xs md:text-sm lg:text-base 2xl:text-lg py-2
 }
 .insights-template{
     @apply flex flex-col lg:flex-row py-6 gap-6
@@ -122,7 +125,7 @@ body{
     @apply w-full object-cover h-full
 }
 .insight-div h6{
-    @apply absolute top-0 text-[8px] md:text-xs lg:text-sm bg-[#122867] text-white p-1 md:p-3
+    @apply absolute top-0 text-[8px] md:text-xs lg:text-sm 2xl:text-base bg-[#122867] text-white p-1 md:p-3
 }
 .insight-div div{
     @apply absolute bottom-0 bg-[linear-gradient(180deg,#0E42D280_50%,transparent_100%)] w-full p-1 md:p-4 text-white
@@ -131,28 +134,28 @@ body{
     @apply w-full lg:w-2/3
 }
 .template-div h5{
-    @apply text-base md:text-lg lg:text-xl font-semibold
+    @apply text-base md:text-lg lg:text-xl 2xl:text-2xl font-semibold
 }
 .template-div p{
-    @apply text-[8px] md:text-xs lg:text-sm
+    @apply text-[8px] md:text-xs lg:text-sm 2xl:text-base
 }
 .insight{
     @apply flex flex-row lg:flex-col gap-3 md:gap-6 w-full lg:w-1/3
 }
 .insight h5{
-     @apply text-[8px] md:text-xs lg:text-sm font-semibold
+     @apply text-[8px] md:text-xs lg:text-sm 2xl:text-base font-semibold
 }
 .insight p{
-     @apply text-[8px] md:text-xs lg:text-sm
+     @apply text-[8px] md:text-xs lg:text-sm 2xl:text-base
 }
 .event{
     @apply bg-[#122867] text-white mb-8 px-8 md:px-18 lg:px-24 py-15
 }
 .event-title h2{
-    @apply text-xl md:text-2xl lg:text-[32px]  font-semibold
+    @apply text-xl md:text-2xl lg:text-[32px] 2xl:text-4xl font-semibold
 }
 .event-title p{
-    @apply text-xs md:text-sm lg:text-base py-2 w-full md:w-2/3 lg:w-1/3
+    @apply text-xs md:text-sm lg:text-base 2xl:text-base py-2 w-full md:w-2/3 lg:w-1/3
 }
 .event-div{
     @apply flex flex-col lg:flex-row justify-center items-center gap-6 py-6
@@ -164,10 +167,10 @@ body{
     @apply w-full
 }
 .event-details h5{
-    @apply bg-[#122867] text-white absolute top-0 p-3 text-sm
+    @apply bg-[#122867] text-white absolute top-0 p-3 text-sm 2xl:text-base
 }
 .event-text{
-    @apply bg-[linear-gradient(180deg,#0E42D280_50%,transparent_100%)] absolute bottom-0 p-3 text-sm
+    @apply bg-[linear-gradient(180deg,#0E42D280_50%,transparent_100%)] absolute bottom-0 p-3 text-sm 2xl:text-base
 }
 .event-text h6{
     @apply font-semibold
@@ -180,10 +183,10 @@ body{
     @apply border-l-4 border-[#122867] pl-4
 }
 .recent-news-title h2{
-    @apply text-[#122867] text-xl md:text-2xl lg:text-[32px] font-semibold
+    @apply text-[#122867] text-xl md:text-2xl lg:text-[32px] 2xl:text-4xl font-semibold
 }
 .recent-news-title p{
-    @apply text-[#1D2129] text-xs md:text-sm lg:text-base w-full md:w-3/4 lg:w-2/5 
+    @apply text-[#1D2129] text-xs md:text-sm lg:text-base 2xl:text-lg w-full md:w-3/4 lg:w-2/5 
 }
 .news-template{
     @apply pt-8 flex flex-col lg:flex-row relative items-center lg:items-start gap-20
@@ -198,10 +201,10 @@ body{
     @apply w-full sm:w-1/2 flex flex-col gap-3
 }
 .template-note h6{
-    @apply text-sm sm:text-base text-[#122867]
+    @apply text-sm sm:text-base 2xl:text-lg text-[#122867]
 }
 .template-note h4{
-    @apply font-semibold text-[#122867] text-base sm:text-[18px]
+    @apply font-semibold text-[#122867] text-base sm:text-[18px] 2xl:text-xl
 }
 .template-text{
     @apply flex items-center gap-4
@@ -213,7 +216,7 @@ body{
     @apply w-full lg:w-[30%] pb-2 border-b-2  border-[#165DFF] sticky top-24
 }
 .template-title{
-    @apply text-base sm:text-2xl text-white font-semibold p-3 bg-[#00227FE5]
+    @apply text-base sm:text-2xl 2xl:text-3xl text-white font-semibold p-3 bg-[#00227FE5]
 }
 .template-alumni img{
     @apply w-full h-full object-cover;
@@ -222,16 +225,16 @@ body{
   @apply bg-white py-4
 }
 .card-div h2{
-  @apply text-[#1D2129] text-base sm:text-[23px]
+  @apply text-[#1D2129] text-base sm:text-[23px] 2xl:text-[28px]
 }
 .card-div h4{
-  @apply text-[#4E5969] text-sm sm:text-base
+  @apply text-[#4E5969] text-sm sm:text-base 2xl:text-lg
 }
 .card-div p{
-  @apply pt-2 text-sm sm:text-base text-[#4E5969] italic
+  @apply pt-2 text-sm sm:text-base 2xl:text-lg text-[#4E5969] italic
 }
 .card-div a {
-  @apply text-sm sm:text-base underline text-[#122867]
+  @apply text-sm sm:text-base 2xl:text-lg underline text-[#122867]
 }
 
 /* FOOTER */
@@ -242,13 +245,13 @@ footer{
   @apply flex gap-4 md:gap-6 lg:gap-8
 }
 .footer-note p{
-  @apply text-[12px] md:text-sm font-normal  pt-4 
+  @apply text-[12px] md:text-sm 2xl:text-base font-normal pt-4 
 }
 .footer-div h3 {
-  @apply text-base font-semibold pb-2
+  @apply text-base 2xl:text-lg font-semibold pb-2
 }
 .footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
-  @apply text-[12px] md:text-sm 
+  @apply text-[12px] md:text-sm 2xl:text-base 
 }
 .footer-div h5{
   @apply py-2 md:py-4 lg:py-6
@@ -260,13 +263,13 @@ footer{
   @apply flex items-center gap-2 pb-2
 }
 .footer-connect h3{
-  @apply text-base md:text-xl lg:text-[28px] pb-2 lg:pb-4
+  @apply text-base md:text-xl lg:text-[28px] 2xl:text-3xl pb-2 lg:pb-4
 }
 .footer-connect p{
-  @apply text-[12px] md:text-sm 
+  @apply text-[12px] md:text-sm 2xl:text-base
 }
 .connect-input{
-  @apply pt-5 text-[10px] sm:text-xs
+  @apply pt-5 text-[10px] sm:text-xs 2xl:text-sm
 }
 .footer-connect input{
   @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-[70%] md:w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
