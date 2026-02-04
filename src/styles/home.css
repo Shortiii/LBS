@@ -1,25 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
 @import "tailwindcss";
 @theme {
-  --font-roboto: "Roboto", sans-serif; 
+  /* --font-roboto: "Roboto", sans-serif; */
+  --font-segoe: "Segoe UI", sans-serif;
 }
 @font-face {
-  font-family: 'SegoeUI';
-  src: url('../assets/fonts/Segoe UI.ttf') format('truetype');
+  font-family: "SegoeUI";
+  src: url("../assets/fonts/Segoe UI.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-body{
-  @apply w-full font-roboto select-none outline-none
+body {
+  @apply w-full font-segoe select-none outline-none;
 }
-input{
-   @apply outline-none focus:outline-none
+input {
+  @apply outline-none focus:outline-none;
 }
 /* NAV */
-.nav{
-  @apply relative
+.nav {
+  @apply relative;
 }
 .top-nav {
   @apply bg-[#122867] text-white py-4 lg:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center  fixed top-0 left-0 w-full z-100;
@@ -27,46 +28,46 @@ input{
 .nav-toggle {
   @apply block lg:hidden cursor-pointer;
 }
-.top-nav a{
-  @apply text-xs md:text-sm lg:text-base 2xl:text-xl 
+.top-nav a {
+  @apply text-xs md:text-sm lg:text-base 2xl:text-xl;
 }
-.nav-community{
-  @apply underline border-r-2  pr-4
+.nav-community {
+  @apply underline border-r-2  pr-4;
 }
 .nav-header {
   @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[80vh] md:h-[95vh] 2xl:min-h-screen flex flex-col justify-center transition-all duration-1000 overflow-hidden;
-  background-image: url('../assets/header1.png');
+  background-image: url("../assets/header1.png");
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] fixed top-14 lg:top-22 left-0 w-full z-100 ;
+  @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] fixed top-14 lg:top-22 left-0 w-full z-100;
 }
-.desktop-nav{
-  @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
+.desktop-nav {
+  @apply hidden lg:flex items-center gap-6 text-white cursor-pointer;
 }
-.desktop-nav div{
-  @apply text-white transition-transform duration-200 ease-out hover:scale-105
+.desktop-nav div {
+  @apply text-white transition-transform duration-200 ease-out hover:scale-105;
 }
- .cancel {
-  @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
+.cancel {
+  @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px];
 }
 .nav-list {
-  @apply text-white cursor-pointer text-base xl:text-lg 2xl:text-2xl
+  @apply text-white cursor-pointer text-base xl:text-lg 2xl:text-2xl;
 }
 .nav-label {
   @apply relative inline-block pb-1;
 }
 
-.list{
-  @apply relative
+.list {
+  @apply relative;
 }
-.list ul{
-  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2 z-50
+.list ul {
+  @apply bg-white  text-black text-base  border-b-2 border-[#165DFF] absolute top-8 left-2 z-50;
 }
-.list ul li{
-  @apply block  px-3 py-2 bg-white hover:bg-[#122867] text-black hover:text-white
+.list ul li {
+  @apply block  px-3 py-2 bg-white hover:bg-[#122867] text-black hover:text-white;
 }
-.list ul li a{
-  @apply whitespace-nowrap 
+.list ul li a {
+  @apply whitespace-nowrap;
 }
 .mobile-nav {
   @apply fixed top-0 left-0 h-screen w-2/4 sm:w-1/4 max-w-xs bg-[#122867] text-white
@@ -74,34 +75,34 @@ input{
          pt-15 px-6 items-center
          transform -translate-x-full
          transition-transform duration-300 ease-in-out
-         z-50 lg:hidden
+         z-50 lg:hidden;
 }
 .mobile-nav.open {
   @apply translate-x-0;
 }
-.logo{
-  @apply flex gap-5
+.logo {
+  @apply flex gap-5;
 }
 .bottom-header {
   @apply text-white  ml-[5%]
          w-[90%] md:w-3/4 lg:w-2/4 2xl:w-2/5
          flex flex-col gap-2 md:gap-4 lg:gap-6
-         flex-1 justify-center
+         flex-1 justify-center;
 }
 .bottom-header h1 {
-  @apply text-lg md:text-2xl lg:text-4xl 2xl:text-5xl font-bold mb-3 mt-0 lg:mt-24
+  @apply text-lg md:text-2xl lg:text-4xl 2xl:text-5xl font-bold mb-3 mt-0 lg:mt-24;
 }
 .bottom-header p {
-  @apply text-xs md:text-base lg:text-xl 2xl:text-2xl font-normal
+  @apply text-xs md:text-base lg:text-xl 2xl:text-2xl font-normal;
 }
-.bottom-header a{
-  @apply inline
+.bottom-header a {
+  @apply inline;
 }
-.join{
-  @apply bg-white text-black p-2 md:p-3 2xl:p-4 rounded-xl text-sm md:text-base lg:text-xl font-medium cursor-pointer w-[50%] md:w-[40%] text-center hover:bg-[#122867] transition duration-400 ease-in-out hover:text-white 
+.join {
+  @apply bg-white text-black p-2 md:p-3 2xl:p-4 rounded-xl text-sm md:text-base lg:text-xl font-medium cursor-pointer w-[50%] md:w-[40%] text-center hover:bg-[#122867] transition duration-400 ease-in-out hover:text-white;
 }
-.toggle{
-  @apply absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-3 z-20
+.toggle {
+  @apply absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-3 z-20;
 }
 .dot {
   @apply w-4 h-4 rounded-full bg-white/50 hover:bg-white transition;
@@ -109,88 +110,91 @@ input{
 .dot.active {
   @apply bg-white;
 }
-.active-nav, .nav-label.active-nav {
-  @apply border-b-4 2xl:border-b-8 border-white pb-10
+.active-nav,
+.nav-label.active-nav {
+  @apply border-b-4 2xl:border-b-8 border-white pb-10;
 }
 
 /* ABOUT */
 .about {
-  @apply flex flex-col lg:flex-row items-center px-8 md:px-18 lg:px-24 my-28 gap-8 sm:gap-16 md:gap-8 w-full 
+  @apply flex flex-col lg:flex-row items-center px-8 md:px-18 lg:px-24 my-28 gap-8 sm:gap-16 md:gap-8 w-full;
 }
 .main-img {
-  @apply  w-full lg:w-1/2 relative
+  @apply w-full lg:w-1/2 relative;
 }
-.main-img img{
-  @apply w-full object-cover
+.main-img img {
+  @apply w-full object-cover;
 }
-.top-img{
-  @apply bg-[#122867] w-[20%] absolute top-[40%] left-[40%] flex justify-center py-2 md:py-4 cursor-pointer
+.top-img {
+  @apply bg-[#122867] w-[20%] absolute top-[40%] left-[40%] flex justify-center py-2 md:py-4 cursor-pointer;
 }
-.top-img svg{
- @apply w-[50%] h-[50%] lg:w-full  lg:h-full
+.top-img svg {
+  @apply w-[50%] h-[50%] lg:w-full  lg:h-full;
 }
-.bottom-img{
-  @apply w-[20%] h-[8%] bg-[#122867] absolute bottom-0 lg:-bottom-[46px]
+.bottom-img {
+  @apply w-[20%] h-[8%] bg-[#122867] absolute bottom-0 lg:-bottom-[46px];
 }
 .about-content {
-  @apply flex flex-col w-full lg:w-1/2 
+  @apply flex flex-col w-full lg:w-1/2;
 }
 .about-content h1 {
-  @apply text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-[#122867]
+  @apply text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-[#122867];
 }
 .about-content p {
-  @apply text-sm md:text-base 2xl:text-xl font-normal text-[#676767] py-2 lg:py-4
+  @apply text-sm md:text-base 2xl:text-xl font-normal text-[#676767] py-2 lg:py-4;
 }
 .about-content a {
-  @apply text-sm md:text-base 2xl:text-xl underline hover:text-[#122867]
+  @apply text-sm md:text-base 2xl:text-xl underline hover:text-[#122867];
 }
-.about-list{
-  @apply mt-4
+.about-list {
+  @apply mt-4;
 }
 .about-items {
-  @apply flex justify-between items-center gap-6 py-4
+  @apply flex justify-between items-center gap-6 py-4;
 }
 .about-item {
-  @apply border-t border-b border-[#E5E6EB]
+  @apply border-t border-b border-[#E5E6EB];
 }
-.about-items p{
-  @apply p-0
+.about-items p {
+  @apply p-0;
 }
 .first-div .firstP {
-  @apply text-[#122867] text-lg 2xl:text-xl font-semibold
+  @apply text-[#122867] text-lg 2xl:text-xl font-semibold;
 }
 .first-div .secondP {
-  @apply text-[#676767] text-base 2xl:text-lg font-normal
+  @apply text-[#676767] text-base 2xl:text-lg font-normal;
 }
 
 /* CONNECT */
 .connect {
   @apply bg-cover bg-center bg-no-repeat w-full h-full px-8 md:px-18 lg:px-24;
-  background-image: url('src/assets/Background Shape1.png');
+  background-image: url("src/assets/Background Shape1.png");
 }
 .first-connect {
-  @apply pt-4 pb-10
+  @apply pt-4 pb-10;
 }
-.first-text{
-  @apply border-l-3 border-[#0E42D2] pl-3
+.first-text {
+  @apply border-l-3 border-[#0E42D2] pl-3;
 }
-.first-text h1{
-  @apply text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-[#122867]
+.first-text h1 {
+  @apply text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl font-semibold text-[#122867];
 }
-.first-text p{
-  @apply text-sm md:text-base 2xl:text-xl font-normal text-[#676767] 
+.first-text p {
+  @apply text-sm md:text-base 2xl:text-xl font-normal text-[#676767];
 }
-.connect-grid{
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-20
+.connect-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mb-20;
 }
 .grid-card {
-  @apply relative overflow-hidden ;
+  @apply relative overflow-hidden;
 }
-.grid-card img, .card-items img, .third-card img {
+.grid-card img,
+.card-items img,
+.third-card img {
   @apply w-full h-full object-cover;
 }
 .grid-text {
-  @apply absolute bottom-0 left-0 w-3/4 bg-[#00227FE5] text-white px-5 py-2 md:py-4 hover:mb-2
+  @apply absolute bottom-0 left-0 w-3/4 bg-[#00227FE5] text-white px-5 py-2 md:py-4 hover:mb-2;
 }
 .grid-text h4 {
   @apply text-[10px] md:text-sm lg:text-lg 2xl:text-xl font-semibold mb-1;
@@ -198,174 +202,180 @@ input{
 .grid-text p {
   @apply text-[10px] md:text-sm 2xl:text-lg leading-snug opacity-90 pb-2;
 }
-.grid-text h6{
-@apply opacity-0 translate-y-2 uppercase group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out
+.grid-text h6 {
+  @apply opacity-0 translate-y-2 uppercase group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out;
 }
-.second-container{
+.second-container {
   @apply flex flex-col lg:flex-row items-center lg:items-start gap-8 w-full pt-8 lg:pt-4 pb-6;
 }
-.first-card{
-  @apply flex flex-col gap-4
+.first-card {
+  @apply flex flex-col gap-4;
 }
-.card-items{
-  @apply relative overflow-hidden
+.card-items {
+  @apply relative overflow-hidden;
 }
-.cardP{
-  @apply absolute top-0 left-0 bg-[#00227FE5] text-white p-2 sm:p-3 text-xs sm:text-sm 2xl:text-lg
+.cardP {
+  @apply absolute top-0 left-0 bg-[#00227FE5] text-white p-2 sm:p-3 text-xs sm:text-sm 2xl:text-lg;
 }
-.card-text, .card-note{
-  @apply absolute bottom-0 left-0 w-full bg-[#0f182ee4] text-white p-3 
+.card-text,
+.card-note {
+  @apply absolute bottom-0 left-0 w-full bg-[#0f182ee4] text-white p-3;
 }
-.card-text h4{
-  @apply text-[12px] sm:text-sm 2xl:text-lg font-semibold pb-1
+.card-text h4 {
+  @apply text-[12px] sm:text-sm 2xl:text-lg font-semibold pb-1;
 }
-.card-text p, .card-note p{
-  @apply text-[12px] sm:text-sm 2xl:text-lg
+.card-text p,
+.card-note p {
+  @apply text-[12px] sm:text-sm 2xl:text-lg;
 }
-.card-note h4{
-  @apply text-xs sm:text-sm md:text-xl 2xl:text-3xl font-semibold pb-1
+.card-note h4 {
+  @apply text-xs sm:text-sm md:text-xl 2xl:text-3xl font-semibold pb-1;
 }
-.third-div{
-  @apply text-base sm:text-lg md:text-2xl text-white font-semibold p-2 sm:p-3 bg-[#00227FE5]
+.third-div {
+  @apply text-base sm:text-lg md:text-2xl text-white font-semibold p-2 sm:p-3 bg-[#00227FE5];
 }
-.card-div{
-  @apply bg-white py-4
+.card-div {
+  @apply bg-white py-4;
 }
-.card-div h2{
-  @apply text-[#1D2129] text-base sm:text-lg md:text-2xl 2xl:text-3xl 
+.card-div h2 {
+  @apply text-[#1D2129] text-base sm:text-lg md:text-2xl 2xl:text-3xl;
 }
-.card-div h4{
-  @apply text-[#4E5969] text-sm sm:text-base md:text-lg
+.card-div h4 {
+  @apply text-[#4E5969] text-sm sm:text-base md:text-lg;
 }
-.card-div p{
-  @apply pt-2 text-[12px] sm:text-base md:text-lg 2xl:text-xl text-[#4E5969] italic
+.card-div p {
+  @apply pt-2 text-[12px] sm:text-base md:text-lg 2xl:text-xl text-[#4E5969] italic;
 }
 .card-div a {
-  @apply text-[12px] sm:text-base md:text-lg 2xl:text-xl underline text-[#122867]
+  @apply text-[12px] sm:text-base md:text-lg 2xl:text-xl underline text-[#122867];
 }
 
 /* CONTACT */
 .contact {
   @apply bg-cover bg-center bg-no-repeat w-full h-full px-8 md:px-18 lg:px-24 py-36 mt-5 flex flex-col justify-center items-center gap-28;
-  background-image: url('src/assets/Background Shape2.png');
+  background-image: url("src/assets/Background Shape2.png");
 }
-.contact-div{
-  @apply flex bg-white rounded-sm 
+.contact-div {
+  @apply flex bg-white rounded-sm;
 }
-.contact-note{
-  @apply bg-[#1679CB] text-white w-[40%] p-2 sm:p-5 md:p-10 hover:rounded-xl ml-1 sm:ml-3 relative transition duration-400 ease-in-out
+.contact-note {
+  @apply bg-[#1679CB] text-white w-[40%] p-2 sm:p-5 md:p-10 hover:rounded-xl ml-1 sm:ml-3 relative transition duration-400 ease-in-out;
 }
-.contact-note img{
-  @apply w-[30%] md:w-[40%] lg:w-[50%]
+.contact-note img {
+  @apply w-[30%] md:w-[40%] lg:w-[50%];
 }
-.contact-note h4{
-  @apply text-sm sm:text-lg md:text-xl lg:text-[28px] 2xl:text-3xl font-semibold pb-2 sm:pb-4 md:pb-2 lg:pb-8
+.contact-note h4 {
+  @apply text-sm sm:text-lg md:text-xl lg:text-[28px] 2xl:text-3xl font-semibold pb-2 sm:pb-4 md:pb-2 lg:pb-8;
 }
-.contact-note h6{
-  @apply  text-[10px] sm:text-base lg:text-lg 2xl:text-xl font-normal pb-3 md:pb-6
+.contact-note h6 {
+  @apply text-[10px] sm:text-base lg:text-lg 2xl:text-xl font-normal pb-3 md:pb-6;
 }
-.contact-div  .eliipse1{
-  @apply absolute bottom-0 right-0
+.contact-div .eliipse1 {
+  @apply absolute bottom-0 right-0;
 }
-.contact-div  .eliipse2{
-  @apply absolute bottom-[5%] sm:bottom-[10%] right-[15%]
+.contact-div .eliipse2 {
+  @apply absolute bottom-[5%] sm:bottom-[10%] right-[15%];
 }
-.contact-details{
-  @apply w-[60%] p-3 sm:p-5 md:p-8 lg:p-10 2xl:p-15 text-[#676767]
+.contact-details {
+  @apply w-[60%] p-3 sm:p-5 md:p-8 lg:p-10 2xl:p-15 text-[#676767];
 }
-.form-div{
-  @apply flex flex-col sm:flex-row gap-4 md:gap-8 lg:gap-10 justify-between
+.form-div {
+  @apply flex flex-col sm:flex-row gap-4 md:gap-8 lg:gap-10 justify-between;
 }
-.form-input input{
-  @apply border-b-2 border-[#8D8D8D] w-full hover:border-b-3 text-xs sm:text-sm md:text-base 2xl:text-lg
+.form-input input {
+  @apply border-b-2 border-[#8D8D8D] w-full hover:border-b-3 text-xs sm:text-sm md:text-base 2xl:text-lg;
 }
-.form-input{
-  @apply flex flex-col w-[80%] sm:w-[40%]
+.form-input {
+  @apply flex flex-col w-[80%] sm:w-[40%];
 }
-.email{
-  @apply w-[80%] sm:w-[40%] py-4 md:py-8 lg:py-12
+.email {
+  @apply w-[80%] sm:w-[40%] py-4 md:py-8 lg:py-12;
 }
-.form-input label{
-  @apply text-xs sm:text-sm 2xl:text-base
+.form-input label {
+  @apply text-xs sm:text-sm 2xl:text-base;
 }
-.form-input .title{
-  @apply text-sm md:text-base 2xl:text-lg font-semibold pb-2 md:pb-4
+.form-input .title {
+  @apply text-sm md:text-base 2xl:text-lg font-semibold pb-2 md:pb-4;
 }
 .message {
-  @apply w-full 
+  @apply w-full;
 }
-.radio-group{
-  @apply flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center w-full 
+.radio-group {
+  @apply flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center w-full;
 }
-.radio-group label{
-  @apply flex gap-2 items-center whitespace-nowrap
+.radio-group label {
+  @apply flex gap-2 items-center whitespace-nowrap;
 }
-.radio-group label input{
-  @apply w-4 h-4 shrink-0
+.radio-group label input {
+  @apply w-4 h-4 shrink-0;
 }
-.subject{
-  @apply pb-4 md:pb-8 lg:pb-12
+.subject {
+  @apply pb-4 md:pb-8 lg:pb-12;
 }
-.message label{
-  @apply pb-2 md:pb-4
+.message label {
+  @apply pb-2 md:pb-4;
 }
-.contact button{
-  @apply my-4 md:my-8 lg:my-12 bg-[#122867] text-white py-2 md:py-4 px-4 md:px-8 rounded-lg text-xs md:text-sm lg:text-base 2xl:text-lg hover:bg-[#1679CB] transition duration-400 ease-in-out 
+.contact button {
+  @apply my-4 md:my-8 lg:my-12 bg-[#122867] text-white py-2 md:py-4 px-4 md:px-8 rounded-lg text-xs md:text-sm lg:text-base 2xl:text-lg hover:bg-[#1679CB] transition duration-400 ease-in-out;
 }
-.form-note p{
-  @apply w-full lg:w-[55%] pb-3 font-medium text-[#676767] text-[10px] md:text-sm lg:text-base 2xl:text-lg
+.form-note p {
+  @apply w-full lg:w-[55%] pb-3 font-medium text-[#676767] text-[10px] md:text-sm lg:text-base 2xl:text-lg;
 }
-.form-note p span{
-  @apply text-[#122867]
+.form-note p span {
+  @apply text-[#122867];
 }
 
 /* FOOTER */
-footer{
-  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 
+footer {
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24;
 }
-.footer{
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
+.footer {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start;
 }
-.footer-contact-div{
-  @apply flex gap-4 md:gap-6 lg:gap-8
+.footer-contact-div {
+  @apply flex gap-4 md:gap-6 lg:gap-8;
 }
-.footer-note p{
-  @apply text-[12px] md:text-sm 2xl:text-base font-normal pt-4 
+.footer-note p {
+  @apply text-[12px] md:text-sm 2xl:text-base font-normal pt-4;
 }
 .footer-div h3 {
-  @apply text-base 2xl:text-lg font-semibold pb-2
+  @apply text-base 2xl:text-lg font-semibold pb-2;
 }
-.footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
-  @apply text-[12px] md:text-sm 2xl:text-base 
+.footer-div h4,
+.footer-div h5,
+.footer-div h6,
+.footer-div p,
+.footer-div div {
+  @apply text-[12px] md:text-sm 2xl:text-base;
 }
-.footer-div h5{
-  @apply py-2 md:py-4 lg:py-6
+.footer-div h5 {
+  @apply py-2 md:py-4 lg:py-6;
 }
-.footer-div p{
-  @apply pt-1
+.footer-div p {
+  @apply pt-1;
 }
-.footer-social div{
-  @apply flex items-center gap-2 pb-2
+.footer-social div {
+  @apply flex items-center gap-2 pb-2;
 }
-.footer-connect h3{
-  @apply text-base md:text-xl lg:text-[28px] 2xl:text-3xl pb-2 lg:pb-4
+.footer-connect h3 {
+  @apply text-base md:text-xl lg:text-[28px] 2xl:text-3xl pb-2 lg:pb-4;
 }
-.footer-connect p{
-  @apply text-[12px] md:text-sm 2xl:text-base
+.footer-connect p {
+  @apply text-[12px] md:text-sm 2xl:text-base;
 }
-.connect-input{
-  @apply pt-5 text-[10px] sm:text-xs 2xl:text-sm
+.connect-input {
+  @apply pt-5 text-[10px] sm:text-xs 2xl:text-sm;
 }
-.footer-connect input{
+.footer-connect input {
   @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-[70%] md:w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
-  outline-none focus:outline-none
+  outline-none focus:outline-none;
 }
-.footer-connect button{
-  @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-4 hover:py-4.5 hover:text-base transition delay-200 duration-400 ease-in-out rounded-lg
+.footer-connect button {
+  @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-4 hover:py-4.5 hover:text-base transition delay-200 duration-400 ease-in-out rounded-lg;
 }
-footer h1{
-  @apply pt-8 text-center text-[17px] font-normal cursor-pointer
+footer h1 {
+  @apply pt-8 text-center text-[17px] font-normal cursor-pointer;
 }
-footer h1 a{
-  @apply underline
+footer h1 a {
+  @apply underline;
 }

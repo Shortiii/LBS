@@ -1,14 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
 @import "tailwindcss";
 @theme {
-  --font-roboto: "Roboto", sans-serif; 
+  /* --font-roboto: "Roboto", sans-serif; */
+  --font-segoe: "Segoe UI", sans-serif;
 }
 
 @font-face {
-  font-family: 'segoe ui';
-  src: url('/assets/fonts/Segoe UI.ttf') format('ttf');
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe UI.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe UI Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe UI Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe UI Bold Italic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
