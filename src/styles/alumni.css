@@ -11,7 +11,7 @@ body{
   @apply relative
 }
 .top-nav {
-  @apply bg-[#122867] text-white py-4 lg:py-6 2xl:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+  @apply bg-[#122867] text-white py-4 lg:py-6 2xl:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center fixed top-0 left-0 w-full z-100;
 }
 .nav-toggle {
   @apply block lg:hidden cursor-pointer;
@@ -23,17 +23,17 @@ body{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[80vh] md:h-[95vh] 2xl:min-h-screen flex flex-col justify-center transition-all duration-1000 overflow-hidden;
+  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[80vh] md:h-[95vh] 2xl:min-h-screen flex flex-col justify-center transition-all duration-1000 overflow-hidden mt-[20%];
   background-image: url('../assets/alumniHero.png');
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+  @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] fixed top-14 lg:top-22 left-0 w-full z-100 ;
 }
 .desktop-nav{
   @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
 }
 .desktop-nav div{
-  @apply text-white transition delay-200 duration-400 ease-in-out hover:text-xl select-none outline-none
+  @apply text-white transition-transform duration-200 ease-out hover:scale-105 select-none outline-none
 }
  .cancel {
   @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
@@ -125,13 +125,13 @@ main{
     @apply w-full object-cover
 }
 .benefit-div h4, .second-div h4, .third-div h4{
-    @apply absolute bg-[#122867] text-white top-0 text-sm 2xl:text-base py-3 px-4
+    @apply absolute bg-[#122967] text-white top-0 text-sm 2xl:text-base py-3 px-4
 }
 .benefit-div div, .second-div div,.third-div div{
-    @apply absolute bottom-0 bg-[linear-gradient(90deg,#0E42D280_50%,transparent_100%)] text-white w-full py-4 px-3 text-base 2xl:text-lg
+    @apply absolute bottom-0 bg-[#00143C] text-white w-full py-4 px-3 text-base 2xl:text-lg
 }
 .third-div div{
-    @apply bg-[linear-gradient(90deg,#0E42D280_40%,transparent_100%)]
+    @apply bg-[#7298ff]
  
 }
 .benefit-div div p, .second-div p, .third-div p{
@@ -219,7 +219,10 @@ main{
 
 /* FOOTER */
 footer{
-  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 
+}
+.footer{
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
 }
 .footer-contact-div{
   @apply flex gap-4 md:gap-6 lg:gap-8
@@ -256,5 +259,11 @@ footer{
   outline-none focus:outline-none
 }
 .footer-connect button{
-  @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-2 hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
+ @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-4 hover:py-4.5 hover:text-base transition delay-200 duration-400 ease-in-out rounded-lg
+}
+footer h1{
+  @apply pt-8 text-center text-[17px] font-normal cursor-pointer
+}
+footer h1 a{
+  @apply underline
 }

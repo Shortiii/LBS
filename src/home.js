@@ -7,7 +7,7 @@ import header3 from './assets/header3.png'
     {
       image: header1,
       title: "Together, We Lead Beyond the Classroom.",
-      text: "The Lagos Business School Alumni Network unites changemakers who are shaping industries, building communities, and redefining leadership across Africa and beyond. "
+      text: "The Lagos Business School Alumni Network brings together changemakers who are shaping industries, building communities, and redefining leadership across Africa and beyond."
     },
     {
       image: header2,

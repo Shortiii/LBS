@@ -11,7 +11,7 @@ body{
   @apply relative
 }
 .top-nav {
-  @apply bg-[#122867] text-white py-4 lg:py-6 2xl:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+  @apply bg-[#122867] text-white py-4 lg:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center fixed top-0 left-0 w-full z-100;
 }
 .nav-toggle {
   @apply block lg:hidden cursor-pointer;
@@ -26,13 +26,13 @@ body{
   @apply w-full
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+  @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] fixed top-14 lg:top-22 left-0 w-full z-100;
 }
 .desktop-nav{
   @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
 }
 .desktop-nav div{
-  @apply text-white transition delay-200 duration-400 ease-in-out hover:text-xl
+  @apply text-white transition-transform duration-200 ease-out hover:scale-105 select-none outline-none
 }
  .cancel {
   @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
@@ -75,7 +75,7 @@ body{
 
 /* EVENT DETAILS */
 .event-details{
-    @apply pt-10 pb-[20%] px-12 md:px-24 lg:px-32
+    @apply pt-[55%] md:pt-[25%] lg:pt-[19%] pb-[20%] px-12 md:px-24 lg:px-32
 }
 .event-details a{
     @apply text-sm 2xl:text-base text-[#115FD6] hover:text-[#122867]
@@ -110,7 +110,10 @@ body{
 
 /* FOOTER */
 footer{
-  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 
+}
+.footer{
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
 }
 .footer-contact-div{
   @apply flex gap-4 md:gap-6 lg:gap-8
@@ -147,5 +150,11 @@ footer{
   outline-none focus:outline-none
 }
 .footer-connect button{
-  @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-2 hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
+ @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-4 hover:py-4.5 hover:text-base transition delay-200 duration-400 ease-in-out rounded-lg
+}
+footer h1{
+  @apply pt-8 text-center text-[17px] font-normal cursor-pointer
+}
+footer h1 a{
+  @apply underline
 }

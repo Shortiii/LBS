@@ -11,7 +11,7 @@ body{
   @apply relative 
 }
 .top-nav {
-  @apply bg-[#122867] text-white py-4 lg:py-6 2xl:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center;
+  @apply bg-[#122867] text-white py-4 lg:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center fixed top-0 left-0 w-full z-100;
 }
 .nav-toggle {
   @apply block lg:hidden cursor-pointer;
@@ -27,13 +27,13 @@ body{
   background-image: url('../assets/alumniImg.png');
 }
 .bottom-nav {
-  @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] ;
+  @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] fixed top-14 lg:top-22 left-0 w-full z-100 ;
 }
 .desktop-nav{
   @apply hidden lg:flex items-center gap-6 text-white cursor-pointer
 }
 .desktop-nav div{
-  @apply text-white transition delay-200 duration-400 ease-in-out hover:text-xl
+  @apply text-white transition-transform duration-200 ease-out hover:scale-105 select-none outline-none
 }
  .cancel {
   @apply absolute top-4 right-6 cursor-pointer z-50 lg:hidden bg-white p-1.5 rounded-[18px]
@@ -72,7 +72,7 @@ body{
   @apply flex-1 flex items-center;
 }
 .bottom-header {
-  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-[90%] sm:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#F2F3F5] p-6 border-b-2 border-[#165DFF] md:p-4 lg:p-6 absolute left-3 md:left-15 lg:left-25 -bottom-16
+  @apply text-white mt-[40%] lg:mt-[10%] ml-[5%] w-[90%] sm:w-3/4 lg:w-2/4 flex flex-col gap-2 md:gap-4 lg:gap-6 bg-[#F2F3F5] p-6 border-b-2 border-[#165DFF] md:p-4 lg:p-6 absolute left-3 md:left-15 lg:left-18 -bottom-16
 }
 .bottom-header h1 {
   @apply text-lg md:text-2xl lg:text-4xl 2xl:text-5xl font-bold mb-0 lg:mb-3 text-[#122867]
@@ -104,7 +104,7 @@ body{
 
 /* MAIN */
 .insights{
-    @apply px-8 md:px-18 lg:px-24 py-30
+    @apply px-8 md:px-24 lg:px-36 py-30
 }
 .insights-title{
     @apply bg-[#122867] text-white p-5 md:p-10
@@ -128,7 +128,7 @@ body{
     @apply absolute top-0 text-[8px] md:text-xs lg:text-sm 2xl:text-base bg-[#122867] text-white p-1 md:p-3
 }
 .insight-div div{
-    @apply absolute bottom-0 bg-[linear-gradient(180deg,#0E42D280_50%,transparent_100%)] w-full p-1 md:p-4 text-white
+    @apply absolute bottom-0 bg-[#0f182ee4] w-full p-1 md:p-4 text-white
 }
 .template-div{
     @apply w-full lg:w-2/3
@@ -140,7 +140,7 @@ body{
     @apply text-[8px] md:text-xs lg:text-sm 2xl:text-base
 }
 .insight{
-    @apply flex flex-row lg:flex-col gap-3 md:gap-6 w-full lg:w-1/3
+    @apply flex flex-col gap-3 md:gap-6 w-full lg:w-1/3
 }
 .insight h5{
      @apply text-[8px] md:text-xs lg:text-sm 2xl:text-base font-semibold
@@ -149,7 +149,7 @@ body{
      @apply text-[8px] md:text-xs lg:text-sm 2xl:text-base
 }
 .event{
-    @apply bg-[#122867] text-white mb-8 px-8 md:px-18 lg:px-24 py-15
+    @apply bg-[#122867] text-white mb-8 px-8 md:px-24 lg:px-36 py-15
 }
 .event-title h2{
     @apply text-xl md:text-2xl lg:text-[32px] 2xl:text-4xl font-semibold
@@ -170,14 +170,14 @@ body{
     @apply bg-[#122867] text-white absolute top-0 p-3 text-sm 2xl:text-base
 }
 .event-text{
-    @apply bg-[linear-gradient(180deg,#0E42D280_50%,transparent_100%)] absolute bottom-0 p-3 text-sm 2xl:text-base
+    @apply bg-[#0f182ee4] absolute bottom-0 p-3 text-sm 2xl:text-base
 }
 .event-text h6{
     @apply font-semibold
 }
 
 .recent-news{
-    @apply px-8 md:px-18 lg:px-24 py-15
+    @apply px-8 md:px-24 lg:px-36 py-15
 }
 .recent-news-title{
     @apply border-l-4 border-[#122867] pl-4
@@ -239,7 +239,10 @@ body{
 
 /* FOOTER */
 footer{
-  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 
+}
+.footer{
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
 }
 .footer-contact-div{
   @apply flex gap-4 md:gap-6 lg:gap-8
@@ -276,5 +279,11 @@ footer{
   outline-none focus:outline-none
 }
 .footer-connect button{
-  @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-2 hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
+ @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-4 hover:py-4.5 hover:text-base transition delay-200 duration-400 ease-in-out rounded-lg
+}
+footer h1{
+  @apply pt-8 text-center text-[17px] font-normal cursor-pointer
+}
+footer h1 a{
+  @apply underline
 }

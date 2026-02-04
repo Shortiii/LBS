@@ -78,32 +78,49 @@
     </header>
 
     <section class="resource-search">
-        <div class="search-input">
-            <input type="text" placeholder="Search by name">
+        <div class="search-input search-category">
+            <input type="text" placeholder="Search by name" data-placeholder="Search by name" class="js-search-name" >
             <div class="search-div">
-                <div class="search-category">
-                    <input type="text" placeholder="All Industries">
-                    <button>
+                <div class="search-category category">
+                    <input type="text" placeholder="All Industries" data-placeholder="All Industries" class="search-input" readonly>
+                    <button class="dropdown-btn">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.0834 5.25L7.00002 8.75L2.91669 5.25" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                    <ul class="dropdown hidden">
+                        <li>All Industries</li>
+                        <li>Finance</li>
+                        <li>Technology</li>
+                        <li>Healthcare</li>
+                    </ul>
                 </div>
-                <div class="search-category">
-                    <input type="text" placeholder="Year published">
-                    <button>
+                <div class="search-category category">
+                    <input type="text" placeholder="Year published" data-placeholder="Year published" class="search-input" readonly>
+                    <button class="dropdown-btn">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.0834 5.25L7.00002 8.75L2.91669 5.25" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                    <ul class="dropdown hidden">
+                        <li>2025</li>
+                        <li>2024</li>
+                        <li>2023</li>
+                        <li>2022</li>
+                    </ul>
                 </div>
-                <div class="search-category">
-                    <input type="text" placeholder="Category">
-                    <button>
+                <div class="search-category category">
+                    <input type="text" placeholder="Category" data-placeholder="Category" class="search-input" readonly>
+                    <button class="dropdown-btn">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.0834 5.25L7.00002 8.75L2.91669 5.25" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                     <ul class="dropdown hidden">
+                    <li>Webinar - Video</li>
+                    <li>Webinar -Audio</li>
+                    <li>Case Study</li>
+                </ul>
                 </div>
                 <button class="search-button">Clear</button>
             </div>
@@ -273,7 +290,8 @@
     </section>
 
   <footer>
-    <div class="footer-note">
+    <section class="footer">
+      <div class="footer-note">
       <img src="./src/assets/footer-logo.png" alt="">
       <p>Connecting business leaders across the globe through a vibrant alumni network that drives professional growth and meaningful impact.</p>
     </div>
@@ -343,8 +361,12 @@
       </div>
     </div>
 
+    </section>
+    
+    <h1>© 2025 Lagos Business School | All Rights Reserved  | <a href="https://www.lbs.edu.ng/privacy-policy" target="_blank">Privacy Policy</a> </h1>
   </footer>
 
   <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/search.js"></script>
 </body>
 </html>

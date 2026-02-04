@@ -1,19 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-// export default {
-//   theme: {
-//     extend: {
-//       screens: {
-//         '2xl': '1700px',
-//       },
-//     },
-//   },
-// }
+
 export default {
+  content: [
+    './index.html, ',
+    './src/**/*.{html,js,ts,jsx,tsx}'
+  ],
   theme: {
     extend: {
-  colors: {
-    proof: '#22c55e',
+      colors: {
+        proof: '#22c55e',
+      },
+      fontFamily: {
+        segoe: ['SegoeUI', 'sans-serif'],
+      },
+    },
   },
-},
-  },
-}
+  plugins: [],
+};

@@ -78,32 +78,49 @@
     </header>
 
     <section class="career-search">
-        <div class="search-input">
-            <input type="text" placeholder="Search by name">
+        <div class="search-category search-input">
+            <input type="text" placeholder="Search by name" data-placeholder="Search by name" class="js-search-name">
             <div class="search-div">
-                <div class="search-category">
-                    <input type="text" placeholder="All Industries">
-                    <button>
+                <div class="search-category category">
+                    <input type="text" placeholder="All Industries" data-placeholder="All Industries" class="search-input" readonly>
+                    <button class="dropdown-btn">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.0834 5.25L7.00002 8.75L2.91669 5.25" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                    <ul class="dropdown hidden">
+                        <li>All Industries</li>
+                        <li>Finance</li>
+                        <li>Technology</li>
+                        <li>Healthcare</li>
+                    </ul>
                 </div>
-                <div class="search-category">
-                    <input type="text" placeholder="Years">
-                    <button>
+                <div class="search-category category">
+                    <input type="text" placeholder="Years" data-placeholder="Years" class="search-input" readonly>
+                    <button class="dropdown-btn">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.0834 5.25L7.00002 8.75L2.91669 5.25" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                    <ul class="dropdown hidden">
+                        <li>2025</li>
+                        <li>2024</li>
+                        <li>2023</li>
+                        <li>2022</li>
+                    </ul>
                 </div>
-                <div class="search-category">
-                    <input type="text" placeholder="Location">
-                    <button>
+                <div class="search-category category">
+                    <input type="text" placeholder="Location" data-placeholder="Location" class="search-input" readonly>
+                    <button class="dropdown-btn">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.0834 5.25L7.00002 8.75L2.91669 5.25" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
+                    <ul class="dropdown hidden">
+                    <li>Lagos</li>
+                    <li>Abuja</li>
+                    <li>Remote</li>
+                </ul>
                 </div>
                 <button class="search-button">Clear</button>
             </div>
@@ -183,9 +200,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Contract</p>
-                    <p>Lagos</p>
-                    <p>₦2,950,000.00</p>
+                    <p class="job-contract">Contract</p>
+                    <p class="job-location">Lagos</p>
+                    <p class="job-pay">₦2,950,000.00</p>
                 </div>
                 <div class="due-date">
                 23 days left to apply 
@@ -209,9 +226,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Full Time</p>
-                    <p>Lagos</p>
-                    <p>₦3,500,000.00</p>
+                    <p class="job-contract">Full Time</p>
+                    <p class="job-location">Lagos</p>
+                    <p class="job-pay">₦3,500,000.00</p>
                 </div>
                 <div class="due-date">
                 23 days left to apply 
@@ -235,9 +252,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Full Time</p>
-                    <p>Remote</p>
-                    <p>₦1,800,000.00</p>
+                    <p class="job-contract">Full Time</p>
+                    <p class="job-location">Remote</p>
+                    <p class="job-pay">₦1,800,000.00</p>
                 </div>
                 <div class="due-date">
                 15 days left to apply 
@@ -261,9 +278,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Full Time</p>
-                    <p>Lagos</p>
-                    <p>₦3,200,000.00</p>
+                    <p class="job-contract">Full Time</p>
+                    <p class="job-location">Lagos</p>
+                    <p class="job-pay">₦3,200,000.00</p>
                 </div>
                 <div class="due-date">
                 20 days left to apply 
@@ -287,9 +304,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Full Time</p>
-                    <p>Abuja</p>
-                    <p>₦2,500,000.00</p>
+                    <p class="job-contract">Full Time</p>
+                    <p class="job-location">Abuja</p>
+                    <p class="job-pay">₦2,500,000.00</p>
                 </div>
                 <div class="due-date">
                 18 days left to apply 
@@ -313,9 +330,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Part Time</p>
-                    <p>Lagos</p>
-                    <p>₦1,600,000.00</p>
+                    <p class="job-contract">Part Time</p>
+                    <p class="job-location">Lagos</p>
+                    <p class="job-pay">₦1,600,000.00</p>
                 </div>
                 <div class="due-date">
                 22 days left to apply 
@@ -339,9 +356,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Contract</p>
-                    <p>Remote</p>
-                    <p>₦1,950,000.00</p>
+                    <p class="job-contract">Contract</p>
+                    <p class="job-location">Remote</p>
+                    <p class="job-pay">₦1,950,000.00</p>
                 </div>
                 <div class="due-date">
                 14 days left to apply 
@@ -365,9 +382,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Full Time</p>
-                    <p>Lagos</p>
-                    <p>₦1,750,000.00</p>
+                    <p class="job-contract">Full Time</p>
+                    <p class="job-location">Lagos</p>
+                    <p class="job-pay">₦1,750,000.00</p>
                 </div>
                 <div class="due-date">
                 10 days left to apply 
@@ -391,9 +408,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Full Time</p>
-                    <p>Abuja</p>
-                    <p>₦1,400,000.00</p>
+                    <p class="job-contract">Full Time</p>
+                    <p class="job-location">Abuja</p>
+                    <p class="job-pay">₦1,400,000.00</p>
                 </div>
                 <div class="due-date">
                 30 days left to apply 
@@ -417,9 +434,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Full Time</p>
-                    <p>Lagos</p>
-                    <p>₦3,000,000.00</p>
+                    <p class="job-contract">Full Time</p>
+                    <p class="job-location">Lagos</p>
+                    <p class="job-pay">₦3,000,000.00</p>
                 </div>
                 <div class="due-date">
                 16 days left to apply 
@@ -443,9 +460,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Part Time</p>
-                    <p>Remote</p>
-                    <p>₦1,200,000.00</p>
+                    <p class="job-contract">Part Time</p>
+                    <p class="job-location">Remote</p>
+                    <p class="job-pay">₦1,200,000.00</p>
                 </div>
                 <div class="due-date">
                 25 days left to apply 
@@ -469,9 +486,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Part Time</p>
-                    <p>Remote</p>
-                    <p>₦1,200,000.00</p>
+                    <p class="job-contract">Part Time</p>
+                    <p class="job-location">Remote</p>
+                    <p class="job-pay">₦1,200,000.00</p>
                 </div>
                 <div class="due-date">
                 25 days left to apply 
@@ -495,9 +512,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Part Time</p>
-                    <p>Remote</p>
-                    <p>₦1,200,000.00</p>
+                    <p class="job-contract">Part Time</p>
+                    <p class="job-location">Remote</p>
+                    <p class="job-pay">₦1,200,000.00</p>
                 </div>
                 <div class="due-date">
                 25 days left to apply 
@@ -521,9 +538,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Part Time</p>
-                    <p>Remote</p>
-                    <p>₦1,200,000.00</p>
+                    <p class="job-contract">Part Time</p>
+                    <p class="job-location">Remote</p>
+                    <p class="job-pay">₦1,200,000.00</p>
                 </div>
                 <div class="due-date">
                 25 days left to apply 
@@ -547,9 +564,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Part Time</p>
-                    <p>Remote</p>
-                    <p>₦1,200,000.00</p>
+                    <p class="job-contract">Part Time</p>
+                    <p class="job-location">Remote</p>
+                    <p class="job-pay">₦1,200,000.00</p>
                 </div>
                 <div class="due-date">
                 25 days left to apply 
@@ -573,9 +590,9 @@
             </div>
             <div class="job-info">
                 <div class="job-type">
-                    <p>Part Time</p>
-                    <p>Remote</p>
-                    <p>₦1,200,000.00</p>
+                    <p class="job-contract">Part Time</p>
+                    <p class="job-location">Remote</p>
+                    <p class="job-pay">₦1,200,000.00</p>
                 </div>
                 <div class="due-date">
                 25 days left to apply 
@@ -585,7 +602,8 @@
     </section>
 
   <footer>
-    <div class="footer-note">
+    <section class="footer">
+      <div class="footer-note">
       <img src="./src/assets/footer-logo.png" alt="">
       <p>Connecting business leaders across the globe through a vibrant alumni network that drives professional growth and meaningful impact.</p>
     </div>
@@ -655,8 +673,11 @@
       </div>
     </div>
 
+    </section>
+    
+    <h1>© 2025 Lagos Business School | All Rights Reserved  | <a href="https://www.lbs.edu.ng/privacy-policy" target="_blank">Privacy Policy</a> </h1>
   </footer>
-
    <script type="module" src="/src/main.js"></script>
+   <script type="module" src="/src/search.js"></script>
 </body>
 </html>
