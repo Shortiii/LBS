@@ -1,10 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @theme {
-  --font-roboto: "Roboto", sans-serif; 
+  --font-roboto: "Roboto", sans-serif;
+  --font-segoe: "Segoe UI", sans-serif;
 }
-body{
-  @apply w-full font-roboto select-none outline-none
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../assets/fonts/Segoe UI.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  @apply w-full font-roboto select-none outline-none;
+}
+p{
+  @apply font-segoe
 }
 /* NAV */
 .nav{
@@ -101,52 +112,56 @@ main a{
 }
 
 /* FOOTER */
-footer{
-  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 
+footer {
+  @apply bg-[#122867] text-white py-8 lg:py-20 px-10 md:px-18 lg:px-24 font-segoe;
 }
-.footer{
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start
+.footer {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8  items-start;
 }
-.footer-contact-div{
-  @apply flex gap-4 md:gap-6 lg:gap-8
+.footer-contact-div {
+  @apply flex gap-4 md:gap-6 lg:gap-8;
 }
-.footer-note p{
-  @apply text-[12px] md:text-sm 2xl:text-base font-normal pt-4 
+.footer-note p {
+  @apply text-[12px] md:text-sm 2xl:text-base font-normal pt-4;
 }
 .footer-div h3 {
-  @apply text-base 2xl:text-lg font-semibold pb-2
+  @apply text-base 2xl:text-lg font-semibold pb-2 font-roboto;
 }
-.footer-div h4, .footer-div h5, .footer-div h6, .footer-div p, .footer-div div{
-  @apply text-[12px] md:text-sm 2xl:text-base 
+.footer-div h4,
+.footer-div h5,
+.footer-div h6,
+.footer-div p,
+.footer-div div {
+  @apply text-[12px] md:text-sm 2xl:text-base;
 }
-.footer-div h5{
-  @apply py-2 md:py-4 lg:py-6
+.footer-div h5 {
+  @apply py-2 md:py-4 lg:py-6;
 }
-.footer-div p{
-  @apply pt-1
+.footer-div p {
+  @apply pt-1;
 }
-.footer-social div{
-  @apply flex items-center gap-2 pb-2
+.footer-social div {
+  @apply flex items-center gap-2 pb-2;
 }
-.footer-connect h3{
-  @apply text-base md:text-xl lg:text-[28px] 2xl:text-3xl pb-2 lg:pb-4
+.footer-connect h3 {
+  @apply text-base md:text-xl lg:text-[28px] 2xl:text-3xl pb-2 lg:pb-4 font-roboto;
 }
-.footer-connect p{
-  @apply text-[12px] md:text-sm 2xl:text-base
+.footer-connect p {
+  @apply text-[12px] md:text-sm 2xl:text-base;
 }
-.connect-input{
-  @apply pt-5 text-[10px] sm:text-xs 2xl:text-sm
+.connect-input {
+  @apply pt-5 text-[10px] sm:text-xs 2xl:text-sm;
 }
-.footer-connect input{
+.footer-connect input {
   @apply bg-white text-[#86909C] py-2 px-5 mt-2 w-[70%] md:w-full hover:py-2.5 hover:text-base transition delay-200 duration-400 ease-in-out
-  outline-none focus:outline-none
+  outline-none focus:outline-none;
 }
-.footer-connect button{
- @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-4 hover:py-4.5 hover:text-base transition delay-200 duration-400 ease-in-out rounded-lg
+.footer-connect button {
+  @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-4 hover:py-4.5 hover:text-base transition delay-200 duration-400 ease-in-out rounded-lg;
 }
-footer h1{
-  @apply pt-8 text-center text-[17px] font-normal cursor-pointer
+footer h1 {
+  @apply pt-8 text-center text-[17px] font-normal cursor-pointer;
 }
-footer h1 a{
-  @apply underline
+footer h1 a {
+  @apply underline;
 }

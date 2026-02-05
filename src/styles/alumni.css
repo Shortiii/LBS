@@ -1,17 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @theme {
-  --font-roboto: "Roboto", sans-serif; 
+  --font-roboto: "Roboto", sans-serif;
+  --font-segoe: "Segoe UI", sans-serif;
 }
-body{
-  @apply w-full font-roboto select-none outline-none
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../assets/fonts/Segoe UI.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  @apply w-full font-roboto select-none outline-none;
+}
+p{
+  @apply font-segoe
 }
 /* NAV */
 .nav{
   @apply relative
 }
 .top-nav {
-  @apply bg-[#122867] text-white py-4 lg:py-6 2xl:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center fixed top-0 left-0 w-full z-100;
+  @apply bg-[#122867] text-white py-4 lg:py-8 pl-8 md:pl-18 lg:pl-32  flex gap-4 items-center fixed top-0 left-0 w-full z-100;
 }
 .nav-toggle {
   @apply block lg:hidden cursor-pointer;
@@ -138,19 +149,19 @@ main{
     @apply text-[#A7A9AC]
 }
 .alumni-benefits{
-    @apply py-10 flex flex-col gap-15 px-8 md:px-18 lg:px-24
+    @apply py-10 flex flex-col gap-15 px-8 md:px-18 lg:px-20
 }
 .section-div h2{
-    @apply text-xl md:text-2xl lg:text-[32px] 2xl:text-4xl font-semibold text-[#122867] border-l-3 border-[#0E42D2] p-2
+    @apply text-xl md:text-2xl lg:text-[28px] 2xl:text-4xl font-semibold text-[#122867] border-l-3 border-[#0E42D2] p-2
 }
 .initial-div{
     @apply flex flex-col lg:flex-row gap-10 text-[#1D2129] pt-4 2xl:pt-6
 }
 .initial-div h4{
-@apply text-xl md:text-2xl lg:text-[32px] 2xl:text-4xl w-full  md:w-3/4
+@apply text-xl md:text-2xl lg:text-[32px] 2xl:text-4xl w-full 
 }
 .initial-div ol{
-    @apply text-lg md:text-xl lg:text-2xl 2xl:text-3xl pt-2 md:pt-4 w-3/4 
+    @apply text-lg md:text-xl lg:text-2xl 2xl:text-3xl pt-2 md:pt-4 font-segoe
 }
 .initial-div li{
     @apply pt-2 md:pt-4 leading-8
