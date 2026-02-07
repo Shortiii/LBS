@@ -264,7 +264,7 @@ p {
   @apply text-[#122867] text-xl md:text-2xl lg:text-[32px] 2xl:text-4xl font-semibold;
 }
 .counter-text h6 {
-  @apply text-[#4E5969] text-xs md:text-sm lg:text-base 2xl:text-lg w-full md:w-1/2 pt-2 font-segoe;
+  @apply text-[#4E5969] text-xs md:text-sm lg:text-base 2xl:text-lg w-full  pt-2 font-segoe;
 }
 .council-template {
   @apply flex pl-[7%] xl:pl-[12%] md:pl-[15%] 2xl:pl-[22%] gap-5 xl:gap-7 py-8 overflow-x-auto overflow-y-hidden;

@@ -169,7 +169,7 @@ input {
 
 /* CONNECT */
 .connect {
-  @apply bg-cover bg-center bg-no-repeat w-full h-full px-8 md:px-18 lg:px-24;
+  @apply bg-cover bg-center bg-no-repeat w-full h-full px-8 md:px-18 lg:px-24 -mb-24 relative z-10;
   background-image: url("src/assets/Background Shape1.png");
 }
 .first-connect {
@@ -234,10 +234,10 @@ input {
   @apply text-xs sm:text-sm md:text-xl 2xl:text-3xl font-semibold pb-1 font-segoe;
 }
 .third-div {
-  @apply text-base sm:text-lg md:text-2xl text-white font-semibold font-roboto p-2 sm:p-3 bg-[#00227FE5];
+  @apply text-base sm:text-lg md:text-2xl text-white font-semibold font-roboto p-2 sm:p-3 bg-[#00227FE5] ;
 }
 .card-div {
-  @apply bg-white py-4;
+  @apply bg-white py-4 border-b-2  border-[#165DFF];
 }
 .card-div h2 {
   @apply text-[#1D2129] text-base sm:text-lg md:text-2xl 2xl:text-3xl font-roboto;
@@ -254,11 +254,12 @@ input {
 
 /* CONTACT */
 .contact {
-  @apply bg-cover bg-center bg-no-repeat w-full h-full px-8 md:px-18 lg:px-24 py-36 mt-5 flex flex-col justify-center items-center gap-28;
+  @apply bg-cover bg-center bg-no-repeat w-full h-full px-8 md:px-18 lg:px-24 flex flex-col justify-center items-center gap-28;
   background-image: url("src/assets/Background Shape2.png");
+  background-position: center -120px;
 }
 .contact-div {
-  @apply flex bg-white rounded-sm;
+  @apply flex bg-white rounded-sm  mt-42 mb-32 ;
 }
 .contact-note {
   @apply bg-[#1679CB] text-white w-[40%] p-2 sm:p-5 md:p-10 hover:rounded-xl ml-1 sm:ml-3 relative transition duration-400 ease-in-out;
