@@ -52,3 +52,22 @@ import header3 from './assets/header3.png'
   });
 
   showSlide(0);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const YTPlayer = document.querySelector(".youtube-overlay");
+  const YTlink = document.querySelector(".main-img");
+  const closeBtn = document.querySelector(".close-btn");
+  const iframe = document.querySelector(".youtube-popUp iframe");
+  const videoSrc = iframe.src;
+
+  YTlink.addEventListener("click", () => {
+    YTPlayer.classList.add("active");
+    iframe.src = videoSrc;
+  });
+
+  closeBtn.addEventListener("click", () => {
+    console.log("clicked");
+    YTPlayer.classList.remove("active");
+    iframe.src = "";
+  });
+});

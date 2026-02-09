@@ -34,8 +34,14 @@ p{
   @apply underline border-r-2  pr-4
 }
 .nav-header {
-  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[80vh] md:h-[95vh] 2xl:min-h-screen flex flex-col justify-center transition-all duration-1000 overflow-hidden;
+  @apply bg-cover bg-center lg:bg-top bg-no-repeat w-full h-[55vh] md:h-[95vh] 2xl:min-h-screen flex flex-col justify-center transition-all duration-1000 overflow-hidden;
   background-image: url('../assets/alumniImg.png');
+}
+@media (max-width: 1023px) {
+  .nav-header {
+    background-size: 100% 100%;
+    margin-top: 125px;
+  }
 }
 .bottom-nav {
   @apply bg-[#12286780] flex py-6 2xl:py-8 items-center justify-between pl-5 md:pl-10 lg:pl-20 pr-[5%] md:pr-[10%] lg:pr-[15%]  xl:pr-[25%] fixed top-14 lg:top-22 left-0 w-full z-100;
@@ -169,7 +175,7 @@ footer {
   @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-4 hover:py-4.5 hover:text-base transition delay-200 duration-400 ease-in-out rounded-lg;
 }
 footer h1 {
-  @apply pt-8 text-center text-[17px] font-normal cursor-pointer;
+  @apply pt-8 text-center text-[12px] md:text-sm 2xl:text-base font-normal cursor-pointer;
 }
 footer h1 a {
   @apply underline;

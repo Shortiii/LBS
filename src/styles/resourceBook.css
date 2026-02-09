@@ -84,7 +84,7 @@ p{
 
 /* MAIN */
 main{
-     @apply bg-cover bg-center bg-no-repeat w-full mt-[40%] md:mt-[20%] lg:mt-[14%] h-[80vh] md:h-[95vh] 2xl:min-h-screen relative;
+     @apply bg-cover bg-center bg-no-repeat w-full mt-[40%] md:mt-[20%] lg:mt-[14%] h-[60vh] md:h-[95vh] 2xl:min-h-screen relative;
   background-image: url('../assets/resourceBook.png');
 }
 main a{
@@ -108,7 +108,7 @@ main a{
     @apply text-center text-[#122867] mx-auto underline text-base
 }
 .video-details a p{
-    @apply text-center
+    @apply text-left
 }
 /* FOOTER */
 footer {
@@ -159,7 +159,7 @@ footer {
   @apply bg-[#1679CB] text-white mt-3 w-[70%] md:w-full py-4 hover:py-4.5 hover:text-base transition delay-200 duration-400 ease-in-out rounded-lg;
 }
 footer h1 {
-  @apply pt-8 text-center text-[17px] font-normal cursor-pointer;
+  @apply pt-8 text-center text-[12px] md:text-sm 2xl:text-base font-normal cursor-pointer;
 }
 footer h1 a {
   @apply underline;
