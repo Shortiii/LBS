@@ -145,9 +145,6 @@ input {
 .youtube-overlay{
   @apply fixed inset-0 bg-[rgba(0,0,0,0.6)] z-20 opacity-0 pointer-events-none ;
 }
-.close-btn {
-  @apply absolute top-[5%] right-[-5%] cursor-pointer -translate-x-1/2 -translate-y-1 z-50 text-white text-2xl z-50  ;
-}
 .youtube-overlay.active{
   @apply opacity-100 pointer-events-auto flex items-center justify-center
 }
@@ -155,7 +152,10 @@ input {
   @apply relative w-[70%] top-[15%] left-[35%] -translate-x-1/2 -translate-y-1 z-50 ;
 }
 .youtube-overlay.active .youtube-popUp{
-  @apply translate-y-0 -translate-x-1/2 transition-all duration-400 ease-in-out block;
+  @apply translate-y-0 -translate-x-1/2 transition-all duration-200 ease-in-out block;
+}
+.close-btn {
+  @apply absolute top-[-2%] right-[-5%] cursor-pointer z-50 text-white text-3xl bg-black/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/70 transition-colors ;
 }
 .youtube-popUp iframe{
   @apply w-full h-[65vh] max-h-[420px] object-cover;

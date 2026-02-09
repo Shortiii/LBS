@@ -65,9 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
     iframe.src = videoSrc;
   });
 
-  closeBtn.addEventListener("click", () => {
-    console.log("clicked");
-    YTPlayer.classList.remove("active");
-    iframe.src = "";
-  });
+  closeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  console.log("clicked");
+  console.log("Before:", YTPlayer.classList); // Check classes before
+  YTPlayer.classList.remove("active");
+  console.log("After:", YTPlayer.classList);  // Check classes after
+  iframe.src = "";
+});
 });
