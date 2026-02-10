@@ -1,57 +1,49 @@
-import './styles/home.css'
-import header1 from './assets/header1.png'
-import header2 from './assets/header2.png'
-import header3 from './assets/header3.png'
+import "./styles/home.css";
+let current = 0;
+const hero = document.getElementById("hero");
+const slides = document.querySelectorAll(".hero-slide");
+const dots = document.querySelectorAll(".dot");
 
-  const slides = [
-    {
-      image: header1,
-      title: "Together, We Lead Beyond the Classroom.",
-      text: "The Lagos Business School Alumni Network brings together changemakers who are shaping industries, building communities, and redefining leadership across Africa and beyond."
-    },
-    {
-      image: header2,
-      title: "Legacy. Leadership. LBS for Life.",
-      text: "More than a school - your alumni journey is a source of inspiration, mentorship, and global possibility shaped by the LBS spirit."
-    },
-    {
-      image: header3,
-      title: "Innovation Rooted in Community",
-      text: "Join a powerful network of alumni driving change in business, technology and society; connected by LBS, motivated by purpose."
-    }
-  ];
+function showSlide(index) {
+  if (slides.length === 0) return;
+  current = index;
 
+  const activeSlide = slides[index];
+  const bgImage = activeSlide.getAttribute("data-image");
 
-  let current = 0;
-   const hero = document.getElementById("hero");
-   const title = document.getElementById("hero-title");
-   const text = document.getElementById("hero-text");
-   const dots = document.querySelectorAll(".dot");
-
-  function showSlide(index) {
-    current = index;
-
-    hero.style.backgroundImage = `url(${slides[index].image})`;
-    title.textContent = slides[index].title;
-    text.textContent = slides[index].text;
-
-    dots.forEach(d => d.classList.remove("active"));
-    dots[index].classList.add("active");
+  if (bgImage) {
+    hero.style.backgroundImage = `url(${bgImage})`;
   }
 
-  let interval = setInterval(() => {
+  slides.forEach((s) => s.classList.remove("active"));
+  activeSlide.classList.add("active");
+
+  dots.forEach((d) => d.classList.remove("active"));
+  if (dots[index]) {
+    dots[index].classList.add("active");
+  }
+}
+
+let interval = setInterval(() => {
+  if (slides.length > 0) {
     current = (current + 1) % slides.length;
     showSlide(current);
-  }, 3000);
+  }
+}, 3000);
 
-  dots.forEach(dot => {
-    dot.addEventListener("click", () => {
-      clearInterval(interval);
-      showSlide(+dot.dataset.index);
-    });
+dots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    clearInterval(interval);
+    showSlide(+dot.dataset.index);
+
+    interval = setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 3000);
   });
+});
 
-  showSlide(0);
+showSlide(0);
 
 document.addEventListener("DOMContentLoaded", () => {
   const YTPlayer = document.querySelector(".youtube-overlay");
@@ -66,11 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   closeBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  console.log("clicked");
-  console.log("Before:", YTPlayer.classList); // Check classes before
-  YTPlayer.classList.remove("active");
-  console.log("After:", YTPlayer.classList);  // Check classes after
-  iframe.src = "";
-});
+    e.stopPropagation();
+    console.log("clicked");
+    console.log("Before:", YTPlayer.classList); // Check classes before
+    YTPlayer.classList.remove("active");
+    console.log("After:", YTPlayer.classList); // Check classes after
+    iframe.src = "";
+  });
 });
