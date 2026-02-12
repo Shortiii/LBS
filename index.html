@@ -75,32 +75,104 @@
             <div><a href="./career.html">Careers</a></div>
           </div>
         </div>
-        <div class="bottom-header">
-          <div class="hero-slide active" data-image="./src/assets/header1.png">
-            <h1 class="hero-title">Together, We Lead Beyond the Classroom.</h1>
-            <p class="hero-text">The Lagos Business School Alumni Network brings together changemakers who are shaping
-              industries, building communities, and redefining leadership across Africa and beyond. </p>
-            <a href="./login.html" class="join">Join the Network</a>
-          </div>
-          <div class="hero-slide" data-image="./src/assets/header2.png">
-            <h1 class="hero-title">Legacy. Leadership. LBS for Life.</h1>
-            <p class="hero-text">More than a school - your alumni journey is a source of inspiration, mentorship, and
-              global possibility shaped by the LBS spirit.</p>
-            <a href="./login.html" class="join">Join the Network</a>
-          </div>
-          <div class="hero-slide" data-image="./src/assets/header3.png">
-            <h1 class="hero-title">Innovation Rooted in Community</h1>
-            <p class="hero-text">Join a powerful network of alumni driving change in business, technology and society;
-              connected by LBS, motivated by purpose.</p>
-            <a href="./login.html" class="join">Join the Network</a>
-          </div>
-        </div>
+      
+
+        <div id="default-carousel" class="relative w-full mt-[5%] lg:mt-[10%]" data-carousel="slide">
+  
+        <!-- Carousel wrapper -->
+          <div class="relative overflow-hidden h-[45vh] md:h-[65vh] lg:h-[75vh]  2xl:min-h-screen">
+
+         <!-- Slide 1 -->
+        <div class="hidden duration-700 ease-in-out absolute inset-0 bg-cover bg-center bg-no-repeat"
+         style="background-image: url('./src/assets/header1.png');"
+         data-carousel-item>
+
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <div class="relative z-10 flex flex-col justify-center h-full px-6 lg:px-20 text-white max-w-3xl">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">
+          Together, We Lead Beyond the Classroom.
+        </h1>
+        <p class="mb-6">
+          The Lagos Business School Alumni Network brings together changemakers who are shaping
+          industries, building communities, and redefining leadership across Africa and beyond.
+        </p>
+        <a href="./login.html" class="bg-white text-black px-6 py-3 rounded-md w-fit hover:bg-[#122867] transition duration-400 ease-in-out hover:text-white">
+          Join the Network
+        </a>
       </div>
-      <div class="toggle">
-        <button class="dot" data-index="0"></button>
-        <button class="dot" data-index="1"></button>
-        <button class="dot" data-index="2"></button>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hidden duration-700 ease-in-out absolute inset-0 bg-cover bg-center bg-no-repeat"
+         style="background-image: url('./src/assets/header2.png');"
+         data-carousel-item>
+
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <div class="relative z-10 flex flex-col justify-center h-full px-6 lg:px-20 text-white max-w-3xl">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">
+          Legacy. Leadership. LBS for Life.
+        </h1>
+        <p class="mb-6">
+          More than a school - your alumni journey is a source of inspiration,
+          mentorship, and global possibility shaped by the LBS spirit.
+        </p>
+        <a href="./login.html" class="bg-white text-black px-6 py-3 rounded-md w-fit hover:bg-[#122867] transition duration-400 ease-in-out hover:text-white">
+          Join the Network
+        </a>
       </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hidden duration-700 ease-in-out absolute inset-0 bg-cover bg-center bg-no-repeat"
+         style="background-image: url('./src/assets/header3.png');"
+         data-carousel-item>
+
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <div class="relative z-10 flex flex-col justify-center h-full px-6 lg:px-20 text-white max-w-3xl">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">
+          Innovation Rooted in Community
+        </h1>
+        <p class="mb-6">
+          Join a powerful network of alumni driving change in business, technology and society;
+          connected by LBS, motivated by purpose.
+        </p>
+        <a href="./login.html" class="bg-white text-black px-6 py-3 rounded-md w-fit hover:bg-[#122867] transition duration-400 ease-in-out hover:text-white">
+          Join the Network
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Indicators -->
+  <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+    <button type="button"
+      class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"
+      aria-current="true"
+      aria-label="Slide 1"
+      data-carousel-slide-to="0"></button>
+
+    <button type="button"
+      class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"
+      aria-current="false"
+      aria-label="Slide 2"
+      data-carousel-slide-to="1"></button>
+
+    <button type="button"
+      class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"
+      aria-current="false"
+      aria-label="Slide 3"
+      data-carousel-slide-to="2"></button>
+  </div>
+
+
+</div>
+
+
+
     </div>
   </header>
 
